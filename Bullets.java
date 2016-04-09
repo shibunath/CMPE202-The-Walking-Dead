@@ -17,7 +17,7 @@ public class Bullets extends Actor
     
     public void act()
     {
-        // Add your action code here.
+        // get a reference of the world so that to get a ref of the hero
         setRotation(this.getRotation());
         move(10);
     }    
