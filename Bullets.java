@@ -18,7 +18,9 @@ public class Bullets extends Actor
     public void act()
     {
         // get a reference of the world so that to get a ref of the hero
-        setRotation(this.getRotation());
+        MyWorld myWorldRef = (MyWorld)getWorld();
+        Hero heroRef = myWorldRef.getHero();
+        setRotation(heroRef.getRotation());
         move(10);
     }    
 }
