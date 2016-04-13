@@ -22,5 +22,9 @@ public class Bullets extends Actor
         Hero heroRef = myWorldRef.getHero();
         setRotation(heroRef.getRotation());
         move(10);
+        if(isAtEdge())
+        {
+            myWorldRef.removeObject(this);
+        }
     }    
 }
