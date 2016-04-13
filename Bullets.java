@@ -13,14 +13,28 @@ public class Bullets extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
+    private boolean setRot = false;
     
+    public boolean getSetRot()
+    {
+        return setRot;
+    }
+    
+    public void setSetRot(int newRot)
+    {
+        setRotation(newRot);
+        setRot = true;
+    }
     
     public void act()
     {
         // get a reference of the world so that to get a ref of the hero
         MyWorld myWorldRef = (MyWorld)getWorld();
         Hero heroRef = myWorldRef.getHero();
-        setRotation(heroRef.getRotation());
+        if (getSetRot() != true)
+        {
+            setSetRot(heroRef.getRotation());
+        }
         move(10);
         if(isAtEdge())
         {
