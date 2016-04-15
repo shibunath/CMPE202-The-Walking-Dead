@@ -1,14 +1,15 @@
 #Greenfoot properties
-#Thu Apr 14 22:41:06 PDT 2016
+#Thu Apr 14 22:54:17 PDT 2016
 readme.name=@README
 class.Hero.superclass=greenfoot.Actor
 target2.name=Hero
 dependency1.from=Hero
-class.LifeLineCount.image=herz.png
 target2.showInterface=false
+class.BaseObservor.superclass=Hero
 dependency3.from=MyWorld
 target3.y=10
 target3.x=70
+class.LifeLine.superclass=Hero
 class.Default.superclass=Bullets
 target1.type=ClassTarget
 class.MyWorld.superclass=greenfoot.World
@@ -17,6 +18,7 @@ target2.y=10
 package.numTargets=3
 target2.x=170
 dependency3.to=Hero
+class.LifeLine.image=herz.png
 target1.height=50
 dependency2.type=UsesDependency
 dependency4.type=UsesDependency
@@ -28,7 +30,6 @@ target2.height=50
 target1.x=70
 target1.naviview.expanded=true
 dependency1.to=Bullets
-class.LifeLineCount.superclass=Hero
 editor.fx.0.height=700
 target3.height=50
 target1.showInterface=false
