@@ -1,4 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Write a description of class Bullets here.
@@ -15,6 +17,8 @@ public class Bullets extends Actor
     
     private boolean setRot = false;
     private int speed = 15;
+    private int _bulletCount = 0;
+    private List<Observor> observors = new ArrayList<Observor>();
     
     public boolean getSetRot()
     {
@@ -55,5 +59,24 @@ public class Bullets extends Actor
     public void act()
     {
         
-    }    
+    }   
+    public int GetBulletCount()
+    {
+        return _bulletCount;
+    }
+    public void SetBulletCount(int bulletCount)
+    {
+        _bulletCount = bulletCount;
+    }
+    public void attach(Observor observor)
+    {
+        observors.add(observor);
+    }
+    public void notifyObservors()
+    {
+        for(Observor observor: observors)
+        {
+            observor.update();
+        }
+    }
 }
