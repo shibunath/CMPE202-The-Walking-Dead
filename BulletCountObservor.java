@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BulletCountObservor extends BaseObservor 
+public class BulletCountObservor extends Observor 
 {
      // instance variables - replace the example below with your own
     private int x;
@@ -17,6 +17,7 @@ public class BulletCountObservor extends BaseObservor
     public BulletCountObservor(Bullets bullets)
     {
         _bullets = bullets;
+        _bullets.attach(this);
     }
 
     /**
@@ -29,6 +30,6 @@ public class BulletCountObservor extends BaseObservor
    public void update() 
     {
         // put your code here
-        System.out.println("updated bullets");
+        System.out.println("updated bullets"+_bullets.GetBulletCount());
     }
 }

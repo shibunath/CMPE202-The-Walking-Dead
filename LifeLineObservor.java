@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LifeLineObservor extends BaseObservor 
+public class LifeLineObservor extends Observor 
 {
     // instance variables - replace the example below with your own
     private int x;
@@ -17,6 +17,7 @@ public class LifeLineObservor extends BaseObservor
     public LifeLineObservor(LifeLine life)
     {
         _lifeline = life;
+        _lifeline.attach(this);
     }
 
     /**
@@ -29,6 +30,6 @@ public class LifeLineObservor extends BaseObservor
    public void update() 
     {
         // put your code here
-        System.out.println("updated life");
+        System.out.println("updated life"+_lifeline.GetLifeLine());
     }
 }

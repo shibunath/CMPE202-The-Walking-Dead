@@ -1,4 +1,7 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
+import java.util.ArrayList;
+import java.util.List;
+ // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class LifeLineCount here.
@@ -8,6 +11,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class LifeLine extends Hero
 {
+    private List<Observor> observors = new ArrayList<Observor>();
     private int _lifeline = 0;
     /**
      * Act - do whatever the LifeLineCount wants to do. This method is called whenever
@@ -25,5 +29,17 @@ public class LifeLine extends Hero
     public void SetLifeLine(int lifeline)
     {
          _lifeline=lifeline;
+         notifyAllObservors();
+    }
+    public void attach(Observor observor)
+    {
+        observors.add(observor);
+    }
+    public void notifyAllObservors()
+    {
+        for(Observor observor: observors)
+        {
+            observor.update();
+        }
     }
 }
