@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Zombie extends Actor
+public class Zombie extends ZombieActor
 {
     /**
      * Act - do whatever the Zombie wants to do. This method is called whenever
