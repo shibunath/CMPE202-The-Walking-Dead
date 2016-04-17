@@ -17,6 +17,7 @@ public class MyWorld extends World
      */
     private Hero hero;// keep a reference of the hero object for the whole game
     private int kills; // Number of Zombies Killed.
+    private int lifes; // Number of Player Lifes.
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -26,6 +27,8 @@ public class MyWorld extends World
         GreenfootImage bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 28));
         bg.setColor(Color.white);        
+        bg.drawString("Lifes: ", 50, 40);
+        displayLife(3);
         bg.drawString("Kills: ", 600, 40); 
         setKill(0);
     }
@@ -42,13 +45,22 @@ public class MyWorld extends World
         return hero;
     }
     
-     public void setKill(int kill)
+    public void setKill(int kill)
     {
         kills += kill; // increment kill      
         GreenfootImage bg = getBackground();                    
         bg.setFont(new Font("SERIF", Font.BOLD, 28));
         bg.setColor(Color.white);
         bg.drawString(" "+kills, 690, 40);
+    }
+    
+    public void displayLife(int life)
+    {
+        lifes = life;
+        GreenfootImage bg = getBackground();                    
+        bg.setFont(new Font("SERIF", Font.BOLD, 28));
+        bg.setColor(Color.white);
+        bg.drawString(" "+lifes, 140, 40);                
     }
 
 }

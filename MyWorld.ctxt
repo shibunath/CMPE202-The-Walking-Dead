@@ -8,4 +8,6 @@ comment2.target=Hero\ getHero()
 comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\n
 comment3.params=kill
 comment3.target=void\ setKill(int)
-numComments=4
+comment4.params=life
+comment4.target=void\ displayLife(int)
+numComments=5
