@@ -25,7 +25,7 @@ public class MyWorld extends World
         hero = new Hero();
         addObject(hero, 400, 300);
         GreenfootImage bg = getBackground();
-        bg.setFont(new Font("SERIF", Font.BOLD, 28));
+        bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);        
         bg.drawString("Lifes: ", 50, 40);
         displayLife(3);
@@ -49,7 +49,7 @@ public class MyWorld extends World
     {
         kills += kill; // increment kill      
         GreenfootImage bg = getBackground();                    
-        bg.setFont(new Font("SERIF", Font.BOLD, 28));
+        bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);
         bg.drawString(" "+kills, 690, 40);
     }
@@ -58,7 +58,7 @@ public class MyWorld extends World
     {
         lifes = life;
         GreenfootImage bg = getBackground();                    
-        bg.setFont(new Font("SERIF", Font.BOLD, 28));
+        bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);
         bg.drawString(" "+lifes, 140, 40);                
     }
