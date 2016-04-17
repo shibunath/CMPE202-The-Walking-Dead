@@ -28,7 +28,7 @@ public class MyWorld extends World
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);        
         bg.drawString("Lifes: ", 50, 40);
-        displayLife(3);
+        addLife(3);
         bg.drawString("Kills: ", 600, 40); 
         setKill(0);
     }
@@ -51,16 +51,25 @@ public class MyWorld extends World
         GreenfootImage bg = getBackground();                    
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);
-        bg.drawString(" "+kills, 690, 40);
+        bg.drawString(""+kills, 675, 40);
     }
     
-    public void displayLife(int life)
+    public void addLife(int life)
     {
-        lifes = life;
+        lifes += life;
         GreenfootImage bg = getBackground();                    
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);
-        bg.drawString(" "+lifes, 140, 40);                
+        bg.drawString(""+lifes, 130, 40);                
+    }
+    
+    public void removeLife(int life)
+    {
+        lifes -= life;
+        GreenfootImage bg = getBackground();                    
+        bg.setFont(new Font("SERIF", Font.BOLD, 24));
+        bg.setColor(Color.white);
+        bg.drawString(""+lifes, 130, 40);                
     }
 
 }
