@@ -10,14 +10,20 @@ import java.awt.Color;
  */
 public class MyWorld extends World
 {
-
-    /**
+ 
+    /** 
      * Constructor for objects of class MyWorld.
      * 
      */
     private Hero hero;// keep a reference of the hero object for the whole game
     private int kills; // Number of Zombies Killed.
     private int lifes; // Number of Player Lifes.
+    
+    private int Count=0;
+    
+     
+    private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
+ 
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -44,6 +50,26 @@ public class MyWorld extends World
         // get the reference of the hero in our World class object
         return hero;
     }
+    
+    
+    public void act()
+    {
+        Count-=3;
+      moveBackground();  
+    }
+    
+    
+    public void moveBackground() {
+    
+        if (Count < -bgImage.getWidth())
+    {
+        Count += bgImage.getWidth();
+    }
+    
+    int t = Count;
+    getBackground().drawImage(bgImage, t, 0);
+    getBackground().drawImage(bgImage, t + bgImage.getWidth(), 0);
+}
     
     public void setKill(int kill)
     {
