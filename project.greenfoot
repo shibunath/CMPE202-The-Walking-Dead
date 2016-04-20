@@ -1,7 +1,10 @@
 #Greenfoot project file
+<<<<<<< HEAD
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
 >>>>>>>=8fca52bed5a6b19bc228563f1e4ce5ff47634ec6
+=======
+>>>>>>> 1fa95a2fa084bd7258046c0f36ecf66b8e13fceb
 class.BulletCountObservor.superclass=Observor
 class.Bullets.superclass=greenfoot.Actor
 class.Default.image=beeper.png
@@ -38,6 +41,15 @@ dependency14.type=UsesDependency
 dependency15.from=Bullets
 dependency15.to=Observor
 dependency15.type=UsesDependency
+<<<<<<< HEAD
+=======
+dependency16.from=MyWorld
+dependency16.to=Bullets
+dependency16.type=UsesDependency
+dependency17.from=Zombie
+dependency17.to=Hero
+dependency17.type=UsesDependency
+>>>>>>> 1fa95a2fa084bd7258046c0f36ecf66b8e13fceb
 dependency2.from=Bullets
 dependency2.to=Hero
 dependency2.type=UsesDependency
@@ -65,6 +77,7 @@ dependency9.type=UsesDependency
 editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
+<<<<<<< HEAD
 editor.fx.0.y=0
 editor.swing.0.height=744
 editor.swing.0.width=1311
@@ -75,6 +88,18 @@ mainWindow.width=1311
 mainWindow.x=55
 mainWindow.y=24
 package.numDependencies=15
+=======
+editor.fx.0.y=23
+editor.swing.0.height=722
+editor.swing.0.width=1281
+editor.swing.0.x=0
+editor.swing.0.y=23
+mainWindow.height=722
+mainWindow.width=1280
+mainWindow.x=0
+mainWindow.y=23
+package.numDependencies=17
+>>>>>>> 1fa95a2fa084bd7258046c0f36ecf66b8e13fceb
 package.numTargets=10
 project.charset=UTF-8
 readme.height=58
@@ -119,7 +144,10 @@ target3.x=70
 target3.y=70
 target4.height=50
 target4.name=Hero
+<<<<<<< HEAD
 target4.naviview.expanded=true
+=======
+>>>>>>> 1fa95a2fa084bd7258046c0f36ecf66b8e13fceb
 target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
@@ -160,7 +188,10 @@ target8.x=10
 target8.y=190
 target9.height=50
 target9.name=MyWorld
+<<<<<<< HEAD
 target9.naviview.expanded=true
+=======
+>>>>>>> 1fa95a2fa084bd7258046c0f36ecf66b8e13fceb
 target9.showInterface=false
 target9.type=ClassTarget
 target9.typeParameters=
