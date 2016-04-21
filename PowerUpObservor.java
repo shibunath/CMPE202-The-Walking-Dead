@@ -27,7 +27,7 @@ public class PowerUpObservor extends GameObservorBase
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public void NotifyObservors(Actor actor)
+    public void Notify(Actor actor)
     {
         // put your code here
         System.out.println("notify observors");
@@ -37,7 +37,7 @@ public class PowerUpObservor extends GameObservorBase
             observor.update();
         }
     }
-   public void attach(PowerUpObservor observor)
+   private void attach(PowerUpObservor observor)
    {
         observors.add(observor);
    }

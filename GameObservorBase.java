@@ -14,6 +14,6 @@ public abstract class GameObservorBase
      */
    protected LifeLine lifeLine;
    protected Bullets bullets;
-   protected abstract void NotifyObservors(Actor actor);
+   protected abstract void Notify(Actor actor);
    
 }
