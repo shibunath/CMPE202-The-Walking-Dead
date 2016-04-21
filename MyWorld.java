@@ -55,7 +55,15 @@ public class MyWorld extends World
     public void act()
     {
         Count-=3;
-        moveBackground();        
+        moveBackground();
+        int x = Greenfoot.getRandomNumber(getWidth());
+        int y = Greenfoot.getRandomNumber(getHeight());
+     
+        Zombie zom = new Zombie();
+        if(x <=2 || y<=2){
+            addObject(zom, x, y);
+        }
+        zom.turnTowards(400, 300);
     }
     
     
