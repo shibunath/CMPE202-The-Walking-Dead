@@ -55,7 +55,7 @@ public class MyWorld extends World
     public void act()
     {
         Count-=3;
-      moveBackground();  
+        moveBackground();        
     }
     
     
