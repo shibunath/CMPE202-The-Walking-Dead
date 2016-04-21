@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public abstract class Observor 
+public abstract class GameObservorBase 
 {
     /**
      * Act - do whatever the BaseObservor wants to do. This method is called whenever
@@ -14,5 +14,6 @@ public abstract class Observor
      */
    protected LifeLine lifeLine;
    protected Bullets bullets;
-   public abstract void update();
+   protected abstract void Notify(Actor actor);
+   
 }

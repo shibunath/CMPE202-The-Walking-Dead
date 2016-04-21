@@ -50,6 +50,7 @@ public class Hero extends Actor
         if (Greenfoot.mouseClicked(null))
         {
             getWorld().addObject(new Default(), getX(), getY());
+           
         }
     }
 
