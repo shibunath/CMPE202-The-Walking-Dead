@@ -53,12 +53,12 @@ public class Bullets extends Actor
         // put your code here
         speed = s;
     }
-
     
     public void act()
     {
         
-    }   
+    }    
+    
     public int GetBulletCount()
     {
         return _bulletCount;

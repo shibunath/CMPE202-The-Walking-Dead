@@ -22,9 +22,23 @@ public class Default extends Bullets
             setSetRot(heroRef.getRotation());
         }
         move(this.getSpeed());
-        if(isAtEdge())
+        
+        if(hit(Zombie.class)|| isAtEdge()){
+            getWorld().removeObject(this);
+        }
+        
+       /* if(isAtEdge())
         {
             myWorldRef.removeObject(this);
+        }*/
+    } 
+    
+    public boolean hit(Class cl){
+        Actor actorZom = getOneIntersectingObject(cl);
+        if(actorZom != null){
+           getWorld().removeObject(actorZom);
+           return true;
         }
-    }    
+        return false;
+    }
 }
