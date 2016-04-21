@@ -24,8 +24,8 @@ public class Zombie extends ZombieActor
     {
         int dx = 0, dy = 0; // the differences in locational coordinates of Zombie and hero
         int rate = 0; // the rate of turn and moving speed
-        MyWorld world = new MyWorld();
-        Actor hero = world.getHero();
+        MyWorld world = (MyWorld)getWorld();
+        Hero hero = world.getHero();
         if (hero != null && hero.getWorld() != null)
         { 
             dx = getX()-hero.getX();
