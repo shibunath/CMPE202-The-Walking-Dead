@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=GameMenuInvoker
+comment0.text=\n\ Write\ a\ description\ of\ class\ GameMenuInvoker\ here.\n\ \n\ @author\ Kushal\n\ @version\ 1.0\ /\ 04-20-2016\n
+comment1.params=command
+comment1.target=void\ setCommand(ICommand)
+comment2.params=
+comment2.target=void\ clickMenuOption()
+numComments=3
