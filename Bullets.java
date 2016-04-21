@@ -18,7 +18,6 @@ public class Bullets extends Actor
     private boolean setRot = false;
     private int speed = 15;
     private int _bulletCount = 0;
-    private List<Observor> observors = new ArrayList<Observor>();
     
     public boolean getSetRot()
     {
@@ -67,16 +66,6 @@ public class Bullets extends Actor
     public void SetBulletCount(int bulletCount)
     {
         _bulletCount = bulletCount;
-    }
-    public void attach(Observor observor)
-    {
-        observors.add(observor);
-    }
-    public void notifyObservors()
-    {
-        for(Observor observor: observors)
-        {
-            observor.update();
-        }
-    }
+    } 
+    
 }
