@@ -1,15 +1,14 @@
+import greenfoot.*; 
 /**
  * Write a description of class LifeLineObservor here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LifeLineObservor extends Observor 
+public class LifeLineObservor extends PowerUpObservor 
 {
     // instance variables - replace the example below with your own
-    private int x;
-    private LifeLine _lifeline;
-    private Bullets _bullets;
+      private LifeLine _lifeline;
 
     /**
      * Constructor for objects of class LifeLineObservor
@@ -17,7 +16,7 @@ public class LifeLineObservor extends Observor
     public LifeLineObservor(LifeLine life)
     {
         _lifeline = life;
-        _lifeline.attach(this);
+
     }
 
     /**
@@ -26,10 +25,11 @@ public class LifeLineObservor extends Observor
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-   @Override
    public void update() 
     {
         // put your code here
         System.out.println("updated life"+_lifeline.GetLifeLine());
     }
+    
+  
 }

@@ -9,37 +9,30 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LifeLine extends Hero
+public class LifeLine extends BoosterPack
 {
-    private List<Observor> observors = new ArrayList<Observor>();
+    
+    public LifeLine()
+    {
+    }
     private int _lifeline = 0;
     /**
-     * Act - do whatever the LifeLineCount wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Getter for lifeline
+     * 
      */
-    public void act() 
-    {
-        // Add your action code here.
-    }  
-    public int GetLifeLine()
+      public int GetLifeLine()
     {
         return _lifeline;
     }
     
+      /**
+     * Setter for lifeline
+     * 
+     */
     public void SetLifeLine(int lifeline)
     {
          _lifeline=lifeline;
-         notifyAllObservors();
+       
     }
-    public void attach(Observor observor)
-    {
-        observors.add(observor);
-    }
-    public void notifyAllObservors()
-    {
-        for(Observor observor: observors)
-        {
-            observor.update();
-        }
-    }
+    
 }
