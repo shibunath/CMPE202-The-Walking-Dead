@@ -19,6 +19,7 @@ public class Hero extends Actor
         shoot();
     }
     
+    
     /**
      * moveAndAim - use keyboard "w, a, s, and d" to control movement; use mouse to aim
      *
@@ -33,8 +34,33 @@ public class Hero extends Actor
         }
         int dx = 0, dy = 0; // 2D axis coordinates
         int moveSpeed = 2;
-        if (Greenfoot.isKeyDown("a")) dx--;
-        if (Greenfoot.isKeyDown("d")) dx++;
+        if (Greenfoot.isKeyDown("a")) 
+        {
+       MyWorld ref=(MyWorld)getWorld();
+            dx--;
+            ref.add();
+            setLocation(getX() + moveSpeed*dx, getY() + moveSpeed*dy);
+            if(ref.checkCount())
+            {
+             
+            ref.moveIt();
+        }
+            return;
+    }
+ 
+        if (Greenfoot.isKeyDown("d")) 
+        { 
+            MyWorld ref=(MyWorld)getWorld();
+            dx++;
+            ref.subtract();
+            setLocation(getX() + moveSpeed*dx, getY() + moveSpeed*dy);
+            if(ref.checkCount())
+            {
+            
+              ref.moveIt();
+            }
+              return;
+        }
         if (Greenfoot.isKeyDown("w")) dy--;
         if (Greenfoot.isKeyDown("s")) dy++;
         setLocation(getX() + moveSpeed*dx, getY() + moveSpeed*dy);
