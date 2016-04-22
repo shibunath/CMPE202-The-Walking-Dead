@@ -70,8 +70,18 @@ public class MyWorld extends World
     
     public void moveIt()
     {
-        
         moveBackground();
+    }
+    
+    public void persistText()
+    {
+        GreenfootImage bg = getBackground();
+        bg.setFont(new Font("SERIF", Font.BOLD, 24));
+        bg.setColor(Color.white);        
+        bg.drawString("Lifes: ", 50, 40);
+        bg.drawString(""+lifes, 130, 40);     
+        bg.drawString("Kills: ", 600, 40); 
+        bg.drawString(""+kills, 675, 40);
     }
     
     
@@ -80,7 +90,7 @@ public class MyWorld extends World
        
         int x = Greenfoot.getRandomNumber(getWidth());
         int y = Greenfoot.getRandomNumber(getHeight());
-     
+    
         Zombie zom = new Zombie();
         if(x <=2 || y<=2){
             addObject(zom, x, y);
@@ -89,16 +99,21 @@ public class MyWorld extends World
     }
     
     
-    public void moveBackground() {
+    public void moveBackground() 
+    {
     
-        if (Count < -bgImage.getWidth())
+    if (Count < -bgImage.getWidth())
     {
         Count += bgImage.getWidth();
     }
     
     int t = Count;
+   
     getBackground().drawImage(bgImage, t, 0);
+     
     getBackground().drawImage(bgImage, t + bgImage.getWidth(), 0);
+    persistText();
+  
 }
     
     public void setKill(int kill)
