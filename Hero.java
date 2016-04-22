@@ -36,15 +36,17 @@ public class Hero extends Actor
         int moveSpeed = 2;
         if (Greenfoot.isKeyDown("a")) 
         {
-       MyWorld ref=(MyWorld)getWorld();
+            MyWorld ref=(MyWorld)getWorld();
             dx--;
             ref.add();
+            
             setLocation(getX() + moveSpeed*dx, getY() + moveSpeed*dy);
+            
             if(ref.checkCount())
-            {
-             
+            {  
             ref.moveIt();
-        }
+            }
+            
             return;
     }
  
@@ -56,11 +58,11 @@ public class Hero extends Actor
             setLocation(getX() + moveSpeed*dx, getY() + moveSpeed*dy);
             if(ref.checkCount())
             {
-            
               ref.moveIt();
             }
               return;
         }
+        
         if (Greenfoot.isKeyDown("w")) dy--;
         if (Greenfoot.isKeyDown("s")) dy++;
         setLocation(getX() + moveSpeed*dx, getY() + moveSpeed*dy);
