@@ -39,6 +39,13 @@ public class MyWorld extends World
         setKill(0);
     }
     
+    public boolean checkCount()
+    {
+        if(Count>=-120 && Count<=120)
+        return true;
+        
+        return false;
+    }
     /**
      * An example of a method - replace this comment with your own
      *
@@ -51,11 +58,26 @@ public class MyWorld extends World
         return hero;
     }
     
+    public void subtract()
+    {
+        Count-=3;
+    }
+    
+    public void add()
+    {
+        Count+=3;
+    }
+    
+    public void moveIt()
+    {
+        
+        moveBackground();
+    }
+    
     
     public void act()
     {
-        Count-=3;
-        moveBackground();
+       
         int x = Greenfoot.getRandomNumber(getWidth());
         int y = Greenfoot.getRandomNumber(getHeight());
      
