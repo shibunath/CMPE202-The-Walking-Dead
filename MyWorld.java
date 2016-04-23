@@ -49,7 +49,7 @@ public class MyWorld extends World
         boosterpack.Image(boosterImg);
         //buletbooster.Image(bulletImg);
         addObject(boosterpack, 640, 70);
-        //addObject(buletbooster,632,72);
+        //addObject(buletbooster,632,72); 
     }
     
     public boolean checkCount()
