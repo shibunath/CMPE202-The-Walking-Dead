@@ -6,11 +6,13 @@
  */
 public class Reload implements WeaponState 
 {
-    HeroBackpack hbp;
+    Arsenal hbp;
+    Hero h;
     
-    public Reload(HeroBackpack bpRef)
+    public Reload(Arsenal bpRef, Hero hRef)
     {
         hbp = bpRef;
+        h = hRef;
     }
     
     @Override

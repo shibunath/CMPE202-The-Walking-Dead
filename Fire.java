@@ -6,11 +6,13 @@
  */
 public class Fire implements WeaponState 
 {
-    HeroBackpack hbp;
+    Arsenal hbp;
+    Hero h;
     
-    public Fire(HeroBackpack bpRef)
+    public Fire(Arsenal bpRef, Hero hRef)
     {
         hbp = bpRef; 
+        h = hRef;
     }
     
     @Override

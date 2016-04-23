@@ -6,11 +6,13 @@
  */
 public class NoAmmo implements WeaponState 
 {
-    HeroBackpack hbp;
+    Arsenal hbp;
+    Hero h;
     
-    public NoAmmo(HeroBackpack bpRef)
+    public NoAmmo(Arsenal bpRef, Hero hRef)
     {
         hbp = bpRef;
+        h = hRef;
     }
     
     @Override

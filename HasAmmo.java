@@ -6,11 +6,13 @@
  */
 public class HasAmmo implements WeaponState 
 {
-    HeroBackpack hbp;
+    Arsenal hbp;
+    Hero h;
     
-    public HasAmmo(HeroBackpack bpRef)
+    public HasAmmo(Arsenal bpRef, Hero hRef)
     {
         hbp = bpRef;
+        h = hRef;
     }
     
     @Override
