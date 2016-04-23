@@ -5,10 +5,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * @author (your name) 
  * @version (a version number or a date)
- */
+ */ 
 public class BoosterPack extends Actor
 {
     
+    GreenfootImage i;
     protected LifeLine _lifeLine;
     protected BulletBooster _bulletbooster;
     /**
@@ -20,9 +21,13 @@ public class BoosterPack extends Actor
         // Add your action code here.
     }    
     
+    public void Image(GreenfootImage s){
+        i = s; 
+        setImage(i);
+    }
     public void UpdateBoosterLifeLine(LifeLine lifeLine)
     {
-        this._lifeLine = lifeLine;
+        this._lifeLine = lifeLine; 
         
     }
     

@@ -23,7 +23,10 @@ public class MyWorld extends World
     
      
     private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
- 
+    private GreenfootImage boosterImg;
+    private GreenfootImage bulletImg;
+    private BoosterPack boosterpack;
+    private BulletBooster buletbooster;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -37,6 +40,14 @@ public class MyWorld extends World
         addLife(3);
         bg.drawString("Kills: ", 600, 40); 
         setKill(0);
+        boosterImg = new GreenfootImage("Boosters : " +0 +"\n Bullets : " +0, 20, Color.WHITE, Color.BLACK);
+        bulletImg =new GreenfootImage("bullet.jpg");
+        boosterpack = new BoosterPack();
+        buletbooster = new BulletBooster();
+        boosterpack.Image(boosterImg);
+        buletbooster.Image(bulletImg);
+        addObject(boosterpack, 640, 70);
+        //addObject(buletbooster,632,72);
     }
     
     public boolean checkCount()

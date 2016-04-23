@@ -11,11 +11,18 @@ import java.util.List;
  */
 public class LifeLine extends BoosterPack
 {
-    
+    GreenfootImage i;
     public LifeLine()
     {
     }
     private int _lifeline = 0;
+    
+    
+     public void Image(GreenfootImage s){
+        i = s; 
+        setImage(i);
+    }
+    
     /**
      * Getter for lifeline
      * 
