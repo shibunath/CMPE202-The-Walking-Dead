@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Arsenal
 comment0.text=\n\ Write\ a\ description\ of\ class\ Arsenal\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=Arsenal()
+comment1.params=heroRef
+comment1.target=Arsenal(Hero)
 comment10.params=
 comment10.target=WeaponState\ getReloadState()
 comment11.params=

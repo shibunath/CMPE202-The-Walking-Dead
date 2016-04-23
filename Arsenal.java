@@ -15,14 +15,11 @@ public class Arsenal extends Actor
     
     WeaponState backpackState;
     
-    MyWorld myWorldRef = (MyWorld)getWorld();
-    Hero heroRef = myWorldRef.getHero();
-    
     int ammo = 50;
     int clip = 3;
     boolean trigger = false;
     
-    public Arsenal()
+    public Arsenal(Hero heroRef)
     {
         hasAmmo = new HasAmmo(this, heroRef);
         noAmmo = new NoAmmo(this, heroRef);
