@@ -10,16 +10,14 @@ public class PowerUpObservor extends GameObservorBase
 {
     // instance variables - replace the example below with your own
     private int x;
-     private List<PowerUpObservor> observors = new ArrayList<PowerUpObservor>();
+    private List<PowerUpObservor> observors = new ArrayList<PowerUpObservor>();
     /**
      * Constructor for objects of class PowerUpObservor
      */
     public PowerUpObservor()
     {
-        this.attach(new LifeLineObservor(new LifeLine()));
-        this.attach(new BulletCountObservor(new BulletBooster()));
-        
-    }
+
+    } 
 
     /**
      * An example of a method - replace this comment with your own
@@ -30,19 +28,22 @@ public class PowerUpObservor extends GameObservorBase
     public void Notify(Actor actor)
     {
         // put your code here
-        System.out.println("notify observors");
+       //System.out.println("notify observors");
+             
         //add logic based on actor
         for(PowerUpObservor observor: observors)
         {
-            observor.update();
+            observor.update(actor);
         }
+       
     }
-   private void attach(PowerUpObservor observor)
+   public void attach(PowerUpObservor observor)
    {
         observors.add(observor);
    }
-   public void update()
+   public void update(Actor actor)
    {
        
    }
 }
+ 

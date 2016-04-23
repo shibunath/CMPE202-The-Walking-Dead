@@ -23,7 +23,11 @@ public class MyWorld extends World
     
      
     private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
- 
+    private GreenfootImage boosterImg;
+    private GreenfootImage bulletImg;
+    private BoosterPack boosterpack;
+    private BulletBooster buletbooster;
+    private LifeLine lifeLineBooster;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -37,8 +41,24 @@ public class MyWorld extends World
         addLife(3);
         bg.drawString("Kills: ", 600, 40); 
         setKill(0);
+        boosterpack = new BoosterPack();
+        buletbooster = new BulletBooster();
+        lifeLineBooster = new LifeLine();
+        boosterImg = new GreenfootImage("BulletBoost : " +0 +"\n LifeBoost : " +0, 20, Color.WHITE, Color.BLACK);
+        //bulletImg =new GreenfootImage("bullet.jpg");
+        boosterpack.Image(boosterImg);
+        //buletbooster.Image(bulletImg);
+        addObject(boosterpack, 640, 70);
+        //addObject(buletbooster,632,72); 
     }
     
+    public boolean checkCount()
+    {
+        if(Count>=-120 && Count<=120)
+        return true;
+        
+        return false;
+    }
     /**
      * An example of a method - replace this comment with your own
      *
@@ -51,14 +71,39 @@ public class MyWorld extends World
         return hero;
     }
     
+    public void subtract()
+    {
+        Count-=3;
+    }
+    
+    public void add()
+    {
+        Count+=3;
+    }
+    
+    public void moveIt()
+    {
+        moveBackground();
+    }
+    
+    public void persistText()
+    {
+        GreenfootImage bg = getBackground();
+        bg.setFont(new Font("SERIF", Font.BOLD, 24));
+        bg.setColor(Color.white);        
+        bg.drawString("Lifes: ", 50, 40);
+        bg.drawString(""+lifes, 130, 40);     
+        bg.drawString("Kills: ", 600, 40); 
+        bg.drawString(""+kills, 675, 40);
+    }
+    
     
     public void act()
     {
-        Count-=3;
-        moveBackground();
+       
         int x = Greenfoot.getRandomNumber(getWidth());
         int y = Greenfoot.getRandomNumber(getHeight());
-     
+    
         Zombie zom = new Zombie();
         if(x <=2 || y<=2){
             addObject(zom, x, y);
@@ -67,16 +112,21 @@ public class MyWorld extends World
     }
     
     
-    public void moveBackground() {
+    public void moveBackground() 
+    {
     
-        if (Count < -bgImage.getWidth())
+    if (Count < -bgImage.getWidth())
     {
         Count += bgImage.getWidth();
     }
     
     int t = Count;
+   
     getBackground().drawImage(bgImage, t, 0);
+     
     getBackground().drawImage(bgImage, t + bgImage.getWidth(), 0);
+    persistText();
+  
 }
     
     public void setKill(int kill)
@@ -104,6 +154,13 @@ public class MyWorld extends World
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);
         bg.drawString(""+lifes, 130, 40);                
+    }
+    
+     public void UpdateWorldBoostCounter(int bulletCount, int lifeCount)
+    {
+        boosterImg = new GreenfootImage("BulletBoost : " +bulletCount +"\n LifeBoost : " +lifeCount, 20, Color.WHITE, Color.BLACK);
+        boosterpack.Image(boosterImg);
+        addObject(boosterpack, 640, 70); 
     }
 
 }

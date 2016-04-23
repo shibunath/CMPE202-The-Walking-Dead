@@ -8,14 +8,14 @@ import greenfoot.*;
 public class LifeLineObservor extends PowerUpObservor 
 {
     // instance variables - replace the example below with your own
-      private LifeLine _lifeline;
+    LifeLine _lifeline;
 
     /**
      * Constructor for objects of class LifeLineObservor
      */
-    public LifeLineObservor(LifeLine life)
+    public LifeLineObservor()
     {
-        _lifeline = life;
+    _lifeline = new LifeLine();
 
     }
 
@@ -25,11 +25,14 @@ public class LifeLineObservor extends PowerUpObservor
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-   public void update() 
+   public void update(Actor actor) 
     {
         // put your code here
-        System.out.println("updated life"+_lifeline.GetLifeLine());
+        Integer currentCount = LifeLine.GetLifeLine();
+        _lifeline.SetLifeLine(currentCount+1);
+        //System.out.println("life counter"+LifeLine.GetLifeLine());
     }
     
   
 }
+ 

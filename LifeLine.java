@@ -10,29 +10,48 @@ import java.util.List;
  * @version (a version number or a date)
  */
 public class LifeLine extends BoosterPack
-{
-    
+{ 
+    GreenfootImage i;
     public LifeLine()
     {
     }
-    private int _lifeline = 0;
+    private static int _lifelineCount = 0;
+    
+    
+     public void Image(GreenfootImage s){
+        i = s; 
+        setImage(i);
+    }
+    
     /**
      * Getter for lifeline
      * 
      */
-      public int GetLifeLine()
+      public static int GetLifeLine()
     {
-        return _lifeline;
+        return _lifelineCount;  
     }
     
       /**
      * Setter for lifeline
      * 
      */
-    public void SetLifeLine(int lifeline)
+    public void SetLifeLine(int lifelineCount)
     {
-         _lifeline=lifeline;
-       
+         _lifelineCount=lifelineCount;
+         UpdateBoosterLifeLine(_lifelineCount);
+        
+        
     }
     
+      public void act() 
+    {
+        // Add your action code here.
+        MyWorld world=(MyWorld)getWorld();
+        Hero hero = world.getHero(); 
+        
+    }    
+      
+    
 }
+ 

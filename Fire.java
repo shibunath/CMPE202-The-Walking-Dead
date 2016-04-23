@@ -10,7 +10,7 @@ public class Fire implements WeaponState
     
     public Fire(HeroBackpack bpRef)
     {
-        hbp = bpRef;
+        hbp = bpRef; 
     }
     
     @Override

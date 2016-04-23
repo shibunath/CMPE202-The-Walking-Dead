@@ -1,45 +1,56 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
+/** 
  * Write a description of class BoosterPack here.
  * 
  * @author (your name) 
- * @version (a version number or a date)
- */
+ * @version (a ver sion number or a date)
+ */ 
 public class BoosterPack extends Actor
 {
     
+    GreenfootImage i;
     protected LifeLine _lifeLine;
-    protected BulletBooster _bulletbooster;
+    protected static int lifeLineCount = 0;
+    protected static int bulletBoosterCount = 0;
     /**
      * Act - do whatever the BoosterPack wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+   
+    public void Image(GreenfootImage s){
+        i = s; 
+        setImage(i); 
+    }
+    
     public void act() 
     {
         // Add your action code here.
-    }    
-    
-    public void UpdateBoosterLifeLine(LifeLine lifeLine)
+        MyWorld world=(MyWorld)getWorld();
+        world.UpdateWorldBoostCounter(lifeLineCount,bulletBoosterCount); 
+        
+    }   
+    public void UpdateBoosterLifeLine(int count)
     {
-        this._lifeLine = lifeLine;
+         this.lifeLineCount = count;  
         
     }
     
-    public void UpdateBoosterBullets(BulletBooster bulletbooster)
-    {
-        this._bulletbooster = bulletbooster;
-        
-    }
     
     public LifeLine GetBoosterLifeLine()
     {
         return _lifeLine;
         
     }
-    public BulletBooster GetBulletBooster()
+    public static int GetBulletBoosterCount()
     {
-        return _bulletbooster;
+        return bulletBoosterCount;
+        
+    }
+     public void UpdateBulletBoosterCount(int count)
+    {
+         this.bulletBoosterCount = count; 
         
     }
 }
+ 

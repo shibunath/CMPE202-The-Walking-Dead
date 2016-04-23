@@ -18,7 +18,7 @@ public class Bullets extends Actor
     private boolean setRot = false;
     private int speed = 15;
     private int _bulletCount = 0;
-    
+    private PowerUpObservor _powerUpObserver = new PowerUpObservor();
     public boolean getSetRot()
     {
         return setRot;
@@ -67,5 +67,13 @@ public class Bullets extends Actor
     {
         _bulletCount = bulletCount;
     } 
+    
+    public void Notify(Actor zombie)
+    {
+        _powerUpObserver.attach(new LifeLineObservor());
+        _powerUpObserver.attach(new BulletCountObservor());
+        _powerUpObserver.Notify(zombie);
+        
+    }
     
 }
