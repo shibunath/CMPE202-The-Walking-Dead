@@ -27,6 +27,7 @@ public class MyWorld extends World
     private GreenfootImage bulletImg;
     private BoosterPack boosterpack;
     private BulletBooster buletbooster;
+    private LifeLine lifeLineBooster;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -40,12 +41,13 @@ public class MyWorld extends World
         addLife(3);
         bg.drawString("Kills: ", 600, 40); 
         setKill(0);
-        boosterImg = new GreenfootImage("Boosters : " +0 +"\n Bullets : " +0, 20, Color.WHITE, Color.BLACK);
-        bulletImg =new GreenfootImage("bullet.jpg");
         boosterpack = new BoosterPack();
         buletbooster = new BulletBooster();
+        lifeLineBooster = new LifeLine();
+        boosterImg = new GreenfootImage("BulletBoost : " +0 +"\n LifeBoost : " +0, 20, Color.WHITE, Color.BLACK);
+        //bulletImg =new GreenfootImage("bullet.jpg");
         boosterpack.Image(boosterImg);
-        buletbooster.Image(bulletImg);
+        //buletbooster.Image(bulletImg);
         addObject(boosterpack, 640, 70);
         //addObject(buletbooster,632,72);
     }
@@ -152,6 +154,13 @@ public class MyWorld extends World
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);
         bg.drawString(""+lifes, 130, 40);                
+    }
+    
+     public void UpdateWorldBoostCounter(int bulletCount, int lifeCount)
+    {
+        boosterImg = new GreenfootImage("BulletBoost : " +bulletCount +"\n LifeBoost : " +lifeCount, 20, Color.WHITE, Color.BLACK);
+        boosterpack.Image(boosterImg);
+        addObject(boosterpack, 640, 70); 
     }
 
 }

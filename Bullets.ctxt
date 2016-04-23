@@ -18,4 +18,6 @@ comment6.params=
 comment6.target=int\ GetBulletCount()
 comment7.params=bulletCount
 comment7.target=void\ SetBulletCount(int)
-numComments=8
+comment8.params=zombie
+comment8.target=void\ Notify(greenfoot.Actor)
+numComments=9

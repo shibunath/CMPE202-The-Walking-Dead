@@ -9,14 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BulletBooster extends BoosterPack
 {
     GreenfootImage i;
-    /**
+    /** 
      * Act - do whatever the BulletBooster wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public BulletBooster()
     {
     }
-    private int _bulletBoosterCount = 0;
+    private static int _bulletBoosterCount = 0;
+    
+   
     
     public void Image(GreenfootImage s){
         i = s; 
@@ -24,13 +26,14 @@ public class BulletBooster extends BoosterPack
     }
     /**
      * Getter for lifeline
-     * 
-     */
-      public int GetBulletBoosterCount()
+     *  
+     */ 
+      public static int GetBulletBoosterCount()
     {
-        return _bulletBoosterCount;
+        return _bulletBoosterCount; 
     }
-    
+  
+       
       /**
      * Setter for BulletBooster
      * 
@@ -38,6 +41,10 @@ public class BulletBooster extends BoosterPack
     public void SetBulletBoosterCount(int bulletBoosterCount)
     {
          _bulletBoosterCount=bulletBoosterCount;
+         UpdateBulletBoosterCount(_bulletBoosterCount); 
+        // UpdateBoosterBullets(_bulletBoosterCount, 0);
+    
        
     }
 }
+ 

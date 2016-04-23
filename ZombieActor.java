@@ -65,7 +65,7 @@ public class ZombieActor extends Actor
     
     public void move(int amount)
     {
-        move(amount, zR);
+        move(amount, zR); 
     //    rotationalBounce = true;
     }    
     

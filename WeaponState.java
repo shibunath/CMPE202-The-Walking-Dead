@@ -1,4 +1,4 @@
-public interface WeaponState
+ public interface WeaponState
 {
     public void fire(); // potentially decrease ammo
     public void addAmmo(int ammo);

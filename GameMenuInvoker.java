@@ -16,5 +16,5 @@ public class GameMenuInvoker
     public void clickMenuOption() {
         command.execute();
     }  
-   
+    
 }

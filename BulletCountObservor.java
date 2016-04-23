@@ -13,9 +13,9 @@ public class BulletCountObservor extends PowerUpObservor
     /**
      * Constructor for objects of class BulletCountObservor
      */
-    public BulletCountObservor(BulletBooster bullets)
+    public BulletCountObservor()
     {
-        _bullets = bullets;
+        _bullets = new BulletBooster();
 
     }
 
@@ -25,11 +25,15 @@ public class BulletCountObservor extends PowerUpObservor
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-   public void update() 
-    {
+   public void update(Actor actor) 
+    { 
         // put your code here
-        System.out.println("updated bullets"+_bullets.GetBulletBoosterCount());
+        Integer currentCount = BulletBooster.GetBulletBoosterCount();
+        _bullets.SetBulletBoosterCount(currentCount+1);
+        //System.out.println("bullet counter"+BulletBooster.GetBulletBoosterCount());
+      
     }
     
    
 }
+ 
