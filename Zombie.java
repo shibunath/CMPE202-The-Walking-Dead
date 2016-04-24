@@ -8,15 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Zombie extends ZombieActor
 {   
-    int dt = 0; // Zombie turn rate
+    int dt = 0; // Zombie turn rate   
     
     public Zombie()
     {
-        GreenfootImage image = new GreenfootImage(30, 30);
-        image.fillOval(0, 0, 30, 30);
-        image.setColor(new java.awt.Color(224, 240, 255));
-        image.fillOval(7, 7, 16, 16);
-        setImage(image);
+        
     }
 
     
@@ -30,7 +26,7 @@ public class Zombie extends ZombieActor
         { 
             dx = getX()-hero.getX();
             dy = getY()-hero.getY();
-            rate = 300-(int)Math.abs(dx)-(int)Math.abs(dy);
+            rate = 800-(int)Math.abs(dx)-(int)Math.abs(dy);
         }
         if (rate > 100)
         { // chase
@@ -38,7 +34,7 @@ public class Zombie extends ZombieActor
             int anglet = (angleDiff+360+180)%360-180; // range: -180 to 179 (sign is turn direction)
                
             turn(rate*(int)Math.signum(anglet)); 
-            move(rate/4, getZR());
+            move(rate/2, getZR());
         }
         else
         { // Zombie wander           
@@ -48,7 +44,8 @@ public class Zombie extends ZombieActor
             if (dt > 40) dt = 40;
             // turn and move
             turn(dt);
-            move(50);
-        }
+            move(200);
+        }       
+        
     }
 }

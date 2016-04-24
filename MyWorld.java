@@ -102,8 +102,7 @@ public class MyWorld extends World
     {
        
         int x = Greenfoot.getRandomNumber(getWidth());
-        int y = Greenfoot.getRandomNumber(getHeight());
-    
+        int y = Greenfoot.getRandomNumber(getHeight());       
         Zombie zom = new Zombie();
         if(x <=2 || y<=2){
             addObject(zom, x, y);
