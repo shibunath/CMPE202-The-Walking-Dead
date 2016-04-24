@@ -15,7 +15,6 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-  
     private Hero hero;// keep a reference of the hero object for the whole game
     private int kills; // Number of Zombies Killed.
     private int lifes; // Number of Player Lifes.
@@ -32,7 +31,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1);     
+        super(800, 600, 1);
         hero = new Hero();
         addObject(hero, 400, 300);
         GreenfootImage bg = getBackground();
@@ -55,14 +54,20 @@ public class MyWorld extends World
     
     public boolean checkCount()
     {
-        if(Count>=-120 && Count<=120)
+        if(Count>=-228 && Count<=228)
         return true;
         
         return false;
     }
-    
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y
+     */
     public Hero getHero()
     {
+        // get the reference of the hero in our World class object
         return hero;
     }
     
@@ -86,7 +91,7 @@ public class MyWorld extends World
         GreenfootImage bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);        
-        bg.drawString("Lives: ", 50, 40);
+        bg.drawString("Lifes: ", 50, 40);
         bg.drawString(""+lifes, 130, 40);     
         bg.drawString("Kills: ", 600, 40); 
         bg.drawString(""+kills, 675, 40);
@@ -95,8 +100,7 @@ public class MyWorld extends World
     
     public void act()
     {
-       GameMenu.gamesound.playLoop();
-       GameMenu.gamesound.setVolume(40);  
+       
         int x = Greenfoot.getRandomNumber(getWidth());
         int y = Greenfoot.getRandomNumber(getHeight());       
         Zombie zom = new Zombie();
@@ -116,13 +120,12 @@ public class MyWorld extends World
     }
     
     int t = Count;
-   
-    getBackground().drawImage(bgImage, t, 0);
-     
+   getBackground().drawImage(bgImage, t-bgImage.getWidth(), 0); 
+    getBackground().drawImage(bgImage, t, 0); 
     getBackground().drawImage(bgImage, t + bgImage.getWidth(), 0);
     persistText();
   
-    }
+}
     
     public void setKill(int kill)
     {
@@ -156,11 +159,6 @@ public class MyWorld extends World
         boosterImg = new GreenfootImage("BulletBoost : " +bulletCount +"\n LifeBoost : " +lifeCount, 20, Color.WHITE, Color.BLACK);
         boosterpack.Image(boosterImg);
         addObject(boosterpack, 640, 70); 
-    }
-    
-    public void stopped()
-    {
-        GameMenu.gamesound.pause();        
     }
 
 }
