@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GameMenu extends World
 {
     private StartGame startgame = new StartGame();
+    static GreenfootSound menu_music = new GreenfootSound("menu.wav");
     //GreenfootSound click = new GreenfootSound("click.wav");
     
     /**
@@ -31,10 +32,15 @@ public class GameMenu extends World
     }
     
     public void act()
-    {
-        /*if ( Greenfoot.mouseClicked(startgame))
+    {   if(menu_music.isPlaying() == false)
+         {
+             menu_music.playLoop();
+             menu_music.setVolume(100);
+         }              
+        
+        if ( Greenfoot.mouseClicked(startgame))
         {
-            click.play();
-        }*/
+            menu_music.stop();
+        }
     }
 }
