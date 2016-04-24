@@ -10,6 +10,7 @@ public class GameMenu extends World
 {
     private StartGame startgame = new StartGame();
     static GreenfootSound menu_music = new GreenfootSound("menu.wav");
+      static GreenfootSound gamesound = new GreenfootSound("gameSound.wav");
     //GreenfootSound click = new GreenfootSound("click.wav");
     
     /**
@@ -41,6 +42,19 @@ public class GameMenu extends World
         if ( Greenfoot.mouseClicked(startgame))
         {
             menu_music.stop();
-        }
+            gamesound.playLoop();
+            gamesound.setVolume(40);
+            
+        }      
     }
+    
+    public void stopped()
+    {
+        gamesound.pause();
+        menu_music.pause();
+    }
+    
+    
+    
+    
 }
