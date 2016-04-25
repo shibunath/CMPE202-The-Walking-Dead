@@ -9,10 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GameMenu extends World
 {
     private StartGame startgame = new StartGame();
+    private GameName gameName = new GameName();
     static GreenfootSound menu_music = new GreenfootSound("menu.wav");
-      static GreenfootSound gamesound = new GreenfootSound("gameSound.wav");
-    //GreenfootSound click = new GreenfootSound("click.wav");
-    
+    static GreenfootSound gamesound = new GreenfootSound("gameSound.wav");
+    //GreenfootSound click = new GreenfootSound("click.wav");     
     /**
      * Constructor for objects of class GameMenu.
      * 
@@ -20,20 +20,22 @@ public class GameMenu extends World
     public GameMenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1); 
-        GreenfootImage gameMenuBackground = new GreenfootImage("menu_background.png");
-        gameMenuBackground.scale(800,600);
+        super(1000, 600, 1); 
+        GreenfootImage gameMenuBackground = new GreenfootImage("menu_background.jpg");
+        gameMenuBackground.scale(1000,600);
         setBackground(gameMenuBackground);     
         prepare();
     }
     
     private void prepare()
     {
-        addObject(startgame,300,300);
+        addObject(startgame,250,320);
+        addObject(gameName,250,70);   
     }
     
     public void act()
-    {   if(menu_music.isPlaying() == false)
+    {      
+        if(menu_music.isPlaying() == false)
          {
              menu_music.playLoop();
              menu_music.setVolume(100);
