@@ -13,13 +13,10 @@ public class StartGame extends Actor
     private GameMenuInvoker menuInvoker = new GameMenuInvoker();
     private MyWorld myWorld = new MyWorld();
     private ICommand myGame = new MyGameCommand(myWorld);
-//    GifImage gif = new GifImage("start.gif");
     public StartGame ()
     {        
         GreenfootImage start = new GreenfootImage("Start.png");            
-        setImage(start);
-        //setImage(gif.getCurrentImage());
-        
+        setImage(start);               
     }
     
     public void act() 

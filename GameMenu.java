@@ -10,6 +10,9 @@ public class GameMenu extends World
 {
     private StartGame startgame = new StartGame();
     private GameName gameName = new GameName();
+    private Controls controls = new Controls();
+    private Exit exit = new Exit();
+    private Instructions instructions = new Instructions();
     static GreenfootSound menu_music = new GreenfootSound("menu.wav");
     static GreenfootSound gamesound = new GreenfootSound("gameSound.wav");
     //GreenfootSound click = new GreenfootSound("click.wav");     
@@ -31,6 +34,9 @@ public class GameMenu extends World
     {
         addObject(startgame,250,320);
         addObject(gameName,250,70);   
+        addObject(controls, 250, 380);
+        addObject(instructions, 250, 440);
+        addObject(exit, 250, 500);
     }
     
     public void act()
@@ -45,7 +51,7 @@ public class GameMenu extends World
         {
             menu_music.stop();
             gamesound.playLoop();
-            gamesound.setVolume(40);
+            gamesound.setVolume(60);
             
         }      
     }
