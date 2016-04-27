@@ -100,7 +100,8 @@ public class MyWorld extends World
     
     public void act()
     {
-       
+        GameMenu.gamesound.playLoop();
+        GameMenu.gamesound.setVolume(60);
         int x = Greenfoot.getRandomNumber(getWidth());
         int y = Greenfoot.getRandomNumber(getHeight());       
         Zombie zom = new Zombie();
@@ -159,6 +160,11 @@ public class MyWorld extends World
         boosterImg = new GreenfootImage("BulletBoost : " +bulletCount +"\n LifeBoost : " +lifeCount, 20, Color.WHITE, Color.BLACK);
         boosterpack.Image(boosterImg);
         addObject(boosterpack, 640, 70); 
+    }
+    
+    public void stopped()
+    {
+        GameMenu.gamesound.pause();
     }
 
 }
