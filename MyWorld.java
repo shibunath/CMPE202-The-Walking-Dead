@@ -49,9 +49,49 @@ public class MyWorld extends World
         boosterpack.Image(boosterImg);
         //buletbooster.Image(bulletImg);
         addObject(boosterpack, 640, 70);
-        //addObject(buletbooster,632,72); 
+        addBulletBoosterToWorld();
+        //addLifeBoosterToWorld();
     }
     
+    public void addBulletBoosterToWorld()
+    {
+        int xcord = 640;
+        int ycord = 500;
+        buletbooster = new BulletBooster();
+        addObject(buletbooster,640,600); 
+        for (int i=1 ; i < 5 ; i++)
+         {
+                GreenfootImage bulletImg =new GreenfootImage("ammunition-icon.png");
+                buletbooster = new BulletBooster();
+                buletbooster.Image(bulletImg);
+                xcord=getRandomNumber(50,1000);
+                ycord=getRandomNumber(0,1000);
+                addObject(buletbooster,xcord,ycord); 
+        
+         }        
+    }
+    
+     public void addLifeBoosterToWorld()
+    {
+        int xcord = 640;
+        int ycord = 500;
+        for (int i=0 ; i < 3 ; i++)
+        {
+                GreenfootImage lifelineimg =new GreenfootImage("powerup.png");
+                lifeLineBooster = new LifeLine();
+                lifeLineBooster.Image(lifelineimg);
+                xcord=getRandomNumber(50,1000);
+                ycord=getRandomNumber(0,1000);
+                addObject(lifeLineBooster,xcord,ycord); 
+        
+        }        
+    }
+    
+    public int getRandomNumber(int start,int end)
+    {
+           int normal = Greenfoot.getRandomNumber(end-start+1);
+           return normal+start;
+    }
     public boolean checkCount()
     {
         if(Count>=-228 && Count<=228)
