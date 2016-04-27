@@ -22,7 +22,7 @@ public class PulledTrigger extends Actor implements WeaponState
     
     public PulledTrigger(Arsenal bpRef, Hero hRef)
     {
-        hbp = bpRef; 
+        hbp = bpRef;
         h = hRef;
     }
     
@@ -33,6 +33,8 @@ public class PulledTrigger extends Actor implements WeaponState
         {
             System.out.println("now we fire!");
             h.getWorld().addObject(new Default(), h.getX(), h.getY());
+            GreenfootSound gun_shot = new GreenfootSound("sounds/gun_shot.wav");
+            gun_shot.play();
             hbp.ammo -= 1;
         }
         else
