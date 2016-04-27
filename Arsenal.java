@@ -13,9 +13,9 @@ public class Arsenal extends Actor
     WeaponState pullTrigger;
     WeaponState reload;
     
-    WeaponState backpackState;
+    WeaponState curState;
     
-    int ammo = 50;
+    int ammo = 10;
     int clip = 3;
     boolean trigger = false;
     
@@ -26,17 +26,19 @@ public class Arsenal extends Actor
         pullTrigger = new Fire(this, heroRef);
         reload = new Reload(this, heroRef);
         
-        backpackState = reload;
-        
         if(ammo < 1)
         {
-            backpackState = noAmmo;
+            curState = noAmmo;
+        }
+        else
+        {
+            curState = hasAmmo;
         }
     }
     
     void setWeaponState(WeaponState newState)
     {
-        backpackState = newState;
+        curState = newState;
     }
     
     public void setAmmoInWeapon(int newAmmo)
@@ -46,15 +48,15 @@ public class Arsenal extends Actor
     
     public void fire()
     {
-        backpackState.fire();
+        curState.fire();
     }
     public void addAmmo(int ammo)
     {
-        backpackState.addAmmo(ammo);
+        curState.addAmmo(ammo);
     }
     public void reload()
     {
-        backpackState.reload();
+        curState.reload();
     }
     
     public WeaponState getHasAmmoState() { return hasAmmo;}
