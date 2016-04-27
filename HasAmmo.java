@@ -29,8 +29,7 @@ public class HasAmmo extends Actor implements WeaponState
     @Override
     public void fire()
     {
-        System.out.println("now we fire!");
-        h.getWorld().addObject(new Default(), h.getX(), h.getY());
+        System.out.println("Pulled Trigger!");
         hbp.setWeaponState(hbp.getPullTriggerState());
     }
     

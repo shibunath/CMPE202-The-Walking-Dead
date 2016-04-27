@@ -1,15 +1,26 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
- * Write a description of class HasAmmo here.
+ * Write a description of class PulledTrigger here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Fire implements WeaponState 
+public class PulledTrigger extends Actor implements WeaponState
 {
+    /**
+     * Act - do whatever the PulledTrigger wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        // Add your action code here.
+    }
+    
     Arsenal hbp;
     Hero h;
     
-    public Fire(Arsenal bpRef, Hero hRef)
+    public PulledTrigger(Arsenal bpRef, Hero hRef)
     {
         hbp = bpRef; 
         h = hRef;
@@ -21,8 +32,8 @@ public class Fire implements WeaponState
         if(hbp.ammo > 0)
         {
             System.out.println("now we fire!");
+            h.getWorld().addObject(new Default(), h.getX(), h.getY());
             hbp.ammo -= 1;
-            hbp.setWeaponState(hbp.getPullTriggerState());
         }
         else
         {

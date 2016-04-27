@@ -23,7 +23,7 @@ public class Arsenal extends Actor
     {
         hasAmmo = new HasAmmo(this, heroRef);
         noAmmo = new NoAmmo(this, heroRef);
-        pullTrigger = new Fire(this, heroRef);
+        pullTrigger = new PulledTrigger(this, heroRef);
         reload = new Reload(this, heroRef);
         
         if(ammo < 1)
