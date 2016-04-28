@@ -12,12 +12,13 @@ public class Zombie extends ZombieActor
     
     public Zombie()
     {
-        
+       
     }
 
     
     public void act()
-    {
+    {   
+        
         int dx = 0, dy = 0; // the differences in locational coordinates of Zombie and hero
         int rate = 0; // the rate of turn and moving speed
         MyWorld world = (MyWorld)getWorld();
