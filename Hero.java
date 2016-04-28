@@ -36,7 +36,7 @@ public class Hero extends Actor
         }
         int dx = 0, dy = 0; // 2D axis coordinates
         int moveSpeed = 2;
-        if (Greenfoot.isKeyDown("a")) 
+        if (Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left") )
         {
             MyWorld ref=(MyWorld)getWorld();
             dx--;
@@ -52,7 +52,7 @@ public class Hero extends Actor
             return;
     }
  
-        if (Greenfoot.isKeyDown("d")) 
+        if (Greenfoot.isKeyDown("d")|| Greenfoot.isKeyDown("right")) 
         { 
             MyWorld ref=(MyWorld)getWorld();
             dx++;
@@ -65,8 +65,8 @@ public class Hero extends Actor
               return;
         }
         
-        if (Greenfoot.isKeyDown("w")) dy--;
-        if (Greenfoot.isKeyDown("s")) dy++;
+        if (Greenfoot.isKeyDown("w")|| Greenfoot.isKeyDown("up")) dy--;
+        if (Greenfoot.isKeyDown("s")|| Greenfoot.isKeyDown("down")) dy++;
         setLocation(getX() + moveSpeed*dx, getY() + moveSpeed*dy);
     }
     
