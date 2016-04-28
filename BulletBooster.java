@@ -23,8 +23,7 @@ public class BulletBooster extends BoosterPack
      public void act() 
     {
         // Add your action code here.
-      
-        if (isTouching(Hero.class))
+         if (isTouching(Hero.class))
         {
             MyWorld world=(MyWorld)getWorld();
             _world = world;
@@ -35,7 +34,20 @@ public class BulletBooster extends BoosterPack
         }
               
     }  
- 
+   
+     /**
+     * Test if we are close to one of the edges of the world. Return true is we are.
+     */
+    public boolean atWorldEdge()
+    {
+        if(getX() < 20 || getX() > getWorld().getWidth() - 20)
+            return true;
+        if(getY() < 20 || getY() > getWorld().getHeight() - 20)
+            return true;
+        else
+            return false;
+    }
+    
     public void Image(GreenfootImage s){
         i = s; 
         setImage(i);

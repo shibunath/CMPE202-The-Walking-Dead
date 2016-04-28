@@ -50,7 +50,7 @@ public class MyWorld extends World
         //buletbooster.Image(bulletImg);
         addObject(boosterpack, 640, 70);
         addBulletBoosterToWorld();
-        //addLifeBoosterToWorld();
+        addLifeBoosterToWorld();
         setAction(0);
     }
     
@@ -78,7 +78,7 @@ public class MyWorld extends World
         int ycord = 500;
         for (int i=0 ; i < 3 ; i++)
         {
-                GreenfootImage lifelineimg =new GreenfootImage("powerup.png");
+                GreenfootImage lifelineimg =new GreenfootImage("power.png");
                 lifeLineBooster = new LifeLine();
                 lifeLineBooster.Image(lifelineimg);
                 xcord=getRandomNumber(50,1000);

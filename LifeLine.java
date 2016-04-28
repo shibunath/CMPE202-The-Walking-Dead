@@ -16,6 +16,7 @@ public class LifeLine extends BoosterPack
     {
     }
     private static int _lifelineCount = 0;
+    private static  MyWorld _world = null;
     
     
      public void Image(GreenfootImage s){
@@ -25,12 +26,20 @@ public class LifeLine extends BoosterPack
     
     public void act() 
     {
+        // Add your action code here.
+      
         if (isTouching(Hero.class))
         {
+            MyWorld world=(MyWorld)getWorld();
+            _world = world;
             getWorld().removeObject(this);
-
+            super.Notify(this);
+    
+            
         }
+              
     }  
+ 
     /**
      * Getter for lifeline
      * 
