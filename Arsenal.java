@@ -15,7 +15,7 @@ public class Arsenal extends Actor
     
     WeaponState curState;
     
-    int ammo = 10;
+    int ammo = 100;
     int clip = 3;
     boolean trigger = false;
     
