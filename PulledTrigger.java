@@ -31,7 +31,6 @@ public class PulledTrigger extends Actor implements WeaponState
     {
         if(hbp.ammo > 0)
         {
-            System.out.println("now we fire!");
             h.getWorld().addObject(new Default(), h.getX(), h.getY());
             GreenfootSound gun_shot = new GreenfootSound("sounds/gun_shot.wav");
             gun_shot.play();
@@ -39,7 +38,6 @@ public class PulledTrigger extends Actor implements WeaponState
         }
         else
         {
-            System.out.println("now we are out of ammo!");
             hbp.setWeaponState(hbp.getNoAmmoState());
         }
     }

@@ -29,17 +29,8 @@ public class NoAmmo extends Actor implements WeaponState
     @Override
     public void fire()
     {
-        if(hbp.ammo > 0)
-        {
-            System.out.println("now we fire!");
-            hbp.ammo -= 1;
-            hbp.setWeaponState(hbp.getPullTriggerState());
-        }
-        else
-        {
-            System.out.println("now we are out of ammo!");
-            hbp.setWeaponState(hbp.getNoAmmoState());
-        }
+        GreenfootSound gun_shot = new GreenfootSound("sounds/no_ammo.wav");
+        gun_shot.play();
     }
     
     @Override
