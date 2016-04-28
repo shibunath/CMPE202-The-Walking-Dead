@@ -26,7 +26,7 @@ public class Zombie extends ZombieActor
         { 
             dx = getX()-hero.getX();
             dy = getY()-hero.getY();
-            rate = 800-(int)Math.abs(dx)-(int)Math.abs(dy);
+            rate = 600-(int)Math.abs(dx)-(int)Math.abs(dy);
         }
         if (rate > 100)
         { // chase
@@ -44,7 +44,7 @@ public class Zombie extends ZombieActor
             if (dt > 40) dt = 40;
             // turn and move
             turn(dt);
-            move(200);
+            move(150);
         }       
         
     }

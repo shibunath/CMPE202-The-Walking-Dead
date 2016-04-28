@@ -20,7 +20,7 @@ public class MyWorld extends World
     private int lifes; // Number of Player Lifes.
     
     private int Count=0;
-    
+    public static int actionType, actionDistance;
      
     private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
     private GreenfootImage boosterImg;
@@ -51,6 +51,7 @@ public class MyWorld extends World
         addObject(boosterpack, 640, 70);
         addBulletBoosterToWorld();
         //addLifeBoosterToWorld();
+        setAction(0);
     }
     
     public void addBulletBoosterToWorld()
@@ -143,12 +144,24 @@ public class MyWorld extends World
         GameMenu.gamesound.playLoop();
         GameMenu.gamesound.setVolume(60);
         int x = Greenfoot.getRandomNumber(getWidth());
-        int y = Greenfoot.getRandomNumber(getHeight());       
+        int y = Greenfoot.getRandomNumber(getHeight());
+        int rand = Greenfoot.getRandomNumber(4);
+        if (rand < 2) x = (getWidth()-3+actionDistance*2)*rand+1-actionDistance;
+        else y = (getHeight()-3+actionDistance*2)*(rand-2)+1-actionDistance;       
         Zombie zom = new Zombie();
-        if(x <=2 || y<=2){
-            addObject(zom, x, y);
+        if(getObjects(Zombie.class).size() <20 && Greenfoot.getRandomNumber(90) <= 40)
+        {
+            addObject(zom,x,y);
         }
+        
         zom.turnTowards(400, 300);
+    }
+    
+    private void setAction(int action){
+        removeObjects(getObjects(Zombie.class));
+        actionType = action%5;
+        int[] distances = { 0, 0, -10, 0, -15 }; // bound ranges
+        actionDistance = distances[actionType];
     }
     
     
