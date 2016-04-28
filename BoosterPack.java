@@ -13,6 +13,7 @@ public class BoosterPack extends Actor
     protected LifeLine _lifeLine;
     protected static int lifeLineCount = 0;
     protected static int bulletBoosterCount = 0;
+    private PowerUpObservor _powerUpObserver = new PowerUpObservor();
     /**
      * Act - do whatever the BoosterPack wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -27,7 +28,10 @@ public class BoosterPack extends Actor
     {
         // Add your action code here.
         MyWorld world=(MyWorld)getWorld();
-        world.UpdateWorldBoostCounter(lifeLineCount,bulletBoosterCount); 
+        Actor actorZom = getOneIntersectingObject(BoosterPack.class);
+        if(actorZom != null){
+            world.UpdateWorldBoostCounter(lifeLineCount,bulletBoosterCount); 
+          }
         
     }   
     public void UpdateBoosterLifeLine(int count)
@@ -37,9 +41,9 @@ public class BoosterPack extends Actor
     }
     
     
-    public LifeLine GetBoosterLifeLine()
+    public static int GetBoosterLifeLineCount()
     {
-        return _lifeLine;
+        return lifeLineCount;
         
     }
     public static int GetBulletBoosterCount()
@@ -50,6 +54,14 @@ public class BoosterPack extends Actor
      public void UpdateBulletBoosterCount(int count)
     {
          this.bulletBoosterCount = count; 
+        
+    }
+    
+    public void Notify(Actor booster)
+    {
+        _powerUpObserver.attach(new LifeLineObservor());
+        _powerUpObserver.attach(new BulletCountObservor());
+        _powerUpObserver.Notify(booster);
         
     }
 }

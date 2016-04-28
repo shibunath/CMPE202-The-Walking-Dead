@@ -30,6 +30,8 @@ public class BulletCountObservor extends PowerUpObservor
         // put your code here
         Integer currentCount = BulletBooster.GetBulletBoosterCount();
         _bullets.SetBulletBoosterCount(currentCount+1);
+        //MyWorld.
+      
         //System.out.println("bullet counter"+BulletBooster.GetBulletBoosterCount());
       
     }

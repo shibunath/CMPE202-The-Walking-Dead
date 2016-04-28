@@ -37,7 +37,8 @@ public class Default extends Bullets
         Actor actorZom = getOneIntersectingObject(cl);
         if(actorZom != null){
            getWorld().removeObject(actorZom);
-           super.Notify(actorZom);
+           //commented as of now to finalize logic
+           //super.Notify(actorZom);
            return true;
         }
         return false;

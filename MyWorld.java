@@ -44,7 +44,7 @@ public class MyWorld extends World
         boosterpack = new BoosterPack();
         buletbooster = new BulletBooster();
         lifeLineBooster = new LifeLine();
-        boosterImg = new GreenfootImage("BulletBoost : " +0 +"\n LifeBoost : " +0, 20, Color.WHITE, Color.BLACK);
+        boosterImg = new GreenfootImage("Bullet Boost : " +0 +"\n Life Boost : " +0, 20, Color.WHITE, Color.BLACK);
         //bulletImg =new GreenfootImage("bullet.jpg");
         boosterpack.Image(boosterImg);
         //buletbooster.Image(bulletImg);
@@ -210,7 +210,7 @@ public class MyWorld extends World
     
      public void UpdateWorldBoostCounter(int bulletCount, int lifeCount)
     {
-        boosterImg = new GreenfootImage("BulletBoost : " +bulletCount +"\n LifeBoost : " +lifeCount, 20, Color.WHITE, Color.BLACK);
+        boosterImg = new GreenfootImage("Bullet Boost : " +bulletCount +"\n Life Boost : " +lifeCount, 20, Color.WHITE, Color.BLACK);
         boosterpack.Image(boosterImg);
         addObject(boosterpack, 640, 70); 
     }

@@ -23,6 +23,14 @@ public class LifeLine extends BoosterPack
         setImage(i);
     }
     
+    public void act() 
+    {
+        if (isTouching(Hero.class))
+        {
+            getWorld().removeObject(this);
+
+        }
+    }  
     /**
      * Getter for lifeline
      * 
@@ -44,14 +52,6 @@ public class LifeLine extends BoosterPack
         
     }
     
-      public void act() 
-    {
-        // Add your action code here.
-        MyWorld world=(MyWorld)getWorld();
-        Hero hero = world.getHero(); 
-        
-    }    
-      
-    
+  
 }
  

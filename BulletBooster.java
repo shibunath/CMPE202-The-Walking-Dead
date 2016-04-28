@@ -17,9 +17,25 @@ public class BulletBooster extends BoosterPack
     {
     }
     private static int _bulletBoosterCount = 0;
+    private static  MyWorld _world = null;
     
-   
     
+     public void act() 
+    {
+        // Add your action code here.
+      
+        if (isTouching(Hero.class))
+        {
+            MyWorld world=(MyWorld)getWorld();
+            _world = world;
+            getWorld().removeObject(this);
+            super.Notify(this);
+    
+            
+        }
+              
+    }  
+ 
     public void Image(GreenfootImage s){
         i = s; 
         setImage(i);
@@ -41,9 +57,12 @@ public class BulletBooster extends BoosterPack
     public void SetBulletBoosterCount(int bulletBoosterCount)
     {
          _bulletBoosterCount=bulletBoosterCount;
-         UpdateBulletBoosterCount(_bulletBoosterCount); 
-        // UpdateBoosterBullets(_bulletBoosterCount, 0);
-    
+          UpdateBulletBoosterCount(_bulletBoosterCount); 
+          if(_world!=null)
+          {
+                _world.UpdateWorldBoostCounter(_bulletBoosterCount,0); 
+           }
+      
        
     }
 }
