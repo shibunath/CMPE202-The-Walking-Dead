@@ -149,7 +149,7 @@ public class MyWorld extends World
         if (rand < 2) x = (getWidth()-3+actionDistance*2)*rand+1-actionDistance;
         else y = (getHeight()-3+actionDistance*2)*(rand-2)+1-actionDistance;       
         Zombie zom = new Zombie();
-        if(getObjects(Zombie.class).size() <20 && Greenfoot.getRandomNumber(90) <= 40)
+        if(getObjects(Zombie.class).size()<30 &&Greenfoot.getRandomNumber(90) <= 40)
         {
             addObject(zom,x,y);
         }
