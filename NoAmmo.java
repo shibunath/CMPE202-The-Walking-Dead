@@ -48,5 +48,16 @@ public class NoAmmo extends Actor implements WeaponState
     public void reload()
     {
         // delay weapon for a few seconds
+        // delay weapon for a few seconds
+        if (hbp.clip > 0)
+        {
+            hbp.setWeaponState(hbp.getReloadState());
+            System.out.println("Executed");
+            hbp.clip -= 1;
+            hbp.setAmmoInWeapon(100);
+            GreenfootSound reload = new GreenfootSound("sounds/uReload.mp3");
+            reload.play();
+            hbp.setWeaponState(hbp.getHasAmmoState());
+        }
     }
 }

@@ -30,6 +30,10 @@ public class HasAmmo extends Actor implements WeaponState
     public void fire()
     {
         hbp.setWeaponState(hbp.getPullTriggerState());
+        h.getWorld().addObject(new Default(), h.getX(), h.getY());
+        GreenfootSound gun_shot = new GreenfootSound("sounds/gun_shot.wav");
+        gun_shot.play();
+        hbp.ammo -= 1;
     }
     
     @Override
@@ -48,10 +52,13 @@ public class HasAmmo extends Actor implements WeaponState
         // delay weapon for a few seconds
         if (hbp.clip > 0)
         {
+            hbp.setWeaponState(hbp.getReloadState());
+            System.out.println("Executed");
             hbp.clip -= 1;
             hbp.setAmmoInWeapon(100);
             GreenfootSound reload = new GreenfootSound("sounds/uReload.mp3");
             reload.play();
+            hbp.setWeaponState(hbp.getHasAmmoState());
         }
     }
 }
