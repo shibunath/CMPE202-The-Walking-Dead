@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hero extends Actor
 {   
     Arsenal a = new Arsenal(this);
+    boolean isRDown = false;
     
     /**
      * Act - do whatever the Hero wants to do. This method is called whenever
@@ -50,7 +51,7 @@ public class Hero extends Actor
             }
             
             return;
-    }
+        }
  
         if (Greenfoot.isKeyDown("d")|| Greenfoot.isKeyDown("right")) 
         { 
@@ -80,7 +81,18 @@ public class Hero extends Actor
         if (Greenfoot.mouseClicked(null))
         {
             a.fire();
-            //getWorld().addObject(new Default(), getX(), getY());
-        }        
+        }
+        if (Greenfoot.isKeyDown("r"))
+        {
+            if(!isRDown)
+           {
+               a.reload();
+               isRDown = true;
+           }
+        }
+        else
+        {
+            isRDown = false;
+        }
     }
 }

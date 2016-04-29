@@ -46,5 +46,12 @@ public class HasAmmo extends Actor implements WeaponState
     public void reload()
     {
         // delay weapon for a few seconds
+        if (hbp.clip > 0)
+        {
+            hbp.clip -= 1;
+            hbp.setAmmoInWeapon(100);
+            GreenfootSound reload = new GreenfootSound("sounds/uReload.mp3");
+            reload.play();
+        }
     }
 }

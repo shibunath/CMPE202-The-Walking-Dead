@@ -15,9 +15,8 @@ public class Arsenal extends Actor
     
     WeaponState curState;
     
-    int ammo = 100;
-    int clip = 3;
-    boolean trigger = false;
+    int ammo;
+    int clip;
     
     public Arsenal(Hero heroRef)
     {
@@ -25,6 +24,9 @@ public class Arsenal extends Actor
         noAmmo = new NoAmmo(this, heroRef);
         pullTrigger = new PulledTrigger(this, heroRef);
         reload = new Reload(this, heroRef);
+        
+        ammo = 100;
+        clip = 3;
         
         if(ammo < 1)
         {

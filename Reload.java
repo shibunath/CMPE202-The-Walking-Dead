@@ -29,17 +29,7 @@ public class Reload extends Actor implements WeaponState
     @Override
     public void fire()
     {
-        if(hbp.ammo > 0)
-        {
-            System.out.println("now we fire!");
-            hbp.ammo -= 1;
-            hbp.setWeaponState(hbp.getPullTriggerState());
-        }
-        else
-        {
-            System.out.println("now we are out of ammo!");
-            hbp.setWeaponState(hbp.getNoAmmoState());
-        }
+        
     }
     
     @Override
