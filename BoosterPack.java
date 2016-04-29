@@ -30,7 +30,7 @@ public class BoosterPack extends Actor
         MyWorld world=(MyWorld)getWorld();
         Actor actorZom = getOneIntersectingObject(BoosterPack.class);
         if(actorZom != null){
-            world.UpdateWorldBoostCounter(lifeLineCount,bulletBoosterCount); 
+           // world.UpdateWorldBoostCounter(lifeLineCount,bulletBoosterCount); 
           }
         
     }   
@@ -40,6 +40,11 @@ public class BoosterPack extends Actor
         
     }
     
+    public static void ResetCount()
+    {
+        lifeLineCount = 0;
+        bulletBoosterCount = 0;
+    }
     
     public static int GetBoosterLifeLineCount()
     {
@@ -59,6 +64,7 @@ public class BoosterPack extends Actor
     
     public void Notify(Actor booster)
     {
+         //String image=booster.GreenfootImage.imageFileName;
         _powerUpObserver.attach(new LifeLineObservor());
         _powerUpObserver.attach(new BulletCountObservor());
         _powerUpObserver.Notify(booster);

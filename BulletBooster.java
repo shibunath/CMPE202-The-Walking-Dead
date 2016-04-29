@@ -9,15 +9,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BulletBooster extends BoosterPack
 {
     GreenfootImage i;
+    private static int _bulletBoosterCount = 0;
+    private static  MyWorld _world = null;
     /** 
      * Act - do whatever the BulletBooster wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public BulletBooster()
     {
+        //_bulletBoosterCount=0;
     }
-    private static int _bulletBoosterCount = 0;
-    private static  MyWorld _world = null;
+  
     
     
      public void act() 
@@ -61,6 +63,10 @@ public class BulletBooster extends BoosterPack
         return _bulletBoosterCount; 
     }
   
+     public static void ResetBulletBoosterCount()
+    {
+       _bulletBoosterCount = 0;
+    }
        
       /**
      * Setter for BulletBooster
@@ -69,10 +75,10 @@ public class BulletBooster extends BoosterPack
     public void SetBulletBoosterCount(int bulletBoosterCount)
     {
          _bulletBoosterCount=bulletBoosterCount;
-          UpdateBulletBoosterCount(_bulletBoosterCount); 
+         // UpdateBulletBoosterCount(_bulletBoosterCount); 
           if(_world!=null)
           {
-                _world.UpdateWorldBoostCounter(_bulletBoosterCount,0); 
+                _world.UpdateWorldBoostCounter(_bulletBoosterCount); 
            }
       
        

@@ -25,6 +25,7 @@ public class MyWorld extends World
     private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
     private GreenfootImage boosterImg;
     private GreenfootImage bulletImg;
+    private GreenfootImage lifeImg;
     private BoosterPack boosterpack;
     private BulletBooster buletbooster;
     private LifeLine lifeLineBooster;
@@ -41,14 +42,19 @@ public class MyWorld extends World
         addLife(3);
         bg.drawString("Kills: ", 600, 40); 
         setKill(0);
+        LifeLine.ResetLifeBoosterCount();
+        BulletBooster.ResetBulletBoosterCount();
         boosterpack = new BoosterPack();
         buletbooster = new BulletBooster();
         lifeLineBooster = new LifeLine();
-        boosterImg = new GreenfootImage("Bullet Boost : " +0 +"\n Life Boost : " +0, 20, Color.WHITE, Color.BLACK);
-        //bulletImg =new GreenfootImage("bullet.jpg");
-        boosterpack.Image(boosterImg);
-        //buletbooster.Image(bulletImg);
-        addObject(boosterpack, 640, 70);
+        //buletbooster
+        GreenfootImage lifeIcon = new GreenfootImage("herz_small.png");
+        GreenfootImage bulletIcon = new GreenfootImage("powerup_small.png");
+        //boosterImg = new GreenfootImage("Bullet Boost : " +0 +"\n Life Boost : "+0, 20, Color.WHITE, Color.BLACK);
+        lifeLineBooster.Image(lifeIcon);
+        buletbooster.Image(bulletIcon);
+        addObject(lifeLineBooster, 610, 60);
+        addObject(buletbooster, 700, 60);
         addBulletBoosterToWorld();
         addLifeBoosterToWorld();
         setAction(0);
@@ -59,7 +65,7 @@ public class MyWorld extends World
         int xcord = 640;
         int ycord = 500;
         buletbooster = new BulletBooster();
-        addObject(buletbooster,640,600); 
+        addObject(buletbooster,640,500); 
         for (int i=1 ; i < 5 ; i++)
          {
                 GreenfootImage bulletImg =new GreenfootImage("ammunition-icon.png");
@@ -208,11 +214,25 @@ public class MyWorld extends World
         bg.drawString(""+lifes, 130, 40);                
     }
     
-     public void UpdateWorldBoostCounter(int bulletCount, int lifeCount)
+     public void UpdateWorldBoostCounter(int bulletCount)
     {
-        boosterImg = new GreenfootImage("Bullet Boost : " +bulletCount +"\n Life Boost : " +lifeCount, 20, Color.WHITE, Color.BLACK);
+        boosterImg = new GreenfootImage(" " +bulletCount, 20, Color.BLACK, Color.WHITE);
+        boosterpack = new BoosterPack();
         boosterpack.Image(boosterImg);
-        addObject(boosterpack, 640, 70); 
+        addObject(boosterpack, 750, 60); 
+    }
+    
+     public void UpdateWorldLifeBooster(int lifeCount)
+    {
+        
+        lifeImg = new GreenfootImage(" " +lifeCount, 20, Color.BLACK, Color.WHITE);
+        //lifeImg = new GreenfootImage(640,80);
+       //GreenfootImage life = new GreenfootImage("herz.png");
+       //life.drawImage(lifeImg,640,90);
+       boosterpack = new BoosterPack();
+       boosterpack.Image(lifeImg);
+       //boosterpack.Image(life);
+       addObject(boosterpack, 650, 60); 
     }
     
     public void stopped()

@@ -28,12 +28,13 @@ public class BulletCountObservor extends PowerUpObservor
    public void update(Actor actor) 
     { 
         // put your code here
+        String name = actor.getClass().getName();
+        if(name == "BulletBooster")
+        {
         Integer currentCount = BulletBooster.GetBulletBoosterCount();
         _bullets.SetBulletBoosterCount(currentCount+1);
-        //MyWorld.
-      
-        //System.out.println("bullet counter"+BulletBooster.GetBulletBoosterCount());
-      
+        }
+
     }
     
    

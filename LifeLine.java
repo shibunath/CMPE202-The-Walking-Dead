@@ -12,12 +12,14 @@ import java.util.List;
 public class LifeLine extends BoosterPack
 { 
     GreenfootImage i;
-    public LifeLine()
-    {
-    }
     private static int _lifelineCount = 0;
     private static  MyWorld _world = null;
     
+    public LifeLine()
+    {
+       // _lifelineCount = 0;
+    }
+   
     
      public void Image(GreenfootImage s){
         i = s; 
@@ -39,6 +41,11 @@ public class LifeLine extends BoosterPack
         }
               
     }  
+    
+     public static void ResetLifeBoosterCount()
+    {
+       _lifelineCount = 0;
+    }
  
     /**
      * Getter for lifeline
@@ -56,7 +63,11 @@ public class LifeLine extends BoosterPack
     public void SetLifeLine(int lifelineCount)
     {
          _lifelineCount=lifelineCount;
-         UpdateBoosterLifeLine(_lifelineCount);
+         //UpdateBoosterLifeLine(_lifelineCount);
+          if(_world!=null)
+          {
+                _world.UpdateWorldLifeBooster(_lifelineCount); 
+           }
         
         
     }

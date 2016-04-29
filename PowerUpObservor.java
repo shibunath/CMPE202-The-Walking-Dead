@@ -30,7 +30,7 @@ public class PowerUpObservor extends GameObservorBase
         // put your code here
        //System.out.println("notify observors");
              
-        //add logic based on actor
+        //add logd on actor
         for(PowerUpObservor observor: observors)
         {
             observor.update(actor);

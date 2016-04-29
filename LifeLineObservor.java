@@ -28,8 +28,12 @@ public class LifeLineObservor extends PowerUpObservor
    public void update(Actor actor) 
     {
         // put your code here
+        String name = actor.getClass().getName();
+        if(name == "LifeLine")
+        {
         Integer currentCount = LifeLine.GetLifeLine();
         _lifeline.SetLifeLine(currentCount+1);
+        }
         //System.out.println("life counter"+LifeLine.GetLifeLine());
     }
     
