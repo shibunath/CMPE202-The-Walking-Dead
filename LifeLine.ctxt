@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=LifeLine
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ LifeLineCount\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ LifeLineCount\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=LifeLine()
 comment2.params=s
@@ -11,8 +11,8 @@ comment4.params=
 comment4.target=void\ ResetLifeBoosterCount()
 comment5.params=
 comment5.target=int\ GetLifeLine()
-comment5.text=\r\n\ Getter\ for\ lifeline\r\n\ \r\n
+comment5.text=\n\ Getter\ for\ lifeline\n\ \n
 comment6.params=lifelineCount
 comment6.target=void\ SetLifeLine(int)
-comment6.text=\r\n\ Setter\ for\ lifeline\r\n\ \r\n
+comment6.text=\n\ Setter\ for\ lifeline\n\ \n
 numComments=7
