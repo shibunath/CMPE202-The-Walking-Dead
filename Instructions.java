@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Instructions extends Actor
 {
+    private GameMenuInvoker menuInvoker = new GameMenuInvoker();
+    private InstructionsScreen is = new InstructionsScreen();
+    private ICommand myGame = new InstructionsCommand(is);
     public Instructions()
     {
         GreenfootImage instructions = new GreenfootImage("instructions.png");            
@@ -16,6 +19,10 @@ public class Instructions extends Actor
     
     public void act() 
     {
-        // Add your action code here.
+        menuInvoker.setCommand(myGame);
+        if (Greenfoot.mouseClicked(this)){
+            
+            menuInvoker.clickMenuOption();
+        }
     }    
 }
