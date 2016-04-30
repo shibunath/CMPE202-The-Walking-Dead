@@ -18,7 +18,8 @@ public class GameEnum
 
    public static enum BoosterTypes {
     BULLET,
-    LIFE
+    LIFE,
+    BOOSTER
     
   }
 

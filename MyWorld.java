@@ -29,6 +29,7 @@ public class MyWorld extends World
     private BoosterPack boosterpack;
     private BulletBooster buletbooster;
     private LifeLine lifeLineBooster;
+    private BoosterFactory boosterFactory;
     
     private EPosition eP;
     private IPosition iP;
@@ -50,9 +51,10 @@ public class MyWorld extends World
         setKill(0);
         LifeLine.ResetLifeBoosterCount();
         BulletBooster.ResetBulletBoosterCount();
-        boosterpack = new BoosterPack();
-        buletbooster = new BulletBooster();
-        lifeLineBooster = new LifeLine();
+        boosterFactory = new BoosterFactory();
+        boosterpack = boosterFactory.GetBooster(GameEnum.BoosterTypes.BOOSTER);
+        buletbooster =(BulletBooster) boosterFactory.GetBooster(GameEnum.BoosterTypes.BULLET);
+        lifeLineBooster = (LifeLine) boosterFactory.GetBooster(GameEnum.BoosterTypes.LIFE);
         //buletbooster
         GreenfootImage lifeIcon = new GreenfootImage("herz_small.png");
         GreenfootImage bulletIcon = new GreenfootImage("powerup_small.png");
@@ -249,7 +251,7 @@ public class MyWorld extends World
      public void UpdateWorldBoostCounter(int bulletCount)
     {
         boosterImg = new GreenfootImage(" " +bulletCount, 20, Color.BLACK, Color.WHITE);
-        boosterpack = new BoosterPack();
+        boosterpack = boosterFactory.GetBooster(GameEnum.BoosterTypes.BOOSTER);
         boosterpack.Image(boosterImg);
         addObject(boosterpack, 750, 60); 
     }
@@ -257,13 +259,9 @@ public class MyWorld extends World
      public void UpdateWorldLifeBooster(int lifeCount)
     {
         
-        lifeImg = new GreenfootImage(" " +lifeCount, 20, Color.BLACK, Color.WHITE);
-        //lifeImg = new GreenfootImage(640,80);
-       //GreenfootImage life = new GreenfootImage("herz.png");
-       //life.drawImage(lifeImg,640,90);
-       boosterpack = new BoosterPack();
+       lifeImg = new GreenfootImage(" " +lifeCount, 20, Color.BLACK, Color.WHITE);
+       boosterpack = boosterFactory.GetBooster(GameEnum.BoosterTypes.BOOSTER);
        boosterpack.Image(lifeImg);
-       //boosterpack.Image(life);
        addObject(boosterpack, 650, 60); 
     }
     

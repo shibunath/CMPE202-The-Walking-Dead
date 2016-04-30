@@ -22,7 +22,7 @@ public class BoosterFactory
         {
             return new BulletBooster();
         }
-        return null;
+        return new BoosterPack();
         // Add your action code here.
     }    
 }
