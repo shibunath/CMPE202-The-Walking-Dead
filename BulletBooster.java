@@ -24,15 +24,19 @@ public class BulletBooster extends BoosterPack
     
      public void act() 
     {
-        // Add your action code here.
+
          if (isTouching(Hero.class))
         {
             MyWorld world=(MyWorld)getWorld();
             _world = world;
             getWorld().removeObject(this);
+            if(world.GetHero()!=null)
+            {
+                Arsenal a = world.GetHero().GetArsenal();
+                a.addAmmo(100);
+            }
             super.Notify(this);
-    
-            
+   
         }
               
     }  

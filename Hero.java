@@ -21,7 +21,12 @@ public class Hero extends Actor
         moveAndAim();
         shoot();
     }
-    
+    /* get current arsenal */
+     public Arsenal GetArsenal()
+    {
+        return a;
+        
+    }
     
     /**
      * moveAndAim - use keyboard "w, a, s, and d" to control movement; use mouse to aim

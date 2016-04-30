@@ -75,6 +75,11 @@ public class MyWorld extends World
        System.out.println(iP.getPosition());
     }
     
+      public Hero GetHero()
+    {
+        return hero;
+    }
+    
     public void setP(int x,int y)
     {
           eP=new EPosition();
