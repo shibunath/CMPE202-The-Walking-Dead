@@ -29,6 +29,12 @@ public class MyWorld extends World
     private BoosterPack boosterpack;
     private BulletBooster buletbooster;
     private LifeLine lifeLineBooster;
+    
+    private EPosition eP;
+    private IPosition iP;
+    private PositionX xP;
+    private PositionY yP;
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -58,6 +64,27 @@ public class MyWorld extends World
         addBulletBoosterToWorld();
         addLifeBoosterToWorld();
         setAction(0);
+        
+        eP=new EPosition();
+        xP=new PositionX(eP);
+        xP.setPosition(hero.getX());
+        yP=new PositionY(xP);
+        yP.setPosition(hero.getY());
+        iP=yP;
+          
+       System.out.println(iP.getPosition());
+    }
+    
+    public void setP(int x,int y)
+    {
+          eP=new EPosition();
+        xP=new PositionX(eP);
+        xP.setPosition(x);
+        yP=new PositionY(xP);
+        yP.setPosition(y);
+        iP=yP;
+        
+        System.out.println(iP.getPosition());
     }
     
     public void addBulletBoosterToWorld()
