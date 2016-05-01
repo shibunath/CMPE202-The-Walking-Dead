@@ -36,6 +36,14 @@ public class MyWorld extends World
     private PositionX xP;
     private PositionY yP;
     
+        private int[] x;
+    private int[] y;
+    private int[] xL;
+    private int[] yL;
+       
+    private BulletBooster[] boosters;
+    private LifeLine[] lives;
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -100,30 +108,38 @@ public class MyWorld extends World
         int ycord = 500;
         buletbooster = new BulletBooster();
         addObject(buletbooster,640,500); 
-        for (int i=1 ; i < 5 ; i++)
+         boosters=new BulletBooster[5];
+        x=new int[10]; 
+        y=new int[10];
+        
+        for (int i=0 ; i < 4 ; i++)
          {
                 GreenfootImage bulletImg =new GreenfootImage("ammunition-icon.png");
-                buletbooster = new BulletBooster();
-                buletbooster.Image(bulletImg);
-                xcord=getRandomNumber(50,1000);
-                ycord=getRandomNumber(0,1000);
-                addObject(buletbooster,xcord,ycord); 
+                boosters[i] = new BulletBooster();
+                boosters[i].Image(bulletImg);
+                x[i]=getRandomNumber(50,1000);
+                y[i]=getRandomNumber(0,1000);
+                addObject(boosters[i],x[i],y[i]); 
         
          }        
     }
-    
+     
      public void addLifeBoosterToWorld()
     {
         int xcord = 640;
         int ycord = 500;
+        xL=new int[10]; 
+        yL=new int[10];
+        lives=new LifeLine[5];
+        
         for (int i=0 ; i < 3 ; i++)
         {
                 GreenfootImage lifelineimg =new GreenfootImage("power.png");
-                lifeLineBooster = new LifeLine();
-                lifeLineBooster.Image(lifelineimg);
-                xcord=getRandomNumber(50,1000);
-                ycord=getRandomNumber(0,1000);
-                addObject(lifeLineBooster,xcord,ycord); 
+                lives[i] = new LifeLine();
+                lives[i].Image(lifelineimg);
+                xL[i]=getRandomNumber(50,1000);
+                yL[i]=getRandomNumber(0,1000);
+                addObject(lives[i],xL[i],yL[i]); 
         
         }        
     }
@@ -217,6 +233,24 @@ public class MyWorld extends World
    getBackground().drawImage(bgImage, t-bgImage.getWidth(), 0); 
     getBackground().drawImage(bgImage, t, 0); 
     getBackground().drawImage(bgImage, t + bgImage.getWidth(), 0);
+    
+        for(int i=0;i<4;i++)
+    {       
+       removeObject(boosters[i]);
+ 
+        if(!boosters[i].unUsed())
+        addObject(boosters[i],x[i]+t,y[i]);
+    }
+     
+     
+        for(int i=0;i<3;i++)
+    {      
+       removeObject(lives[i]);
+ 
+        if(!lives[i].unUsed())
+        addObject(lives[i],xL[i]+t,yL[i]);
+    } 
+    
     persistText();
   
 }
