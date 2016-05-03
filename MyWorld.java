@@ -258,7 +258,7 @@ public class MyWorld extends World
     {      
        removeObject(lives[i]);
  
-     //   if(!lives[i].unUsed())
+        if(!lives[i].unUsed())
         addObject(lives[i],xL[i]+t,yL[i]);
     } 
     
