@@ -14,12 +14,18 @@ public class LifeLine extends BoosterPack
     GreenfootImage i;
     private static int _lifelineCount = 0;
     private static  MyWorld _world = null;
+    private boolean used=false;
     
     public LifeLine()
     {
        // _lifelineCount = 0;
     }
    
+      public boolean unUsed()
+    {
+        return used;
+    }
+    
     
      public void Image(GreenfootImage s){
         i = s; 
@@ -34,6 +40,7 @@ public class LifeLine extends BoosterPack
         {
             MyWorld world=(MyWorld)getWorld();
             _world = world;
+            used=true;
             getWorld().removeObject(this);
             super.Notify(this);
     
