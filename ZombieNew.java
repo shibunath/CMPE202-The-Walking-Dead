@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Zombie here.
+ * Write a description of class ZombieNew here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Zombie extends ZombieActor implements ActorObjects
-{   
+public class ZombieNew extends ZombieActor implements ActorObjects
+{
     int dt = 0; // Zombie turn rate   
     java.lang.String image;
-    public Zombie(java.lang.String image)
-    {
-        GreenfootImage myZom = new GreenfootImage(image);
-        setImage(myZom);        
+    public ZombieNew(java.lang.String image)
+    {   
+        GreenfootImage myZomNew = new GreenfootImage(image);
+        setImage(myZomNew);        
     }    
     
     public String getActorImage(){
@@ -49,11 +49,11 @@ public class Zombie extends ZombieActor implements ActorObjects
             if (dt > 40) dt = 40;
             // turn and move
             turn(dt);
-            move(110);
+            move(90);
         }       
     }    
     
     public java.lang.String accept(ActorVisitor visitor){
         return visitor.visit(this);
-    }
+    }       
 }

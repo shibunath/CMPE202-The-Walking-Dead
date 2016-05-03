@@ -23,7 +23,7 @@ public class Default extends Bullets
         }
         move(this.getSpeed());
         
-       if(hit(Zombie.class)||isAtEdge()){
+       if(hit(Zombie.class)||hit(ZombieNew.class)||isAtEdge()){
             getWorld().removeObject(this);
         }
         

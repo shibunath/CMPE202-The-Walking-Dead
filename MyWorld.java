@@ -85,7 +85,7 @@ public class MyWorld extends World
        System.out.println(iP.getPosition());
     }
     
-      public Hero GetHero()
+    public Hero GetHero()
     {
         return hero;
     }
@@ -203,14 +203,25 @@ public class MyWorld extends World
         int y = Greenfoot.getRandomNumber(getHeight());
         int rand = Greenfoot.getRandomNumber(4);
         if (rand < 2) x = (getWidth()-3+actionDistance*2)*rand+1-actionDistance;
-        else y = (getHeight()-3+actionDistance*2)*(rand-2)+1-actionDistance;       
-        Zombie zom = new Zombie();
-        if(getObjects(Zombie.class).size()<30 &&Greenfoot.getRandomNumber(90) <= 40)
-        {
-            addObject(zom,x,y);
-        }
+        else y = (getHeight()-3+actionDistance*2)*(rand-2)+1-actionDistance;  
         
+        ImageClassA ic = new ImageClassA();
+        
+        Zombie zom = new Zombie("zommy_converted.png");
+        ZombieNew zomn = new ZombieNew("zomlunna.png");
+        if(Greenfoot.getRandomNumber(80) <= 50)
+        {   
+            if(getObjects(Zombie.class).size()<20){
+                zom.accept(ic);
+                addObject(zom,x,y);            
+                if(numberOfObjects()<30||getObjects(ZombieNew.class).size()==0){
+                    zomn.accept(ic);
+                    addObject(zomn,x,y);
+                }
+            }           
+        }
         zom.turnTowards(400, 300);
+        zomn.turnTowards(400, 300);
     }
     
     private void setAction(int action){
@@ -247,7 +258,7 @@ public class MyWorld extends World
     {      
        removeObject(lives[i]);
  
-        if(!lives[i].unUsed())
+     //   if(!lives[i].unUsed())
         addObject(lives[i],xL[i]+t,yL[i]);
     } 
     
