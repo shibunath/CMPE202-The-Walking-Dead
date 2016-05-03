@@ -1,5 +1,12 @@
 #Greenfoot project file
+<<<<<<< HEAD
 class.Arsenal.superclass=greenfoot.Actor
+=======
+class.ActorObjects.superclass=
+class.ActorVisitor.superclass=
+class.Arsenal.superclass=greenfoot.Actor
+class.BoosterFactory.superclass=
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 class.BoosterPack.superclass=greenfoot.Actor
 class.BulletBooster.superclass=BoosterPack
 class.BulletCountObservor.superclass=PowerUpObservor
@@ -12,6 +19,10 @@ class.Default.superclass=Bullets
 class.EPosition.superclass=greenfoot.Actor
 class.Exit.superclass=greenfoot.Actor
 class.Fire.superclass=
+<<<<<<< HEAD
+=======
+class.GameEnum.superclass=
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 class.GameMenu.image=start.gif
 class.GameMenu.superclass=greenfoot.World
 class.GameMenuInvoker.superclass=
@@ -24,6 +35,10 @@ class.Hero.image=hero2.png
 class.Hero.superclass=greenfoot.Actor
 class.ICommand.superclass=
 class.IPosition.superclass=
+<<<<<<< HEAD
+=======
+class.ImageClassA.superclass=greenfoot.Actor
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 class.Instructions.superclass=greenfoot.Actor
 class.InstructionsCommand.superclass=
 class.InstructionsScreen.superclass=greenfoot.World
@@ -46,21 +61,105 @@ class.Rocket.image=rocket.png
 class.Rocket.superclass=Bullets
 class.StartGame.superclass=greenfoot.Actor
 class.WeaponState.superclass=
+<<<<<<< HEAD
 class.Zombie.image=zommy.png
 class.Zombie.superclass=ZombieActor
 class.ZombieActor.superclass=greenfoot.Actor
+=======
+class.Zombie.superclass=ZombieActor
+class.ZombieActor.superclass=greenfoot.Actor
+class.ZombieNew.superclass=ZombieActor
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 dependency1.from=Hero
 dependency1.to=Bullets
 dependency1.type=UsesDependency
 dependency10.from=BulletCountObservor
 dependency10.to=LifeLine
 dependency10.type=UsesDependency
+<<<<<<< HEAD
 dependency11.from=BulletCountObservor
 dependency11.to=Bullets
 dependency11.type=UsesDependency
 dependency12.from=MyWorld
 dependency12.to=Bullets
 dependency12.type=UsesDependency
+=======
+dependency100.from=Instructions
+dependency100.to=InstructionsScreen
+dependency100.type=UsesDependency
+dependency101.from=Instructions
+dependency101.to=ICommand
+dependency101.type=UsesDependency
+dependency102.from=Instructions
+dependency102.to=InstructionsCommand
+dependency102.type=UsesDependency
+dependency103.from=InstructionsCommand
+dependency103.to=InstructionsScreen
+dependency103.type=UsesDependency
+dependency104.from=BulletBooster
+dependency104.to=Arsenal
+dependency104.type=UsesDependency
+dependency105.from=BoosterFactory
+dependency105.to=BoosterPack
+dependency105.type=UsesDependency
+dependency106.from=BoosterFactory
+dependency106.to=LifeLine
+dependency106.type=UsesDependency
+dependency107.from=BoosterFactory
+dependency107.to=BulletBooster
+dependency107.type=UsesDependency
+dependency108.from=BoosterFactory
+dependency108.to=GameEnum
+dependency108.type=UsesDependency
+dependency109.from=MyWorld
+dependency109.to=BoosterFactory
+dependency109.type=UsesDependency
+dependency11.from=BulletCountObservor
+dependency11.to=Bullets
+dependency11.type=UsesDependency
+dependency110.from=MyWorld
+dependency110.to=GameEnum
+dependency110.type=UsesDependency
+dependency111.from=ActorVisitor
+dependency111.to=Zombie
+dependency111.type=UsesDependency
+dependency112.from=ActorVisitor
+dependency112.to=ZombieNew
+dependency112.type=UsesDependency
+dependency113.from=ActorObjects
+dependency113.to=ActorVisitor
+dependency113.type=UsesDependency
+dependency114.from=ImageClassA
+dependency114.to=Zombie
+dependency114.type=UsesDependency
+dependency115.from=ImageClassA
+dependency115.to=ZombieNew
+dependency115.type=UsesDependency
+dependency116.from=ZombieNew
+dependency116.to=MyWorld
+dependency116.type=UsesDependency
+dependency117.from=ZombieNew
+dependency117.to=Hero
+dependency117.type=UsesDependency
+dependency118.from=ZombieNew
+dependency118.to=ActorVisitor
+dependency118.type=UsesDependency
+dependency119.from=Zombie
+dependency119.to=ActorVisitor
+dependency119.type=UsesDependency
+dependency12.from=MyWorld
+dependency12.to=Bullets
+dependency12.type=UsesDependency
+dependency120.from=MyWorld
+dependency120.to=ImageClassA
+dependency120.type=UsesDependency
+dependency121.from=MyWorld
+dependency121.to=ZombieNew
+dependency121.type=UsesDependency
+dependency122.from=Default
+dependency122.to=ZombieNew
+dependency122.type=UsesDependency
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 dependency13.from=Zombie
 dependency13.to=Hero
 dependency13.type=UsesDependency
@@ -331,13 +430,32 @@ dependency93.type=UsesDependency
 dependency94.from=MyWorld
 dependency94.to=PositionY
 dependency94.type=UsesDependency
+<<<<<<< HEAD
 dependency95.from=PulledTrigger
 dependency95.to=Rocket
 dependency95.type=UsesDependency
+=======
+dependency95.from=PositionY
+dependency95.to=IPosition
+dependency95.type=UsesDependency
+dependency96.from=InstructionsScreen
+dependency96.to=ReturnMenu
+dependency96.type=UsesDependency
+dependency97.from=PositionX
+dependency97.to=IPosition
+dependency97.type=UsesDependency
+dependency98.from=Position
+dependency98.to=IPosition
+dependency98.type=UsesDependency
+dependency99.from=Instructions
+dependency99.to=GameMenuInvoker
+dependency99.type=UsesDependency
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 editor.swing.0.height=772
 editor.swing.0.width=1311
 editor.swing.0.x=55
@@ -348,6 +466,18 @@ mainWindow.x=55
 mainWindow.y=-4
 package.numDependencies=95
 package.numTargets=40
+=======
+editor.swing.0.height=754
+editor.swing.0.width=1382
+editor.swing.0.x=-8
+editor.swing.0.y=-8
+mainWindow.height=768
+mainWindow.width=1358
+mainWindow.x=-9
+mainWindow.y=-9
+package.numDependencies=122
+package.numTargets=46
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -365,74 +495,132 @@ target1.width=100
 target1.x=10
 target1.y=190
 target10.height=50
+<<<<<<< HEAD
 target10.name=GameMenuInvoker
+=======
+target10.name=ReturnMenu
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target10.naviview.expanded=true
 target10.showInterface=false
 target10.type=ClassTarget
 target10.typeParameters=
+<<<<<<< HEAD
 target10.width=160
 target10.x=10
 target10.y=370
 target11.height=50
 target11.name=EPosition
+=======
+target10.width=90
+target10.x=10
+target10.y=850
+target11.height=50
+target11.name=GameMenuInvoker
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target11.naviview.expanded=true
 target11.showInterface=false
 target11.type=ClassTarget
 target11.typeParameters=
+<<<<<<< HEAD
 target11.width=90
 target11.x=10
 target11.y=970
 target12.height=50
 target12.name=ZombieActor
+=======
+target11.width=160
+target11.x=10
+target11.y=370
+target12.height=50
+target12.name=PulledTrigger
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target12.naviview.expanded=true
 target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=
 target12.width=100
+<<<<<<< HEAD
 target12.x=160
 target12.y=250
 target13.height=50
 target13.name=HasAmmo
+=======
+target12.x=110
+target12.y=850
+target13.height=50
+target13.name=EPosition
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target13.naviview.expanded=true
 target13.showInterface=false
 target13.type=ClassTarget
 target13.typeParameters=
 target13.width=90
+<<<<<<< HEAD
 target13.x=150
 target13.y=550
 target14.height=50
 target14.name=BoosterPack
+=======
+target13.x=10
+target13.y=970
+target14.height=50
+target14.name=ZombieActor
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target14.naviview.expanded=true
 target14.showInterface=false
 target14.type=ClassTarget
 target14.typeParameters=
 target14.width=100
+<<<<<<< HEAD
 target14.x=170
 target14.y=430
 target15.height=50
 target15.name=StartGame
+=======
+target14.x=160
+target14.y=250
+target15.height=50
+target15.name=ZombieNew
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target15.naviview.expanded=true
 target15.showInterface=false
 target15.type=ClassTarget
 target15.typeParameters=
+<<<<<<< HEAD
 target15.width=100
 target15.x=120
 target15.y=310
 target16.height=50
 target16.name=InstructionsScreen
+=======
+target15.width=90
+target15.x=110
+target15.y=1150
+target16.height=50
+target16.name=HasAmmo
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target16.naviview.expanded=true
 target16.showInterface=false
 target16.type=ClassTarget
 target16.typeParameters=
+<<<<<<< HEAD
 target16.width=160
 target16.x=110
 target16.y=1030
 target17.height=50
 target17.name=Reload
+=======
+target16.width=90
+target16.x=150
+target16.y=550
+target17.height=50
+target17.name=BoosterPack
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target17.naviview.expanded=true
 target17.showInterface=false
 target17.type=ClassTarget
 target17.typeParameters=
+<<<<<<< HEAD
 target17.width=80
 target17.x=100
 target17.y=670
@@ -447,13 +635,35 @@ target18.x=180
 target18.y=370
 target19.height=50
 target19.name=Arsenal
+=======
+target17.width=100
+target17.x=170
+target17.y=430
+target18.height=50
+target18.name=GameEnum
+target18.naviview.expanded=true
+target18.showInterface=false
+target18.type=ClassTarget
+target18.typeParameters=
+target18.width=90
+target18.x=10
+target18.y=1150
+target19.height=50
+target19.name=StartGame
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target19.naviview.expanded=true
 target19.showInterface=false
 target19.type=ClassTarget
 target19.typeParameters=
+<<<<<<< HEAD
 target19.width=80
 target19.x=190
 target19.y=670
+=======
+target19.width=100
+target19.x=120
+target19.y=310
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target2.height=50
 target2.name=WeaponState
 target2.naviview.expanded=true
@@ -464,6 +674,7 @@ target2.width=120
 target2.x=160
 target2.y=490
 target20.height=50
+<<<<<<< HEAD
 target20.name=Controls
 target20.naviview.expanded=true
 target20.showInterface=false
@@ -474,55 +685,108 @@ target20.x=110
 target20.y=730
 target21.height=50
 target21.name=GameName
+=======
+target20.name=ICommand
+target20.naviview.expanded=true
+target20.showInterface=false
+target20.type=InterfaceTarget
+target20.typeParameters=
+target20.width=100
+target20.x=180
+target20.y=370
+target21.height=50
+target21.name=InstructionsScreen
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target21.naviview.expanded=true
 target21.showInterface=false
 target21.type=ClassTarget
 target21.typeParameters=
+<<<<<<< HEAD
 target21.width=100
 target21.x=10
 target21.y=610
 target22.height=50
 target22.name=NoAmmo
+=======
+target21.width=130
+target21.x=110
+target21.y=1030
+target22.height=50
+target22.name=Reload
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target22.naviview.expanded=true
 target22.showInterface=false
 target22.type=ClassTarget
 target22.typeParameters=
+<<<<<<< HEAD
 target22.width=90
 target22.x=140
 target22.y=610
 target23.height=50
 target23.name=PositionX
+=======
+target22.width=80
+target22.x=100
+target22.y=670
+target23.height=50
+target23.name=Arsenal
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target23.naviview.expanded=true
 target23.showInterface=false
 target23.type=ClassTarget
 target23.typeParameters=
+<<<<<<< HEAD
 target23.width=90
 target23.x=110
 target23.y=970
 target24.height=50
 target24.name=MyWorld
+=======
+target23.width=80
+target23.x=190
+target23.y=670
+target24.height=50
+target24.name=Controls
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target24.naviview.expanded=true
 target24.showInterface=false
 target24.type=ClassTarget
 target24.typeParameters=
+<<<<<<< HEAD
 target24.width=90
 target24.x=70
 target24.y=10
 target25.height=50
 target25.name=BulletCountObservor
+=======
+target24.width=80
+target24.x=110
+target24.y=730
+target25.height=50
+target25.name=GameName
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target25.naviview.expanded=true
 target25.showInterface=false
 target25.type=ClassTarget
 target25.typeParameters=
+<<<<<<< HEAD
 target25.width=140
 target25.x=10
 target25.y=250
 target26.height=50
 target26.name=Exit
+=======
+target25.width=100
+target25.x=10
+target25.y=610
+target26.height=50
+target26.name=NoAmmo
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target26.naviview.expanded=true
 target26.showInterface=false
 target26.type=ClassTarget
 target26.typeParameters=
+<<<<<<< HEAD
 target26.width=80
 target26.x=200
 target26.y=730
@@ -537,22 +801,52 @@ target27.x=10
 target27.y=1030
 target28.height=50
 target28.name=ControlsCommand
+=======
+target26.width=90
+target26.x=140
+target26.y=610
+target27.height=50
+target27.name=PositionX
+target27.naviview.expanded=true
+target27.showInterface=false
+target27.type=ClassTarget
+target27.typeParameters=
+target27.width=90
+target27.x=110
+target27.y=970
+target28.height=50
+target28.name=MyWorld
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target28.naviview.expanded=true
 target28.showInterface=false
 target28.type=ClassTarget
 target28.typeParameters=
+<<<<<<< HEAD
 target28.width=130
 target28.x=10
 target28.y=910
 target29.height=50
 target29.name=Zombie
+=======
+target28.width=90
+target28.x=70
+target28.y=10
+target29.height=50
+target29.name=BulletCountObservor
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target29.naviview.expanded=true
 target29.showInterface=false
 target29.type=ClassTarget
 target29.typeParameters=
+<<<<<<< HEAD
 target29.width=80
 target29.x=10
 target29.y=130
+=======
+target29.width=140
+target29.x=10
+target29.y=250
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target3.height=50
 target3.name=PositionY
 target3.naviview.expanded=true
@@ -563,6 +857,7 @@ target3.width=90
 target3.x=150
 target3.y=910
 target30.height=50
+<<<<<<< HEAD
 target30.name=Position
 target30.naviview.expanded=true
 target30.showInterface=false
@@ -600,10 +895,50 @@ target33.x=160
 target33.y=70
 target34.height=50
 target34.name=GifImage
+=======
+target30.name=Exit
+target30.naviview.expanded=true
+target30.showInterface=false
+target30.type=ClassTarget
+target30.typeParameters=
+target30.width=80
+target30.x=200
+target30.y=730
+target31.height=50
+target31.name=ControlsCommand
+target31.naviview.expanded=true
+target31.showInterface=false
+target31.type=ClassTarget
+target31.typeParameters=
+target31.width=130
+target31.x=10
+target31.y=910
+target32.height=50
+target32.name=IPosition
+target32.naviview.expanded=true
+target32.showInterface=false
+target32.type=InterfaceTarget
+target32.typeParameters=
+target32.width=90
+target32.x=10
+target32.y=1030
+target33.height=50
+target33.name=Position
+target33.naviview.expanded=true
+target33.showInterface=false
+target33.type=AbstractTarget
+target33.typeParameters=
+target33.width=80
+target33.x=10
+target33.y=670
+target34.height=50
+target34.name=Zombie
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target34.naviview.expanded=true
 target34.showInterface=false
 target34.type=ClassTarget
 target34.typeParameters=
+<<<<<<< HEAD
 target34.width=90
 target34.x=10
 target34.y=730
@@ -618,28 +953,62 @@ target35.x=10
 target35.y=310
 target36.height=50
 target36.name=MyGameCommand
+=======
+target34.width=80
+target34.x=10
+target34.y=130
+target35.height=50
+target35.name=GameObservorBase
+target35.naviview.expanded=true
+target35.showInterface=false
+target35.type=AbstractTarget
+target35.typeParameters=
+target35.width=140
+target35.x=10
+target35.y=490
+target36.height=50
+target36.name=ImageClassA
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target36.naviview.expanded=true
 target36.showInterface=false
 target36.type=ClassTarget
 target36.typeParameters=
+<<<<<<< HEAD
 target36.width=150
 target36.x=10
 target36.y=430
 target37.height=50
 target37.name=Bullets
+=======
+target36.width=100
+target36.x=10
+target36.y=1270
+target37.height=50
+target37.name=Instructions
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target37.naviview.expanded=true
 target37.showInterface=false
 target37.type=ClassTarget
 target37.typeParameters=
+<<<<<<< HEAD
 target37.width=80
 target37.x=70
 target37.y=70
 target38.height=50
 target38.name=Hero
+=======
+target37.width=90
+target37.x=10
+target37.y=790
+target38.height=50
+target38.name=Default
+target38.naviview.expanded=true
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target38.showInterface=false
 target38.type=ClassTarget
 target38.typeParameters=
 target38.width=80
+<<<<<<< HEAD
 target38.x=170
 target38.y=10
 target39.height=50
@@ -667,6 +1036,88 @@ target40.typeParameters=
 target40.width=180
 target40.x=10
 target40.y=1090
+=======
+target38.x=160
+target38.y=70
+target39.height=50
+target39.name=ActorObjects
+target39.naviview.expanded=true
+target39.showInterface=false
+target39.type=InterfaceTarget
+target39.typeParameters=
+target39.width=100
+target39.x=10
+target39.y=1210
+target4.height=50
+target4.name=ActorVisitor
+target4.naviview.expanded=true
+target4.showInterface=false
+target4.type=InterfaceTarget
+target4.typeParameters=
+target4.width=90
+target4.x=120
+target4.y=1210
+target40.height=50
+target40.name=GifImage
+target40.naviview.expanded=true
+target40.showInterface=false
+target40.type=ClassTarget
+target40.typeParameters=
+target40.width=90
+target40.x=10
+target40.y=730
+target41.height=50
+target41.name=GameMenu
+target41.naviview.expanded=true
+target41.showInterface=false
+target41.type=ClassTarget
+target41.typeParameters=
+target41.width=100
+target41.x=10
+target41.y=310
+target42.height=50
+target42.name=MyGameCommand
+target42.naviview.expanded=true
+target42.showInterface=false
+target42.type=ClassTarget
+target42.typeParameters=
+target42.width=150
+target42.x=10
+target42.y=430
+target43.height=50
+target43.name=Bullets
+target43.naviview.expanded=true
+target43.showInterface=false
+target43.type=ClassTarget
+target43.typeParameters=
+target43.width=80
+target43.x=70
+target43.y=70
+target44.height=50
+target44.name=Hero
+target44.showInterface=false
+target44.type=ClassTarget
+target44.typeParameters=
+target44.width=80
+target44.x=170
+target44.y=10
+target45.height=50
+target45.name=LifeLine
+target45.showInterface=false
+target45.type=ClassTarget
+target45.typeParameters=
+target45.width=80
+target45.x=100
+target45.y=130
+target46.height=50
+target46.name=InstructionsCommand
+target46.showInterface=false
+target46.type=ClassTarget
+target46.typeParameters=
+target46.width=150
+target46.x=10
+target46.y=1090
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target5.height=50
 target5.name=ControlsScreen
 target5.naviview.expanded=true
@@ -686,31 +1137,57 @@ target6.width=120
 target6.x=130
 target6.y=190
 target7.height=50
+<<<<<<< HEAD
 target7.name=Rocket
+=======
+target7.name=PowerUpObservor
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target7.naviview.expanded=true
 target7.showInterface=false
 target7.type=ClassTarget
 target7.typeParameters=
+<<<<<<< HEAD
 target7.width=80
 target7.x=190
 target7.y=130
 target8.height=50
 target8.name=ReturnMenu
+=======
+target7.width=130
+target7.x=10
+target7.y=550
+target8.height=50
+target8.name=BoosterFactory
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target8.naviview.expanded=true
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
+<<<<<<< HEAD
 target8.width=90
 target8.x=10
 target8.y=850
 target9.height=50
 target9.name=PulledTrigger
+=======
+target8.width=110
+target8.x=170
+target8.y=1090
+target9.height=50
+target9.name=Rocket
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 target9.naviview.expanded=true
 target9.showInterface=false
 target9.type=ClassTarget
 target9.typeParameters=
+<<<<<<< HEAD
 target9.width=100
 target9.x=110
 target9.y=850
+=======
+target9.width=80
+target9.x=190
+target9.y=130
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 version=2.8.0
 world.lastInstantiated=GameMenu

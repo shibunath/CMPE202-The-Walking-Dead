@@ -3,16 +3,27 @@ comment0.target=LifeLine
 comment0.text=\n\ Write\ a\ description\ of\ class\ LifeLineCount\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=LifeLine()
-comment2.params=s
-comment2.target=void\ Image(greenfoot.GreenfootImage)
-comment3.params=
-comment3.target=void\ act()
+comment2.params=
+comment2.target=boolean\ unUsed()
+comment3.params=s
+comment3.target=void\ Image(greenfoot.GreenfootImage)
 comment4.params=
-comment4.target=void\ ResetLifeBoosterCount()
+comment4.target=void\ act()
 comment5.params=
+<<<<<<< HEAD
 comment5.target=int\ GetLifeLine()
 comment5.text=\n\ Getter\ for\ lifeline\n\ \n
 comment6.params=lifelineCount
 comment6.target=void\ SetLifeLine(int)
 comment6.text=\n\ Setter\ for\ lifeline\n\ \n
 numComments=7
+=======
+comment5.target=void\ ResetLifeBoosterCount()
+comment6.params=
+comment6.target=int\ GetLifeLine()
+comment6.text=\n\ Getter\ for\ lifeline\n\ \n
+comment7.params=lifelineCount
+comment7.target=void\ SetLifeLine(int)
+comment7.text=\n\ Setter\ for\ lifeline\n\ \n
+numComments=8
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a

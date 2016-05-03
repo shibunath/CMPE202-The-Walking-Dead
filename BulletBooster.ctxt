@@ -5,8 +5,9 @@ comment1.params=
 comment1.target=BulletBooster()
 comment1.text=\ \n\ Act\ -\ do\ whatever\ the\ BulletBooster\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
-comment2.target=void\ act()
+comment2.target=boolean\ unUsed()
 comment3.params=
+<<<<<<< HEAD
 comment3.target=boolean\ atWorldEdge()
 comment3.text=\n\ Test\ if\ we\ are\ close\ to\ one\ of\ the\ edges\ of\ the\ world.\ Return\ true\ is\ we\ are.\n
 comment4.params=s
@@ -20,3 +21,20 @@ comment7.params=bulletBoosterCount
 comment7.target=void\ SetBulletBoosterCount(int)
 comment7.text=\n\ Setter\ for\ BulletBooster\n\ \n
 numComments=8
+=======
+comment3.target=void\ act()
+comment4.params=
+comment4.target=boolean\ atWorldEdge()
+comment4.text=\r\n\ Test\ if\ we\ are\ close\ to\ one\ of\ the\ edges\ of\ the\ world.\ Return\ true\ is\ we\ are.\r\n
+comment5.params=s
+comment5.target=void\ Image(greenfoot.GreenfootImage)
+comment6.params=
+comment6.target=int\ GetBulletBoosterCount()
+comment6.text=\r\n\ Getter\ for\ lifeline\r\n\ \ \r\n
+comment7.params=
+comment7.target=void\ ResetBulletBoosterCount()
+comment8.params=bulletBoosterCount
+comment8.target=void\ SetBulletBoosterCount(int)
+comment8.text=\r\n\ Setter\ for\ BulletBooster\r\n\ \r\n
+numComments=9
+>>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
