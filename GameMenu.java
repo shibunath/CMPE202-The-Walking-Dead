@@ -15,6 +15,7 @@ public class GameMenu extends World
     private Instructions instructions = new Instructions();
     static GreenfootSound menu_music = new GreenfootSound("menu.wav");
     static GreenfootSound gamesound = new GreenfootSound("gameSound.wav");
+    static GreenfootSound zombiesSound = new GreenfootSound("sounds/zombies.wav");
     //GreenfootSound click = new GreenfootSound("click.wav");     
     /**
      * Constructor for objects of class GameMenu.
@@ -51,7 +52,9 @@ public class GameMenu extends World
         {
             menu_music.stop();
             gamesound.playLoop();
-            gamesound.setVolume(60);
+            gamesound.setVolume(50);
+            zombiesSound.playLoop();
+            zombiesSound.setVolume(40);
             
         }      
     }
