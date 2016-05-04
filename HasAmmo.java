@@ -32,7 +32,7 @@ public class HasAmmo extends Actor implements WeaponState
         hbp.setWeaponState(hbp.getPullTriggerState());
         h.getWorld().addObject(new Default(), h.getX(), h.getY());
         GreenfootSound gun_shot = new GreenfootSound("sounds/gun_shot.wav");
-        gun_shot.play();
+        gun_shot.play();      
         hbp.ammo -= 1;
     }
     
