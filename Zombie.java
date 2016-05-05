@@ -51,19 +51,8 @@ public class Zombie extends ZombieActor implements ActorObjects
             turn(dt);
             move(110);
         }    
-        killHero();
-    }    
-    
-    public void killHero(){
-        Actor hero;
-        hero = getOneObjectAtOffset(0, 0, Hero.class);
-        if(hero != null)
-        {
-            World world = getWorld();
-            world.removeObject(hero);
-            Greenfoot.stop();
-        }
-    }
+        killHero();        
+    } 
     
     public java.lang.String accept(ActorVisitor visitor){
         return visitor.visit(this);

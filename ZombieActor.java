@@ -67,7 +67,18 @@ public class ZombieActor extends Actor
     {
         move(amount, zR); 
     //    rotationalBounce = true;
-    }    
+    } 
+    
+    public void killHero(){
+        Actor hero;
+        hero = getOneObjectAtOffset(0, 0, Hero.class);
+        if(hero != null)
+        {
+            World world = getWorld();
+            world.removeObject(hero);            
+            Greenfoot.setWorld(new ExitScreen());            
+        }
+    }
     
     // getters and setters
     protected int getzY() { return zY; }        
