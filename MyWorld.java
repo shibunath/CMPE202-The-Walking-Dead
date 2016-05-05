@@ -313,6 +313,7 @@ public class MyWorld extends World
     public void stopped()
     {
         GameMenu.gamesound.pause();
+        GameMenu.zombiesSound.pause();
     }
 
 }

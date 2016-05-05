@@ -34,6 +34,7 @@ public class PulledTrigger extends Actor implements WeaponState
             h.getWorld().addObject(new Default(), h.getX(), h.getY());
             GreenfootSound gun_shot = new GreenfootSound("sounds/gun_shot.wav");
             gun_shot.play();
+            gun_shot.setVolume(70);
             hbp.ammo -= 1;
         }
         else

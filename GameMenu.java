@@ -63,6 +63,7 @@ public class GameMenu extends World
     {
         gamesound.pause();
         menu_music.pause();
+        zombiesSound.pause();
     }
     
     
