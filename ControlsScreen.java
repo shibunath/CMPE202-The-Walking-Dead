@@ -16,9 +16,9 @@ public class ControlsScreen extends World
     public ControlsScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1); 
+        super(1000, 600, 1); 
         GreenfootImage controlScreen = new GreenfootImage("controlsScreen.jpg");
-        controlScreen.scale(800,600);
+        controlScreen.scale(1000,600);
         setBackground(controlScreen);
         prepare();
     }

@@ -75,7 +75,7 @@ public class ZombieActor extends Actor
         if(hero != null)
         {
             World world = getWorld();
-            world.removeObject(hero);            
+            world.removeObject(hero);                        
             Greenfoot.setWorld(new ExitScreen());            
         }
     }

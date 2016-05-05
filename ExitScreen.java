@@ -14,10 +14,12 @@ public class ExitScreen extends World
      * 
      */
     private CheckScore checkScore = new CheckScore();
+    private MyWorld  myworld = new MyWorld();
     public ExitScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1); 
+        myworld.stopped();
         GreenfootImage bg = getBackground();
         bg.scale(1000,600);
         prepare();
