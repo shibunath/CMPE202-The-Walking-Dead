@@ -61,6 +61,7 @@ public class Zombie extends ZombieActor implements ActorObjects
         {
             World world = getWorld();
             world.removeObject(hero);
+            Greenfoot.stop();
         }
     }
     
