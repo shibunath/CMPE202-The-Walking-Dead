@@ -24,7 +24,9 @@ public class Default extends Bullets
         move(this.getSpeed());
         
        if(hit(Zombie.class)||hit(ZombieNew.class)||isAtEdge()){
+            myWorldRef.setKill(1);
             getWorld().removeObject(this);
+            
         }
         
        /* if(isAtEdge())
