@@ -45,7 +45,9 @@ public class BulletBooster extends BoosterPack
         }
         
         
-        if(atWorldEdge())
+        if(used==false)
+        {
+            if(atWorldEdge())
         {
             this.getImage().setTransparency(0);
         }
@@ -53,6 +55,7 @@ public class BulletBooster extends BoosterPack
         {
             this.getImage().setTransparency(255);
         }
+        }  
               
     }  
    
