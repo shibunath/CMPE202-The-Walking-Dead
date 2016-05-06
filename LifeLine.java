@@ -46,8 +46,10 @@ public class LifeLine extends BoosterPack
     
             
         }
-           
-        if(atWorldEdge())
+         
+        if(used==false)
+        {
+               if(atWorldEdge())
         {
             this.getImage().setTransparency(0);
         }
@@ -55,7 +57,7 @@ public class LifeLine extends BoosterPack
         {
             this.getImage().setTransparency(255);
         }
-        
+        } 
     }  
     
        /**
