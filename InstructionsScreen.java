@@ -17,7 +17,7 @@ public class InstructionsScreen extends World
     public InstructionsScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1); 
+        super(1000, 600, 1); 
         GreenfootImage bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.black); 

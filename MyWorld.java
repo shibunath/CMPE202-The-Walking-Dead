@@ -10,7 +10,7 @@ import java.awt.Color;
  */
 public class MyWorld extends World
 {
- 
+  
     /** 
      * Constructor for objects of class MyWorld.
      * 
@@ -36,7 +36,7 @@ public class MyWorld extends World
     private PositionX xP;
     private PositionY yP;
     
-        private int[] x;
+    private int[] x;
     private int[] y;
     private int[] xL;
     private int[] yL;
@@ -44,17 +44,18 @@ public class MyWorld extends World
     private BulletBooster[] boosters;
     private LifeLine[] lives;
     
+    private GreenfootImage bg;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         hero = new Hero();
         addObject(hero, 400, 300);
-        GreenfootImage bg = getBackground();
+        bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);        
-        bg.drawString("Lifes: ", 50, 40);
-        addLife(3);
+       // bg.drawString("Lifes: ", 50, 40);
+        //addLife(3);
         bg.drawString("Kills: ", 600, 40); 
         setKill(0);
         LifeLine.ResetLifeBoosterCount();
@@ -188,8 +189,8 @@ public class MyWorld extends World
         GreenfootImage bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);        
-        bg.drawString("Lifes: ", 50, 40);
-        bg.drawString(""+lifes, 130, 40);     
+       // bg.drawString("Lifes: ", 50, 40);
+       // bg.drawString(""+lifes, 130, 40);     
         bg.drawString("Kills: ", 600, 40); 
         bg.drawString(""+kills, 675, 40);
     }
@@ -269,10 +270,10 @@ public class MyWorld extends World
     public void setKill(int kill)
     {
         kills += kill; // increment kill      
-        GreenfootImage bg = getBackground();                    
-        bg.setFont(new Font("SERIF", Font.BOLD, 24));
-        bg.setColor(Color.white);
-        bg.drawString(""+kills, 675, 40);
+        GreenfootImage bg2 = new GreenfootImage(bg);                    
+        bg2.setFont(new Font("SERIF", Font.BOLD, 24));
+        bg2.setColor(Color.white);
+        bg2.drawString(""+kills, 675, 40);
     }
     
     public void addLife(int life)
@@ -313,6 +314,7 @@ public class MyWorld extends World
     public void stopped()
     {
         GameMenu.gamesound.pause();
+        GameMenu.zombiesSound.pause();
     }
 
 }

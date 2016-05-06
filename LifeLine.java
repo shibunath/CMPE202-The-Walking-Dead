@@ -46,8 +46,32 @@ public class LifeLine extends BoosterPack
     
             
         }
-              
+         
+        if(used==false)
+        {
+               if(atWorldEdge())
+        {
+            this.getImage().setTransparency(0);
+        }
+        else
+        {
+            this.getImage().setTransparency(255);
+        }
+        } 
     }  
+    
+       /**
+     * Test if we are close to one of the edges of the world. Return true is we are.
+     */
+    public boolean atWorldEdge()
+    {
+        if(getX() < 20 || getX() > getWorld().getWidth() - 20)
+            return true;
+        if(getY() < 20 || getY() > getWorld().getHeight() - 20)
+            return true;
+        else
+            return false;
+    }
     
      public static void ResetLifeBoosterCount()
     {

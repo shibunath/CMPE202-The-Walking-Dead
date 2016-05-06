@@ -50,8 +50,11 @@ public class ZombieNew extends ZombieActor implements ActorObjects
             // turn and move
             turn(dt);
             move(90);
-        }       
-    }    
+        } 
+        killHero();
+        
+    }  
+    
     
     public java.lang.String accept(ActorVisitor visitor){
         return visitor.visit(this);
