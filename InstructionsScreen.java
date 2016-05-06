@@ -19,7 +19,9 @@ public class InstructionsScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1); 
-        GreenfootImage bg = getBackground();
+        GreenfootImage bg = new GreenfootImage("back.jpg");
+        bg.scale(1000,600);
+        setBackground(bg);
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.black); 
         bg.drawString("1. The Key to survive this Zombie Apocalypse is to keep collecting \n lives and bullets to kill zombies.\n",50, 100);

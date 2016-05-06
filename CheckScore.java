@@ -24,5 +24,8 @@ public class CheckScore extends Actor
         // Add your action code here.
         gameOver.playLoop();
         gameOver.setVolume(70);
+        if (Greenfoot.mouseClicked(this)){         
+           Greenfoot.setWorld(new CheckScoreScreen());
+        }
     }    
 }
