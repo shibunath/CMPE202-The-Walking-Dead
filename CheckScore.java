@@ -11,7 +11,7 @@ public class CheckScore extends Actor
     /**
      * Act - do whatever the CheckScore wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+     */    
     static GreenfootSound gameOver = new GreenfootSound("sounds/gameOver.mp3");
     public CheckScore()
     {
