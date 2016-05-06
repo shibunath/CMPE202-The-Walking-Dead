@@ -43,6 +43,16 @@ public class BulletBooster extends BoosterPack
             super.Notify(this);
    
         }
+        
+        
+        if(atWorldEdge())
+        {
+            this.getImage().setTransparency(0);
+        }
+        else
+        {
+            this.getImage().setTransparency(255);
+        }
               
     }  
    
