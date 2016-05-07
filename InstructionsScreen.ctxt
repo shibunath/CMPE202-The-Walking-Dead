@@ -3,7 +3,10 @@ comment0.target=InstructionsScreen
 comment0.text=\n\ Write\ a\ description\ of\ class\ InstructionsScreen\ here.\n\ \n\ @author\ Kushal\n\ @version\ 1.0\ /\ 04-30-2016\n
 comment1.params=
 comment1.target=InstructionsScreen()
+<<<<<<< HEAD
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ InstructionsScreen.\n\ \n
+=======
+>>>>>>> 715d777ac25a50b0c31e124abd48d82bad61f5dd
 comment2.params=
 comment2.target=void\ prepare()
 numComments=3

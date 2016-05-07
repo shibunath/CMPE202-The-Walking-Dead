@@ -14,6 +14,7 @@ public class ExitScreen extends World
      * 
      */
     private CheckScore checkScore = new CheckScore();
+    private PlayAgain playAgain = new PlayAgain();
     private MyWorld  myworld = new MyWorld();
     public ExitScreen()
     {    
@@ -27,6 +28,7 @@ public class ExitScreen extends World
     
     public void prepare()
     {        
-        addObject(checkScore, 500, 530);
+        addObject(checkScore, 330, 530);
+        addObject(playAgain, 660, 520);
     }
 }
