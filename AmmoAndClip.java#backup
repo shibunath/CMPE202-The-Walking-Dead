@@ -3,26 +3,26 @@ import java.awt.Font;
 import java.awt.Color;
 
 /**
- * Write a description of class AmmoAndClip2 here.
+ * Write a description of class AmmoAndClip here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class AmmoAndClip2 extends Actor
+public class AmmoAndClip extends Actor
 {
-    Arsenal aaa2;
+    Arsenal aaa;
     /**
-     * Act - do whatever the AmmoAndClip2 wants to do. This method is called whenever
+     * Act - do whatever the AmmoAndClip wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
         // Add your action code here.
-        setImage(new GreenfootImage("Clip: " + aaa2.clip, 20, Color.white, null));
+        setImage(new GreenfootImage("Ammo: " + aaa.ammo + "\n", 20, null, null));
     }
     
-    public AmmoAndClip2(Arsenal aRef)
+    public AmmoAndClip(Arsenal aRef)
     {
-        aaa2 = aRef;
+        aaa = aRef;
     }
 }

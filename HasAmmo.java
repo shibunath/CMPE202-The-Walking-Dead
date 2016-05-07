@@ -57,9 +57,8 @@ public class HasAmmo extends Actor implements WeaponState
         if (hbp.clip > 0)
         {
             hbp.setWeaponState(hbp.getReloadState());
-            System.out.println("Executed");
             hbp.clip -= 1;
-            hbp.setAmmoInWeapon(100);
+            hbp.setAmmoInWeapon(35);
             GreenfootSound reload = new GreenfootSound("sounds/uReload.mp3");
             reload.play();
             hbp.setWeaponState(hbp.getHasAmmoState());

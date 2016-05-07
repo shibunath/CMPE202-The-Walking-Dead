@@ -1,4 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.awt.Font;
+import java.awt.Color;
 
 /**
  * Write a description of class AmmoAndClip here.
@@ -16,7 +18,7 @@ public class AmmoAndClip extends Actor
     public void act() 
     {
         // Add your action code here.
-        setImage(new GreenfootImage("Ammo: " + aaa.ammo + "\n", 20, null, null));
+        setImage(new GreenfootImage("Ammo: " + aaa.ammo + "\n", 20, Color.white, null));
     }
     
     public AmmoAndClip(Arsenal aRef)

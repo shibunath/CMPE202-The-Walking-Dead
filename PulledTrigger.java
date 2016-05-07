@@ -60,12 +60,11 @@ public class PulledTrigger extends Actor implements WeaponState
     public void reload()
     {
         // delay weapon for a few seconds
-        // delay weapon for a few seconds
         if (hbp.clip > 0)
         {
             hbp.setWeaponState(hbp.getReloadState());
             hbp.clip -= 1;
-            hbp.setAmmoInWeapon(100);
+            hbp.setAmmoInWeapon(35);
             GreenfootSound reload = new GreenfootSound("sounds/uReload.mp3");
             reload.play();
             hbp.setWeaponState(hbp.getHasAmmoState());
