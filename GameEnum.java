@@ -22,5 +22,11 @@ public class GameEnum
     BOOSTER
     
   }
+  
+   public static enum BOOSTERBONUS {
+    ADD,
+    SUBSTRACT,
+    
+  }
 
 }

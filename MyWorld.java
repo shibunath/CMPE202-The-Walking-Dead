@@ -11,7 +11,7 @@ import java.awt.Color;
 public class MyWorld extends World
 {
   
-    /** 
+    /**  
      * Constructor for objects of class MyWorld.
      * 
      */
@@ -25,7 +25,7 @@ public class MyWorld extends World
     AmmoAndClip aac;
     AmmoAndClip2 aac2;
      
-    private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
+    private GreenfootImage bgImage = new GreenfootImage("Background.jpg");
     private GreenfootImage boosterImg;
     private GreenfootImage bulletImg;
     private GreenfootImage lifeImg;
@@ -47,18 +47,23 @@ public class MyWorld extends World
        
     private BulletBooster[] boosters;
     private LifeLine[] lives;
-    
+     
     private GreenfootImage bg;
     public MyWorld()
-    {    
+    {     
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1);
+        super(1000, 600, 1);
         hero = new Hero();
+<<<<<<< HEAD
         aac = new AmmoAndClip(hero.GetArsenal());
         aac2 = new AmmoAndClip2(hero.GetArsenal());
         addObject(hero, 400, 300);
         addObject(aac, 60, 40);
         addObject(aac2, 60, 60);
+=======
+        hero.getImage().scale(70,40);
+        addObject(hero, 400, 300);
+>>>>>>> 66eb557c26a13f0df73b1b4348d4d54996be2f3c
         
         bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
@@ -67,6 +72,7 @@ public class MyWorld extends World
         //addLife(3);
         bg.drawString("Kills: ", 600, 40); 
         setKill(0);
+        bg.drawString(""+kills, 675, 40);
         LifeLine.ResetLifeBoosterCount();
         BulletBooster.ResetBulletBoosterCount();
         boosterFactory = new BoosterFactory();
@@ -92,7 +98,7 @@ public class MyWorld extends World
         yP.setPosition(hero.getY());
         iP=yP;
           
-       System.out.println(iP.getPosition());
+    //   System.out.println(iP.getPosition());
     }
     
     public Hero GetHero()
@@ -109,15 +115,14 @@ public class MyWorld extends World
         yP.setPosition(y);
         iP=yP;
         
-        System.out.println(iP.getPosition());
+      //  System.out.println(iP.getPosition());
     }
     
     public void addBulletBoosterToWorld()
     {
         int xcord = 640;
         int ycord = 500;
-        buletbooster = new BulletBooster();
-        addObject(buletbooster,640,500); 
+     
          boosters=new BulletBooster[5];
         x=new int[10]; 
         y=new int[10];
@@ -152,6 +157,15 @@ public class MyWorld extends World
                 addObject(lives[i],xL[i],yL[i]); 
         
         }        
+    }
+    
+    public BoosterFactory GetBoosterFactory()
+    {
+        if(boosterFactory == null)
+        {
+            boosterFactory = new BoosterFactory();
+        }
+       return boosterFactory;
     }
     
     public int getRandomNumber(int start,int end)

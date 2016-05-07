@@ -91,9 +91,17 @@ public class LifeLine extends BoosterPack
      * Setter for lifeline
      * 
      */
-    public void SetLifeLine(int lifelineCount)
+    public void SetLifeLine(int lifelineCount, boolean isLifeReduced)
     {
-         _lifelineCount=lifelineCount;
+         if(isLifeReduced && lifelineCount > 0)
+         {
+             lifelineCount -=1;
+         }
+         else
+         {
+             lifelineCount +=1;
+            }
+        _lifelineCount=lifelineCount;
          //UpdateBoosterLifeLine(_lifelineCount);
           if(_world!=null)
           {
