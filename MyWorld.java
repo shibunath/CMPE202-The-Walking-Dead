@@ -107,8 +107,7 @@ public class MyWorld extends World
     {
         int xcord = 640;
         int ycord = 500;
-        buletbooster = new BulletBooster();
-        addObject(buletbooster,640,500); 
+     
          boosters=new BulletBooster[5];
         x=new int[10]; 
         y=new int[10];
