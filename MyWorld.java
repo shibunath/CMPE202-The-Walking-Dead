@@ -157,7 +157,7 @@ public class MyWorld extends World
                 lives[i].Image(lifelineimg);
                 xL[i]=getRandomNumber(50,1000);
                 yL[i]=getRandomNumber(0,1000);
-                addObject(lives[i],xL[i],yL[i]); 
+         //       addObject(lives[i],xL[i],yL[i]); 
         
         }        
     }
@@ -283,10 +283,10 @@ public class MyWorld extends World
      
         for(int i=0;i<3;i++)
     {      
-       removeObject(lives[i]);
+   //    removeObject(lives[i]);
  
-        if(!lives[i].unUsed())
-        addObject(lives[i],xL[i]+t,yL[i]);
+     //   if(!lives[i].unUsed())
+       // addObject(lives[i],xL[i]+t,yL[i]);
     } 
     
     persistText();
