@@ -88,7 +88,7 @@ public class MyWorld extends World
         addObject(buletbooster, 700, 60);
         addBulletBoosterToWorld();
         kk.setKill(kills);
-        kk.tact();
+      
         addObject(kk,60,80);
         
         addLifeBoosterToWorld();
@@ -101,7 +101,7 @@ public class MyWorld extends World
         yP.setPosition(hero.getY());
         iP=yP;
           
-    //   System.out.println(iP.getPosition());
+       System.out.println(iP.getPosition());
     }
     
     public Hero GetHero()
@@ -118,7 +118,7 @@ public class MyWorld extends World
         yP.setPosition(y);
         iP=yP;
         
-      //  System.out.println(iP.getPosition());
+        System.out.println(iP.getPosition());
     }
     
     public void addBulletBoosterToWorld()
@@ -297,7 +297,7 @@ public class MyWorld extends World
     {
         kills += kill; 
         kk.setKill(kills);
-          kk.tact();    // increment kill      
+       // increment kill      
         GreenfootImage bg2 = new GreenfootImage(bg);                    
         bg2.setFont(new Font("SERIF", Font.BOLD, 24));
         bg2.setColor(Color.white);
