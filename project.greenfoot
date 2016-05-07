@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat May 07 11:38:43 PDT 2016
+#Sat May 07 11:54:30 PDT 2016
 target49.type=ClassTarget
 target24.type=ClassTarget
 target16.name=Position
@@ -692,6 +692,7 @@ target8.type=ClassTarget
 dependency70.to=Controls
 dependency66.from=GameName
 class.GameMenu.image=start.gif
+class.gameContents.superclass=greenfoot.Actor
 dependency41.from=MyWorld
 dependency6.to=MyWorld
 target24.typeParameters=

@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=LifeLineObservor
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ LifeLineObservor\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ LifeLineObservor\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=LifeLineObservor()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LifeLineObservor\r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ LifeLineObservor\n
 comment2.params=actor
 comment2.target=void\ update(greenfoot.Actor)
-comment2.text=\r\n\ Updates\ observors\ in\ case\ life\ pack\ bonus\ is\ picked\r\n\ \r\n\ @param\ \ Actor\ \ actor\r\n\ \r\n
+comment2.text=\n\ Updates\ observors\ in\ case\ life\ pack\ bonus\ is\ picked\n\ \n\ @param\ \ Actor\ \ actor\n\ \n
 numComments=3
