@@ -70,16 +70,23 @@ public class ZombieActor extends Actor
     } 
     
     public void killHero(){
-        Actor hero;
+    Actor hero;
         hero = getOneObjectAtOffset(0, 0, Hero.class);
         if(hero != null)
         {
             
-            BoosterPack  boosterpack = boosterFactory.GetBooster(GameEnum.BoosterTypes.LIFE);
-            int currentCount = boosterpack.GetBoosterLifeLineCount();
-            World world = getWorld();
-            world.removeObject(hero);                        
-            Greenfoot.setWorld(new ExitScreen());            
+            LifeLine  lifeline = (LifeLine) boosterFactory.GetBooster(GameEnum.BoosterTypes.LIFE);
+            int currentCount = lifeline.GetLifeLine();
+            if(currentCount > 0)
+            {
+              lifeline.SetLifeLine(currentCount, true);
+            }
+            if(currentCount > 15)
+            {
+                World world = getWorld();
+                world.removeObject(hero);                        
+                Greenfoot.setWorld(new ExitScreen());      
+            }
         }
     }
     

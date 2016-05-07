@@ -32,7 +32,7 @@ public class LifeLineObservor extends PowerUpObservor
         if(name == "LifeLine")
         {
         Integer currentCount = LifeLine.GetLifeLine();
-        _lifeline.SetLifeLine(currentCount+1);
+        _lifeline.SetLifeLine(currentCount,false);
         }
         //System.out.println("life counter"+LifeLine.GetLifeLine());
     }
