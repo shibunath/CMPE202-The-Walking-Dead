@@ -1,15 +1,20 @@
 #BlueJ class context
 comment0.target=Arsenal
-comment0.text=\n\ Write\ a\ description\ of\ class\ Arsenal\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Arsenal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=heroRef
 comment1.target=Arsenal(Hero)
 comment10.params=
 comment10.target=WeaponState\ getPullTriggerState()
 comment11.params=
+<<<<<<< HEAD
 comment11.target=WeaponState\ getReloadState()
 comment12.params=
 comment12.target=void\ act()
 comment12.text=\n\ Act\ -\ do\ whatever\ the\ Arsenal\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+=======
+comment11.target=void\ act()
+comment11.text=\r\n\ Act\ -\ do\ whatever\ the\ Arsenal\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+>>>>>>> 946f38c2a4637f05b7274253930f86dbb582b35f
 comment2.params=newState
 comment2.target=void\ setWeaponState(WeaponState)
 comment3.params=newAmmo

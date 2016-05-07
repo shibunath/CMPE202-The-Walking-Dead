@@ -38,7 +38,7 @@ public class BulletBooster extends BoosterPack
             if(world.GetHero()!=null)
             {
                 Arsenal a = world.GetHero().GetArsenal();
-                a.addAmmo(100);
+                a.addAmmo(35);
             }
             super.Notify(this);
    
