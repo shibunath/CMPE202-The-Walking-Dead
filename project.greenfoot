@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat May 07 11:54:30 PDT 2016
+#Sat May 07 12:05:02 PDT 2016
 target49.type=ClassTarget
 target24.type=ClassTarget
 target16.name=Position
@@ -480,6 +480,7 @@ dependency53.type=UsesDependency
 class.LifeLineObservor.superclass=PowerUpObservor
 target16.type=AbstractTarget
 dependency9.to=Bullets
+class.BulletBooster.image=ammunition-icon.png
 dependency80.type=UsesDependency
 class.PositionX.superclass=Position
 dependency146.to=Arsenal
