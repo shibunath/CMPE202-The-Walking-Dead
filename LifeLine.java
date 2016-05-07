@@ -18,7 +18,6 @@ public class LifeLine extends BoosterPack
     
     public LifeLine()
     {
-       // _lifelineCount = 0;
     }
    
       public boolean unUsed()
@@ -99,7 +98,7 @@ public class LifeLine extends BoosterPack
          }
          else
          {
-             lifelineCount +=2;
+             lifelineCount +=1;
             }
         _lifelineCount=lifelineCount;
          //UpdateBoosterLifeLine(_lifelineCount);

@@ -20,30 +20,37 @@ public class PowerUpObservor extends GameObservorBase
     } 
 
     /**
-     * An example of a method - replace this comment with your own
+     * Notifies all observors
      * 
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
     public void Notify(Actor actor)
     {
-        // put your code here
-       //System.out.println("notify observors");
-             
-        //add logd on actor
+
         for(PowerUpObservor observor: observors)
         {
             observor.update(actor);
         }
        
     }
+   /** Attach listener 
+   */
    public void attach(PowerUpObservor observor)
    {
         observors.add(observor);
    }
+   
+   /** Detach listener 
+   */
+   public void remove(PowerUpObservor observor)
+   {
+        observors.remove(observor);
+   }
+
    public void update(Actor actor)
    {
        
-   }
+   } 
 }
  

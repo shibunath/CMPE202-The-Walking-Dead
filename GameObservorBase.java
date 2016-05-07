@@ -12,8 +12,7 @@ public abstract class GameObservorBase
      * Act - do whatever the BaseObservor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-   protected LifeLine lifeLine;
-   protected Bullets bullets;
    protected abstract void Notify(Actor actor);
+   protected abstract void update(Actor actor);
    
 }

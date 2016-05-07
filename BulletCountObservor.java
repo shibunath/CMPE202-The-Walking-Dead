@@ -20,11 +20,12 @@ public class BulletCountObservor extends PowerUpObservor
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Updates observors in case bullet pack bonus is picked
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param  Actor   actor param
+     * 
      */
+   @Override
    public void update(Actor actor) 
     { 
         // put your code here

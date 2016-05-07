@@ -6,5 +6,5 @@ comment1.target=BulletCountObservor()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ BulletCountObservor\r\n
 comment2.params=actor
 comment2.target=void\ update(greenfoot.Actor)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.text=\r\n\ Updates\ observors\ in\ case\ bullet\ pack\ bonus\ is\ picked\r\n\ \r\n\ @param\ \ Actor\ \ \ actor\ param\r\n\ \r\n
 numComments=3

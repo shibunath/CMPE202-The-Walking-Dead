@@ -75,7 +75,7 @@ public class ZombieActor extends Actor
         if(hero != null)
         {
             
-            LifeLine  lifeline = (LifeLine) boosterFactory.GetBooster(GameEnum.BoosterTypes.LIFE);
+            LifeLine  lifeline = (LifeLine) boosterFactory.GetBooster(GameEnum.BOOSTERTYPE.LIFE);
             int currentCount = lifeline.GetLifeLine();
             if(currentCount > 0)
             {

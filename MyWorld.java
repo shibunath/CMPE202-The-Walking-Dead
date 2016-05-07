@@ -75,9 +75,9 @@ public class MyWorld extends World
         LifeLine.ResetLifeBoosterCount();
         BulletBooster.ResetBulletBoosterCount();
         boosterFactory = new BoosterFactory();
-        boosterpack = boosterFactory.GetBooster(GameEnum.BoosterTypes.BOOSTER);
-        buletbooster =(BulletBooster) boosterFactory.GetBooster(GameEnum.BoosterTypes.BULLET);
-        lifeLineBooster = (LifeLine) boosterFactory.GetBooster(GameEnum.BoosterTypes.LIFE);
+        boosterpack = boosterFactory.GetBooster(GameEnum.BOOSTERTYPE.BOOSTER);
+        buletbooster =(BulletBooster) boosterFactory.GetBooster(GameEnum.BOOSTERTYPE.BULLET);
+        lifeLineBooster = (LifeLine) boosterFactory.GetBooster(GameEnum.BOOSTERTYPE.LIFE);
         //buletbooster
         GreenfootImage lifeIcon = new GreenfootImage("herz_small.png");
         GreenfootImage bulletIcon = new GreenfootImage("powerup_small.png");
@@ -101,7 +101,7 @@ public class MyWorld extends World
         yP.setPosition(hero.getY());
         iP=yP;
           
-       System.out.println(iP.getPosition());
+      // System.out.println(iP.getPosition());
     }
     
     public Hero GetHero()
@@ -118,7 +118,7 @@ public class MyWorld extends World
         yP.setPosition(y);
         iP=yP;
         
-        System.out.println(iP.getPosition());
+        //System.out.println(iP.getPosition());
     }
     
     public void addBulletBoosterToWorld()
@@ -322,10 +322,10 @@ public class MyWorld extends World
         bg.drawString(""+lifes, 130, 40);                
     }
     
-     public void UpdateWorldBoostCounter(int bulletCount)
+     public void UpdateWorldBulletBoostCounter(int bulletCount)
     {
         boosterImg = new GreenfootImage(" " +bulletCount, 20, Color.BLACK, Color.WHITE);
-        boosterpack = boosterFactory.GetBooster(GameEnum.BoosterTypes.BOOSTER);
+        boosterpack = boosterFactory.GetBooster(GameEnum.BOOSTERTYPE.BULLET);
         boosterpack.Image(boosterImg);
         addObject(boosterpack, 750, 60); 
     }
@@ -334,7 +334,7 @@ public class MyWorld extends World
     {
         
        lifeImg = new GreenfootImage(" " +lifeCount, 20, Color.BLACK, Color.WHITE);
-       boosterpack = boosterFactory.GetBooster(GameEnum.BoosterTypes.BOOSTER);
+       boosterpack = boosterFactory.GetBooster(GameEnum.BOOSTERTYPE.LIFE);
        boosterpack.Image(lifeImg);
        addObject(boosterpack, 650, 60); 
     }

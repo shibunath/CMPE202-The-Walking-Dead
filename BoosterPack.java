@@ -8,12 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */ 
 public class BoosterPack extends Actor
 {
-    
     GreenfootImage i;
-    protected LifeLine _lifeLine;
-    protected static int lifeLineCount = 0;
-    protected static int bulletBoosterCount = 0;
-    private PowerUpObservor _powerUpObserver = new PowerUpObservor();
+    private PowerUpObservor _powerUpObserver;
     /**
      * Act - do whatever the BoosterPack wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -34,37 +30,10 @@ public class BoosterPack extends Actor
           }
         
     }   
-    public void UpdateBoosterLifeLine(int count)
-    {
-         this.lifeLineCount = count;  
-        
-    }
-    
-    public static void ResetCount()
-    {
-        lifeLineCount = 0;
-        bulletBoosterCount = 0;
-    }
-    
-    public static int GetBoosterLifeLineCount()
-    {
-        return lifeLineCount;
-        
-    }
-    public static int GetBulletBoosterCount()
-    {
-        return bulletBoosterCount;
-        
-    }
-     public void UpdateBulletBoosterCount(int count)
-    {
-         this.bulletBoosterCount = count; 
-        
-    }
     
     public void Notify(Actor booster)
     {
-         //String image=booster.GreenfootImage.imageFileName;
+        _powerUpObserver = new PowerUpObservor();
         _powerUpObserver.attach(new LifeLineObservor());
         _powerUpObserver.attach(new BulletCountObservor());
         _powerUpObserver.Notify(booster);

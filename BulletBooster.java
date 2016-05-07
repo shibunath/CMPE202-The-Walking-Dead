@@ -18,14 +18,8 @@ public class BulletBooster extends BoosterPack
      */
     public BulletBooster()
     {
-        //_bulletBoosterCount=0;
     }
-  
-    public boolean unUsed()
-    {
-        return used;
-    }
-    
+ 
      public void act() 
     {
 
@@ -38,6 +32,7 @@ public class BulletBooster extends BoosterPack
             if(world.GetHero()!=null)
             {
                 Arsenal a = world.GetHero().GetArsenal();
+                a.addAmmo(35);
                 a.addClip(1);
             }
             super.Notify(this);
@@ -59,6 +54,11 @@ public class BulletBooster extends BoosterPack
               
     }  
    
+    public boolean unUsed()
+    {
+        return used;
+    }
+    
      /**
      * Test if we are close to one of the edges of the world. Return true is we are.
      */
@@ -97,10 +97,9 @@ public class BulletBooster extends BoosterPack
     public void SetBulletBoosterCount(int bulletBoosterCount)
     {
          _bulletBoosterCount=bulletBoosterCount;
-         // UpdateBulletBoosterCount(_bulletBoosterCount); 
           if(_world!=null)
           {
-                _world.UpdateWorldBoostCounter(_bulletBoosterCount); 
+                _world.UpdateWorldBulletBoostCounter(_bulletBoosterCount); 
            }
       
        

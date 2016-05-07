@@ -20,11 +20,12 @@ public class LifeLineObservor extends PowerUpObservor
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Updates observors in case life pack bonus is picked
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param  Actor  actor
+     * 
      */
+   @Override
    public void update(Actor actor) 
     {
         // put your code here
@@ -34,9 +35,9 @@ public class LifeLineObservor extends PowerUpObservor
         Integer currentCount = LifeLine.GetLifeLine();
         _lifeline.SetLifeLine(currentCount,false);
         }
-        //System.out.println("life counter"+LifeLine.GetLifeLine());
+        
     }
     
-  
+
 }
  

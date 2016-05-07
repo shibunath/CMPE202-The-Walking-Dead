@@ -16,7 +16,7 @@ public class GameEnum
     {
     }
 
-   public static enum BoosterTypes {
+   public static enum BOOSTERTYPE {
     BULLET,
     LIFE,
     BOOSTER
