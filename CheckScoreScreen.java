@@ -22,9 +22,11 @@ public class CheckScoreScreen extends World
         super(1000, 600, 1);     
         GreenfootImage bg = new GreenfootImage("back.jpg");
         bg.scale(1000,600);
+        
+     CheckScoreS s=new CheckScoreS();
+     addObject(s,500,250);
         setBackground(bg);
-        bg.setFont(new Font("SERIF", Font.BOLD, 24));
-        bg.setColor(Color.black);         
+    
         prepare();
     }
     
