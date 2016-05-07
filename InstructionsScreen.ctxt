@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=InstructionsScreen
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ InstructionsScreen\ here.\r\n\ \r\n\ @author\ Kushal\r\n\ @version\ 1.0\ /\ 04-30-2016\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ InstructionsScreen\ here.\n\ \n\ @author\ Kushal\n\ @version\ 1.0\ /\ 04-30-2016\n
 comment1.params=
 comment1.target=InstructionsScreen()
 comment2.params=

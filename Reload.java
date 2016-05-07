@@ -37,8 +37,11 @@ public class Reload extends Actor implements WeaponState
     {
         if (newAmmo > 0)
         {
-            System.out.println("Added more ammo");
             hbp.ammo += newAmmo;
+            if (hbp.ammo > 35)
+            {
+                hbp.ammo = 35;
+            }
         }
     }
     

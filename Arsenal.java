@@ -28,7 +28,7 @@ public class Arsenal extends Actor
         pullTrigger = new PulledTrigger(this, heroRef);
         reload = new Reload(this, heroRef);
         
-        ammo = 100;
+        ammo = 35;
         clip = 3;
         
         if(ammo < 1)

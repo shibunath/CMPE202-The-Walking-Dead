@@ -54,16 +54,13 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
         hero = new Hero();
-<<<<<<< HEAD
         aac = new AmmoAndClip(hero.GetArsenal());
         aac2 = new AmmoAndClip2(hero.GetArsenal());
         addObject(hero, 400, 300);
         addObject(aac, 60, 40);
         addObject(aac2, 60, 60);
-=======
         hero.getImage().scale(70,40);
         addObject(hero, 400, 300);
->>>>>>> 66eb557c26a13f0df73b1b4348d4d54996be2f3c
         
         bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
