@@ -120,11 +120,11 @@ public class MyWorld extends World
         int xcord = 640;
         int ycord = 500;
      
-         boosters=new BulletBooster[5];
+         boosters=new BulletBooster[20];
         x=new int[10]; 
         y=new int[10];
         
-        for (int i=0 ; i < 4 ; i++)
+        for (int i=0 ; i < 9 ; i++)
          {
                 GreenfootImage bulletImg =new GreenfootImage("ammunition-icon.png");
                 boosters[i] = new BulletBooster();
@@ -142,9 +142,9 @@ public class MyWorld extends World
         int ycord = 500;
         xL=new int[10]; 
         yL=new int[10];
-        lives=new LifeLine[5];
+        lives=new LifeLine[20];
         
-        for (int i=0 ; i < 3 ; i++)
+        for (int i=0 ; i < 9 ; i++)
         {
                 GreenfootImage lifelineimg =new GreenfootImage("power.png");
                 lives[i] = new LifeLine();

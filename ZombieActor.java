@@ -81,7 +81,7 @@ public class ZombieActor extends Actor
             {
               lifeline.SetLifeLine(currentCount, true);
             }
-            if(currentCount > 15)
+            if(currentCount < 1)
             {
                 World world = getWorld();
                 world.removeObject(hero);                        
