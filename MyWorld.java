@@ -84,8 +84,8 @@ public class MyWorld extends World
         //boosterImg = new GreenfootImage("Bullet Boost : " +0 +"\n Life Boost : "+0, 20, Color.WHITE, Color.BLACK);
         lifeLineBooster.Image(lifeIcon);
         buletbooster.Image(bulletIcon);
-        addObject(lifeLineBooster, 850, 20);
-        addObject(buletbooster, 950, 20);
+       // addObject(lifeLineBooster, 850, 20);
+        //addObject(buletbooster, 950, 20);
         addBulletBoosterToWorld();
         kk.setKill(kills);
       
@@ -272,7 +272,7 @@ public class MyWorld extends World
     getBackground().drawImage(bgImage, t, 0); 
     getBackground().drawImage(bgImage, t + bgImage.getWidth(), 0);
     
-        for(int i=0;i<4;i++)
+        for(int i=0;i<9;i++)
     {       
        removeObject(boosters[i]);
  
