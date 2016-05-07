@@ -99,7 +99,7 @@ public class LifeLine extends BoosterPack
          }
          else
          {
-             lifelineCount +=1;
+             lifelineCount +=2;
             }
         _lifelineCount=lifelineCount;
          //UpdateBoosterLifeLine(_lifelineCount);
