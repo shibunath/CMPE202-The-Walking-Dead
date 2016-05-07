@@ -22,7 +22,7 @@ public class MyWorld extends World
     private int Count=0;
     public static int actionType, actionDistance;
      
-    private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
+    private GreenfootImage bgImage = new GreenfootImage("Background.jpg");
     private GreenfootImage boosterImg;
     private GreenfootImage bulletImg;
     private GreenfootImage lifeImg;
@@ -46,11 +46,13 @@ public class MyWorld extends World
      
     private GreenfootImage bg;
     public MyWorld()
-    {    
+    {     
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
         hero = new Hero();
+        hero.getImage().scale(70,40);
         addObject(hero, 400, 300);
+        
         bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);        
@@ -84,7 +86,7 @@ public class MyWorld extends World
         yP.setPosition(hero.getY());
         iP=yP;
           
-       System.out.println(iP.getPosition());
+    //   System.out.println(iP.getPosition());
     }
     
     public Hero GetHero()
@@ -101,7 +103,7 @@ public class MyWorld extends World
         yP.setPosition(y);
         iP=yP;
         
-        System.out.println(iP.getPosition());
+      //  System.out.println(iP.getPosition());
     }
     
     public void addBulletBoosterToWorld()
