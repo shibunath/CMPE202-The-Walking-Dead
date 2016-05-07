@@ -25,7 +25,6 @@ public class Hero extends Actor
      public Arsenal GetArsenal()
     {
         return a;
-        
     }
     
     /**

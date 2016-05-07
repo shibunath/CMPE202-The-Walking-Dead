@@ -18,8 +18,6 @@ public class Arsenal extends Actor
     
     WeaponState curState;
     
-    GreenfootImage gi;
-    
     int ammo;
     int clip;
     

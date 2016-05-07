@@ -21,6 +21,9 @@ public class MyWorld extends World
     
     private int Count=0;
     public static int actionType, actionDistance;
+    
+    AmmoAndClip aac;
+    AmmoAndClip2 aac2;
      
     private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
     private GreenfootImage boosterImg;
@@ -51,7 +54,12 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         hero = new Hero();
+        aac = new AmmoAndClip(hero.GetArsenal());
+        aac2 = new AmmoAndClip2(hero.GetArsenal());
         addObject(hero, 400, 300);
+        addObject(aac, 60, 40);
+        addObject(aac2, 60, 60);
+        
         bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);        
