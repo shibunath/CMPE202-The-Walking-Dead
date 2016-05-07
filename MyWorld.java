@@ -88,7 +88,8 @@ public class MyWorld extends World
         addObject(buletbooster, 700, 60);
         addBulletBoosterToWorld();
         kk.setKill(kills);
-        addObject(kk,675,40);
+        kk.tact();
+        addObject(kk,60,80);
         
         addLifeBoosterToWorld();
         setAction(0);
@@ -295,7 +296,8 @@ public class MyWorld extends World
     public void setKill(int kill)
     {
         kills += kill; 
-        kk.setKill(kills);// increment kill      
+        kk.setKill(kills);
+          kk.tact();    // increment kill      
         GreenfootImage bg2 = new GreenfootImage(bg);                    
         bg2.setFont(new Font("SERIF", Font.BOLD, 24));
         bg2.setColor(Color.white);
