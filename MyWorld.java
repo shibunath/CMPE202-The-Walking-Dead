@@ -84,8 +84,8 @@ public class MyWorld extends World
         //boosterImg = new GreenfootImage("Bullet Boost : " +0 +"\n Life Boost : "+0, 20, Color.WHITE, Color.BLACK);
         lifeLineBooster.Image(lifeIcon);
         buletbooster.Image(bulletIcon);
-        addObject(lifeLineBooster, 610, 60);
-        addObject(buletbooster, 700, 60);
+        addObject(lifeLineBooster, 850, 20);
+        addObject(buletbooster, 950, 20);
         addBulletBoosterToWorld();
         kk.setKill(kills);
       
@@ -327,16 +327,15 @@ public class MyWorld extends World
         boosterImg = new GreenfootImage(" " +bulletCount, 20, Color.BLACK, Color.WHITE);
         boosterpack = boosterFactory.GetBooster(GameEnum.BOOSTERTYPE.BULLET);
         boosterpack.Image(boosterImg);
-        addObject(boosterpack, 750, 60); 
-    }
+        addObject(boosterpack, 880, 20);  
+     }
     
      public void UpdateWorldLifeBooster(int lifeCount)
     {
-        
        lifeImg = new GreenfootImage(" " +lifeCount, 20, Color.BLACK, Color.WHITE);
        boosterpack = boosterFactory.GetBooster(GameEnum.BOOSTERTYPE.LIFE);
        boosterpack.Image(lifeImg);
-       addObject(boosterpack, 650, 60); 
+       addObject(boosterpack, 980, 20); 
     }
     
     public void stopped()
