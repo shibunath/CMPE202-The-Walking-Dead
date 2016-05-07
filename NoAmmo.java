@@ -48,6 +48,12 @@ public class NoAmmo extends Actor implements WeaponState
     }
     
     @Override
+    public void addClip(int newClip)
+    {
+        hbp.clip += newClip;
+    }
+    
+    @Override
     public void reload()
     {
         // delay weapon for a few seconds

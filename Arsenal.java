@@ -59,6 +59,10 @@ public class Arsenal extends Actor
     {
         curState.addAmmo(ammo);
     }
+    public void addClip(int clip)
+    {
+        curState.addClip(clip);
+    }
     public void reload()
     {
         curState.reload();
