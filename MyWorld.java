@@ -34,6 +34,7 @@ public class MyWorld extends World
     private BulletBooster buletbooster;
     private LifeLine lifeLineBooster;
     private BoosterFactory boosterFactory;
+    private Kills kk;
     
     private EPosition eP;
     private IPosition iP;
@@ -61,15 +62,16 @@ public class MyWorld extends World
         addObject(aac2, 60, 60);
         hero.getImage().scale(70,40);
         addObject(hero, 400, 300);
-        
+        kk=new Kills();
+         
         bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);        
        // bg.drawString("Lifes: ", 50, 40);
         //addLife(3);
-        bg.drawString("Kills: ", 600, 40); 
+    //    bg.drawString("Kills: ", 600, 40); 
         setKill(0);
-        bg.drawString(""+kills, 675, 40);
+      //  bg.drawString(""+kills, 675, 40);
         LifeLine.ResetLifeBoosterCount();
         BulletBooster.ResetBulletBoosterCount();
         boosterFactory = new BoosterFactory();
@@ -85,6 +87,9 @@ public class MyWorld extends World
         addObject(lifeLineBooster, 610, 60);
         addObject(buletbooster, 700, 60);
         addBulletBoosterToWorld();
+        kk.setKill(kills);
+        addObject(kk,675,40);
+        
         addLifeBoosterToWorld();
         setAction(0);
         
@@ -211,8 +216,8 @@ public class MyWorld extends World
         bg.setColor(Color.white);        
        // bg.drawString("Lifes: ", 50, 40);
        // bg.drawString(""+lifes, 130, 40);     
-        bg.drawString("Kills: ", 600, 40); 
-        bg.drawString(""+kills, 675, 40);
+    //    bg.drawString("Kills: ", 600, 40); 
+      //  bg.drawString(""+kills, 675, 40);
     }
     
     
@@ -289,7 +294,8 @@ public class MyWorld extends World
     
     public void setKill(int kill)
     {
-        kills += kill; // increment kill      
+        kills += kill; 
+        kk.setKill(kills);// increment kill      
         GreenfootImage bg2 = new GreenfootImage(bg);                    
         bg2.setFont(new Font("SERIF", Font.BOLD, 24));
         bg2.setColor(Color.white);
