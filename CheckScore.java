@@ -12,7 +12,7 @@ public class CheckScore extends Actor
      * Act - do whatever the CheckScore wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */    
-    static GreenfootSound gameOver = new GreenfootSound("sounds/gameOver.mp3");
+    //static GreenfootSound gameOver = new GreenfootSound("sounds/gameOver.mp3");
     public CheckScore()
     {
         GreenfootImage highScores = new GreenfootImage("checkScore.png");       
@@ -22,10 +22,10 @@ public class CheckScore extends Actor
     public void act() 
     {
         // Add your action code here.
-        gameOver.playLoop();
-        gameOver.setVolume(70);
+        
         if (Greenfoot.mouseClicked(this)){         
            Greenfoot.setWorld(new CheckScoreScreen());
         }
-    }    
+    } 
+        
 }

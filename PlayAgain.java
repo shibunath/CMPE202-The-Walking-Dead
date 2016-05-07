@@ -20,6 +20,7 @@ public class PlayAgain extends Actor
     {
         if (Greenfoot.mouseClicked(this)){
            Greenfoot.setWorld(new GameMenu());
+           ExitScreen.gameOver.stop();
         }
     }    
 }
