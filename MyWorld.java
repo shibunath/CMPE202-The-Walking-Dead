@@ -22,7 +22,7 @@ public class MyWorld extends World
     private int Count=0;
     public static int actionType, actionDistance;
      
-    private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
+    private GreenfootImage bgImage = new GreenfootImage("Background.jpg");
     private GreenfootImage boosterImg;
     private GreenfootImage bulletImg;
     private GreenfootImage lifeImg;
@@ -43,12 +43,12 @@ public class MyWorld extends World
        
     private BulletBooster[] boosters;
     private LifeLine[] lives;
-    
+     
     private GreenfootImage bg;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1);
+        super(1000, 600, 1);
         hero = new Hero();
         addObject(hero, 400, 300);
         bg = getBackground();
@@ -58,6 +58,7 @@ public class MyWorld extends World
         //addLife(3);
         bg.drawString("Kills: ", 600, 40); 
         setKill(0);
+        bg.drawString(""+kills, 675, 40);
         LifeLine.ResetLifeBoosterCount();
         BulletBooster.ResetBulletBoosterCount();
         boosterFactory = new BoosterFactory();
