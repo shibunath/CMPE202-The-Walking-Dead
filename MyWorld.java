@@ -147,6 +147,15 @@ public class MyWorld extends World
         }        
     }
     
+    public BoosterFactory GetBoosterFactory()
+    {
+        if(boosterFactory == null)
+        {
+            boosterFactory = new BoosterFactory();
+        }
+       return boosterFactory;
+    }
+    
     public int getRandomNumber(int start,int end)
     {
            int normal = Greenfoot.getRandomNumber(end-start+1);

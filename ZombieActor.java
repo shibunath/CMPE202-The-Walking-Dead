@@ -13,7 +13,7 @@ public class ZombieActor extends Actor
     private int zX, zY; // Zombie location coordinates
     private int vX, vY; // Zombie speeds along the horizontal axis and the vertial axis
     private int zR; // Zombie rotation
-    
+    BoosterFactory boosterFactory = new BoosterFactory();
     
     public void move()
     {
@@ -74,6 +74,9 @@ public class ZombieActor extends Actor
         hero = getOneObjectAtOffset(0, 0, Hero.class);
         if(hero != null)
         {
+            
+            BoosterPack  boosterpack = boosterFactory.GetBooster(GameEnum.BoosterTypes.LIFE);
+            int currentCount = boosterpack.GetBoosterLifeLineCount();
             World world = getWorld();
             world.removeObject(hero);                        
             Greenfoot.setWorld(new ExitScreen());            
