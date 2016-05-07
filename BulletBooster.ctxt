@@ -7,21 +7,6 @@ comment1.text=\ \n\ Act\ -\ do\ whatever\ the\ BulletBooster\ wants\ to\ do.\ Th
 comment2.params=
 comment2.target=boolean\ unUsed()
 comment3.params=
-<<<<<<< HEAD
-comment3.target=boolean\ atWorldEdge()
-comment3.text=\n\ Test\ if\ we\ are\ close\ to\ one\ of\ the\ edges\ of\ the\ world.\ Return\ true\ is\ we\ are.\n
-comment4.params=s
-comment4.target=void\ Image(greenfoot.GreenfootImage)
-comment5.params=
-comment5.target=int\ GetBulletBoosterCount()
-comment5.text=\n\ Getter\ for\ lifeline\n\ \ \n
-comment6.params=
-comment6.target=void\ ResetBulletBoosterCount()
-comment7.params=bulletBoosterCount
-comment7.target=void\ SetBulletBoosterCount(int)
-comment7.text=\n\ Setter\ for\ BulletBooster\n\ \n
-numComments=8
-=======
 comment3.target=void\ act()
 comment4.params=
 comment4.target=boolean\ atWorldEdge()
@@ -37,4 +22,3 @@ comment8.params=bulletBoosterCount
 comment8.target=void\ SetBulletBoosterCount(int)
 comment8.text=\n\ Setter\ for\ BulletBooster\n\ \n
 numComments=9
->>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a

@@ -10,25 +10,6 @@ comment3.target=void\ Image(greenfoot.GreenfootImage)
 comment4.params=
 comment4.target=void\ act()
 comment5.params=
-<<<<<<< HEAD
-<<<<<<< HEAD
-comment5.target=int\ GetLifeLine()
-comment5.text=\n\ Getter\ for\ lifeline\n\ \n
-comment6.params=lifelineCount
-comment6.target=void\ SetLifeLine(int)
-comment6.text=\n\ Setter\ for\ lifeline\n\ \n
-numComments=7
-=======
-comment5.target=void\ ResetLifeBoosterCount()
-comment6.params=
-comment6.target=int\ GetLifeLine()
-comment6.text=\n\ Getter\ for\ lifeline\n\ \n
-comment7.params=lifelineCount
-comment7.target=void\ SetLifeLine(int)
-comment7.text=\n\ Setter\ for\ lifeline\n\ \n
-numComments=8
->>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
-=======
 comment5.target=boolean\ atWorldEdge()
 comment5.text=\n\ Test\ if\ we\ are\ close\ to\ one\ of\ the\ edges\ of\ the\ world.\ Return\ true\ is\ we\ are.\n
 comment6.params=
@@ -40,4 +21,3 @@ comment8.params=lifelineCount
 comment8.target=void\ SetLifeLine(int)
 comment8.text=\n\ Setter\ for\ lifeline\n\ \n
 numComments=9
->>>>>>> 8b728c2d710182b77dfc1b0562cb4d1861234631

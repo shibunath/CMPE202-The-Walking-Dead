@@ -1,22 +1,8 @@
 #BlueJ class context
 comment0.target=Zombie
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 comment0.text=\n\ Write\ a\ description\ of\ class\ Zombie\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=Zombie()
-=======
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Zombie\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-=======
-comment0.text=\n\ Write\ a\ description\ of\ class\ Zombie\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
->>>>>>> 7ef983ac1b44b6b35897394538cf8dd354cc7331
-=======
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Zombie\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
->>>>>>> 8b728c2d710182b77dfc1b0562cb4d1861234631
 comment1.params=image
 comment1.target=Zombie(java.lang.String)
->>>>>>> 3f987463a8bd8c0c3eee328700bb750039ad3b3a
 comment2.params=
 comment2.target=java.lang.String\ getActorImage()
 comment3.params=

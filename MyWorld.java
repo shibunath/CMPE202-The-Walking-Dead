@@ -26,6 +26,7 @@ public class MyWorld extends World
     private GreenfootImage boosterImg;
     private GreenfootImage bulletImg;
     private GreenfootImage lifeImg;
+    private GreenfootImage hud; // for displaying current ammo amount
     private BoosterPack boosterpack;
     private BulletBooster buletbooster;
     private LifeLine lifeLineBooster;
@@ -242,7 +243,7 @@ public class MyWorld extends World
     }
     
     int t = Count;
-   getBackground().drawImage(bgImage, t-bgImage.getWidth(), 0); 
+    getBackground().drawImage(bgImage, t-bgImage.getWidth(), 0); 
     getBackground().drawImage(bgImage, t, 0); 
     getBackground().drawImage(bgImage, t + bgImage.getWidth(), 0);
     
