@@ -11,7 +11,7 @@ import java.awt.Color;
 public class MyWorld extends World
 {
   
-    /** 
+    /**  
      * Constructor for objects of class MyWorld.
      * 
      */
@@ -22,7 +22,7 @@ public class MyWorld extends World
     private int Count=0;
     public static int actionType, actionDistance;
      
-    private GreenfootImage bgImage = new GreenfootImage("Background.jpg");
+    private GreenfootImage bgImage = new GreenfootImage("Game.jpg");
     private GreenfootImage boosterImg;
     private GreenfootImage bulletImg;
     private GreenfootImage lifeImg;
