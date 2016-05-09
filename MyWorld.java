@@ -48,6 +48,7 @@ public class MyWorld extends World
        
     private BulletBooster[] boosters;
     private LifeLine[] lives;
+    private bomb[] bombs;
      
     private GreenfootImage bg;
     public MyWorld()
@@ -92,6 +93,7 @@ public class MyWorld extends World
         addObject(kk,60,80);
         
         addLifeBoosterToWorld();
+       // addBombToWorld();
         setAction(0);
         
         eP=new EPosition();
@@ -158,6 +160,26 @@ public class MyWorld extends World
                 xL[i]=getRandomNumber(50,1000);
                 yL[i]=getRandomNumber(0,1000);
          //       addObject(lives[i],xL[i],yL[i]); 
+        
+        }        
+    }
+    
+      public void addBombToWorld()
+    {
+        int xcord = 640;
+        int ycord = 600;
+        xL=new int[10]; 
+        yL=new int[10];
+        bombs=new bomb[20];
+        
+        for (int i=0 ; i < 1 ; i++)
+        {
+                GreenfootImage lifelineimg =new GreenfootImage("bomb.gif");
+                bombs[i] = new bomb();
+                bombs[i].Image(lifelineimg);
+                xL[i]=getRandomNumber(50,1000);
+                yL[i]=getRandomNumber(0,1000);
+             addObject(bombs[i],xL[i],yL[i]); 
         
         }        
     }
@@ -324,7 +346,7 @@ public class MyWorld extends World
     
      public void UpdateWorldBulletBoostCounter(int bulletCount)
     {
-        boosterImg = new GreenfootImage(" " +bulletCount, 20, Color.BLACK, Color.WHITE);
+        boosterImg = new GreenfootImage("Power Up : " +bulletCount, 20, Color.BLACK, Color.WHITE);
         boosterpack = boosterFactory.GetBooster(GameEnum.BOOSTERTYPE.BULLET);
         boosterpack.Image(boosterImg);
         addObject(boosterpack, 880, 20);  
