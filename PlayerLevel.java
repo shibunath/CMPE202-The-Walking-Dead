@@ -20,19 +20,19 @@ public class PlayerLevel
         //super(600, 400, 1); 
     }
     
-    public void addObject(WorldItem item)
+    public void addItem(WorldItem item)
     {
-        
+        items.add(item);
     }
     
-     public void removeObject(WorldItem item)
+     public void removeItem(WorldItem item)
     {
-        
+         items.remove(item);
     }
     
-    public void showObjects()
+    public WorldItem getItem()
     {
-        
+        return items.get(0);
     }
     
    

@@ -14,17 +14,15 @@ public class WorldBuilder
         // super(1000, 600, 1);
     }
     public PlayerLevel PrepareLevel1 (){
-     // Meal meal = new Meal();
-     // meal.addItem(new VegBurger());
-     // meal.addItem(new Coke());
-      return null;
+     PlayerLevel level = new  PlayerLevel();
+     level.addItem(new PlayerLevel1());
+     return (PlayerLevel) level.getItem();
    }   
 
      public PlayerLevel PrepareLevel2 (){
-     // Meal meal = new Meal();
-     // meal.addItem(new VegBurger());
-     // meal.addItem(new Coke());
-      return null;
+        PlayerLevel level = new  PlayerLevel();
+        level.addItem(new PlayerLevel2());
+        return (PlayerLevel) level.getItem();
    }   
  
     
