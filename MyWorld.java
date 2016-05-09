@@ -93,7 +93,7 @@ public class MyWorld extends World
         addObject(kk,60,80);
         
         addLifeBoosterToWorld();
-       // addBombToWorld();
+        addBombToWorld();
         setAction(0);
         
         eP=new EPosition();
@@ -134,7 +134,7 @@ public class MyWorld extends World
         
         for (int i=0 ; i < 9 ; i++)
          {
-                GreenfootImage bulletImg =new GreenfootImage("ammunition-icon.png");
+                GreenfootImage bulletImg =new GreenfootImage("ammunition_pack.gif");
                 boosters[i] = new BulletBooster();
                 boosters[i].Image(bulletImg);
                 x[i]=getRandomNumber(50,1000);
@@ -172,14 +172,14 @@ public class MyWorld extends World
         yL=new int[10];
         bombs=new bomb[20];
         
-        for (int i=0 ; i < 1 ; i++)
+        for (int i=0 ; i < 5 ; i++)
         {
                 GreenfootImage lifelineimg =new GreenfootImage("bomb.gif");
                 bombs[i] = new bomb();
                 bombs[i].Image(lifelineimg);
                 xL[i]=getRandomNumber(50,1000);
                 yL[i]=getRandomNumber(0,1000);
-             addObject(bombs[i],xL[i],yL[i]); 
+                //addObject(bombs[i],xL[i],yL[i]); 
         
         }        
     }
@@ -303,13 +303,13 @@ public class MyWorld extends World
     }
      
      
-        for(int i=0;i<3;i++)
+    /*    for(int i=0;i<3;i++)
     {      
-   //    removeObject(lives[i]);
+      removeObject(bombs[i]);
  
-     //   if(!lives[i].unUsed())
-       // addObject(lives[i],xL[i]+t,yL[i]);
-    } 
+     if(!bombs[i].unUsed())
+        addObject(bombs[i],xL[i]+t,yL[i]);
+    }  */
     
     persistText();
   
