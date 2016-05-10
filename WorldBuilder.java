@@ -13,16 +13,16 @@ public class WorldBuilder
     {
         // super(1000, 600, 1);
     }
-    public PlayerLevel PrepareLevel1 (){
+    public PlayerLevel PrepareAndReturnLevel1 (){
      PlayerLevel level = new  PlayerLevel();
      level.addItem(new PlayerLevel1());
-     return (PlayerLevel) level.getItem();
+     return  level;
    }   
 
-     public PlayerLevel PrepareLevel2 (){
+     public PlayerLevel PrepareAndReturnLevel2 (){
         PlayerLevel level = new  PlayerLevel();
         level.addItem(new PlayerLevel2());
-        return (PlayerLevel) level.getItem();
+        return level;
    }   
  
     

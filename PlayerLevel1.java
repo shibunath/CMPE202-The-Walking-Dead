@@ -8,7 +8,7 @@ public class PlayerLevel1 implements WorldItem
 {
     public String WorldBackGroundImgName()
     {
-        return "background.png";
+        return "Background.jpg";
     }
     public int PlayerLevel()
     {

@@ -25,6 +25,7 @@ public class MyWorld extends World
     AmmoAndClip aac;
     AmmoAndClip2 aac2;
      
+    //private GreenfootImage bgImage = null;
     private GreenfootImage bgImage = new GreenfootImage("Background.jpg");
     private GreenfootImage boosterImg;
     private GreenfootImage bulletImg;
@@ -51,10 +52,13 @@ public class MyWorld extends World
     private bomb[] bombs;
      
     private GreenfootImage bg;
+    WorldBuilder builder;
     public MyWorld()
     {     
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
+        builder = new WorldBuilder();
+       // builder.PrepareAndReturnLevel1();
         hero = new Hero();
         aac = new AmmoAndClip(hero.GetArsenal());
         aac2 = new AmmoAndClip2(hero.GetArsenal());
@@ -64,15 +68,10 @@ public class MyWorld extends World
         hero.getImage().scale(70,40);
         addObject(hero, 400, 300);
         kk=new Kills();
-         
         bg = getBackground();
         bg.setFont(new Font("SERIF", Font.BOLD, 24));
         bg.setColor(Color.white);        
-       // bg.drawString("Lifes: ", 50, 40);
-        //addLife(3);
-    //    bg.drawString("Kills: ", 600, 40); 
         setKill(0);
-      //  bg.drawString(""+kills, 675, 40);
         LifeLine.ResetLifeBoosterCount();
         BulletBooster.ResetBulletBoosterCount();
         boosterFactory = new BoosterFactory();
@@ -102,8 +101,27 @@ public class MyWorld extends World
         yP=new PositionY(xP);
         yP.setPosition(hero.getY());
         iP=yP;
-          
+       // GetWorldElementsByLevel(1);
       // System.out.println(iP.getPosition());
+    }
+    
+    public void GetWorldElementsByLevel(int level)
+    {
+       PlayerLevel playerlevel =  null;
+       switch (level)
+       {
+            case 1:  playerlevel =  builder.PrepareAndReturnLevel2();
+                     break;
+            case 2:  playerlevel =  builder.PrepareAndReturnLevel2();
+                     break;
+            default:
+                     playerlevel =  builder.PrepareAndReturnLevel1();
+                     break;
+        }
+    
+       WorldItem item = playerlevel.getItem();
+       String bgfilename = item.WorldBackGroundImgName();
+      // bgImage = new GreenfootImage(bgfilename);
     }
     
     public Hero GetHero()
@@ -319,6 +337,10 @@ public class MyWorld extends World
     {
         kills += kill; 
         kk.setKill(kills);
+        if(kills > 10)
+        {
+            GetWorldElementsByLevel(2);
+        }
        // increment kill      
         GreenfootImage bg2 = new GreenfootImage(bg);                    
         bg2.setFont(new Font("SERIF", Font.BOLD, 24));
