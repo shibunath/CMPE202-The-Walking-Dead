@@ -11,6 +11,7 @@ public interface WorldItem
     public int PlayerLevel();
     public int PlayerScore();
     public int scoreThresholdForNextLevel();
+    public BoosterPack[] getLevelBoosters();
     
 
    

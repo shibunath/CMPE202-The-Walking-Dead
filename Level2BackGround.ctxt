@@ -1,6 +1,5 @@
 #BlueJ class context
-comment0.target=PlayerLevel2
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ PlayerLevel1\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.target=Level2BackGround
 comment1.params=
 comment1.target=java.lang.String\ WorldBackGroundImgName()
 comment2.params=
@@ -9,4 +8,6 @@ comment3.params=
 comment3.target=int\ PlayerScore()
 comment4.params=
 comment4.target=int\ scoreThresholdForNextLevel()
-numComments=5
+comment5.params=
+comment5.target=BoosterPack[]\ getLevelBoosters()
+numComments=6

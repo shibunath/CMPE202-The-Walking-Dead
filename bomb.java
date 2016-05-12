@@ -18,7 +18,12 @@ public class bomb extends BoosterPack
     {
          if (isTouching(Hero.class))
         {
+        Actor hero;
+        hero = getOneObjectAtOffset(0, 0, Hero.class);
           used=true;
+          World world = getWorld();
+          world.removeObject(hero);                        
+          Greenfoot.setWorld(new ExitScreen());   
           
         }
         // Add your action code here.

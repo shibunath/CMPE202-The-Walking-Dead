@@ -21,6 +21,7 @@ public class MyWorld extends World
     
     private int Count=0;
     public static int actionType, actionDistance;
+    private static int playercurrentLevel=1;
     
     AmmoAndClip aac;
     AmmoAndClip2 aac2;
@@ -45,8 +46,7 @@ public class MyWorld extends World
     private int[] x;
     private int[] y;
     private int[] xL;
-    private int[] yL;
-       
+    private int[] yL;      
     private BulletBooster[] boosters;
     private LifeLine[] lives;
     private bomb[] bombs;
@@ -58,6 +58,7 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
         builder = new WorldBuilder();
+        playercurrentLevel=1;
        // builder.PrepareAndReturnLevel1();
         hero = new Hero();
         aac = new AmmoAndClip(hero.GetArsenal());
@@ -115,13 +116,25 @@ public class MyWorld extends World
             case 2:  playerlevel =  builder.PrepareAndReturnLevel2();
                      break;
             default:
-                     playerlevel =  builder.PrepareAndReturnLevel1();
+                     playerlevel =  builder.PrepareAndReturnLevel2();
                      break;
         }
-    
+      	
+       //((MyWorld) getWorld()).setBackground(new GreenfootImage("nameOfImageFile.png"));
+       //setBackground("Game.jpg");
        WorldItem item = playerlevel.getItem();
        String bgfilename = item.WorldBackGroundImgName();
-      // bgImage = new GreenfootImage(bgfilename);
+       setBackground(bgfilename);
+       bgImage = new GreenfootImage(bgfilename);
+       BoosterPack[] boosters = item.getLevelBoosters();
+       int boosterCount=0;
+       for(BoosterPack pack : boosters)
+       {
+          xL[boosterCount]=getRandomNumber(50,1000);
+          yL[boosterCount]=getRandomNumber(0,1000);
+          addObject(boosters[boosterCount],xL[boosterCount],yL[boosterCount]); 
+          boosterCount+=1;
+       }
     }
     
     public Hero GetHero()
@@ -337,8 +350,9 @@ public class MyWorld extends World
     {
         kills += kill; 
         kk.setKill(kills);
-        if(kills > 10)
+        if(kills > 20 && playercurrentLevel == 1)
         {
+            playercurrentLevel = 2;
             GetWorldElementsByLevel(2);
         }
        // increment kill      

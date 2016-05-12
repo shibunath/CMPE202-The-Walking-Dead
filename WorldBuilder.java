@@ -15,13 +15,13 @@ public class WorldBuilder
     }
     public PlayerLevel PrepareAndReturnLevel1 (){
      PlayerLevel level = new  PlayerLevel();
-     level.addItem(new PlayerLevel1());
+     level.addItem(new Level1BackGround());
      return  level;
    }   
 
      public PlayerLevel PrepareAndReturnLevel2 (){
         PlayerLevel level = new  PlayerLevel();
-        level.addItem(new PlayerLevel2());
+        level.addItem(new Level2BackGround());
         return level;
    }   
  
