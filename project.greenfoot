@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu May 12 09:47:18 PDT 2016
+#Thu May 12 11:58:38 PDT 2016
 target15.width=90
 target5.height=50
 dependency147.from=Kills
@@ -286,7 +286,7 @@ target16.typeParameters=
 target38.width=90
 dependency30.to=Hero
 dependency154.type=UsesDependency
-editor.swing.0.height=700
+editor.swing.0.height=1050
 target60.y=1330
 target18.y=730
 target60.x=10
@@ -857,7 +857,7 @@ target4.typeParameters=
 target20.naviview.expanded=true
 target2.naviview.expanded=true
 target40.height=50
-editor.swing.0.width=701
+editor.swing.0.width=1938
 target10.y=1150
 target10.x=110
 dependency74.from=ReturnMenu

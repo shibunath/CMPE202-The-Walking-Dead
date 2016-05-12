@@ -119,9 +119,6 @@ public class MyWorld extends World
                      playerlevel =  builder.PrepareAndReturnLevel2();
                      break;
         }
-      	
-       //((MyWorld) getWorld()).setBackground(new GreenfootImage("nameOfImageFile.png"));
-       //setBackground("Game.jpg");
        WorldItem item = playerlevel.getItem();
        String bgfilename = item.WorldBackGroundImgName();
        setBackground(bgfilename);
@@ -181,7 +178,7 @@ public class MyWorld extends World
         int ycord = 500;
         xL=new int[10]; 
         yL=new int[10];
-        lives=new LifeLine[20];
+        lives=new LifeLine[20];  
         
         for (int i=0 ; i < 9 ; i++)
         {
@@ -333,16 +330,7 @@ public class MyWorld extends World
         addObject(boosters[i],x[i]+t,y[i]);
     }
      
-     
-    /*    for(int i=0;i<3;i++)
-    {      
-      removeObject(bombs[i]);
- 
-     if(!bombs[i].unUsed())
-        addObject(bombs[i],xL[i]+t,yL[i]);
-    }  */
-    
-    persistText();
+   persistText();
   
 }
     
@@ -352,6 +340,9 @@ public class MyWorld extends World
         kk.setKill(kills);
         if(kills > 20 && playercurrentLevel == 1)
         {
+            //Greenfoot.delay(5);
+            setBackground("level2.png");
+            Greenfoot.delay(50);
             playercurrentLevel = 2;
             GetWorldElementsByLevel(2);
         }
