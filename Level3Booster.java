@@ -1,11 +1,11 @@
 /**
- * Write a description of class PlayerLevel1 here.
+ * Write a description of class Level1Booster here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 import greenfoot.*; 
-public class Level2BackGround implements WorldItem 
+public class Level3Booster implements WorldItem  
 {
     private int[] xL;
     private int[] yL;  
@@ -13,7 +13,7 @@ public class Level2BackGround implements WorldItem
     private BoosterPack[] BoosterPacks;
     public String WorldBackGroundImgName()
     {
-        return "Game.jpg";
+        return "Background.jpg";
     }
     public int PlayerLevel()
     {
@@ -32,13 +32,13 @@ public class Level2BackGround implements WorldItem
     {
         int xcord = 640;
         int ycord = 600;
-        xL=new int[10]; 
-        yL=new int[10];
-        bombs=new bomb[20];
+        xL=new int[6]; 
+        yL=new int[6];
+        bombs=new bomb[6];
         
-        for (int i=0 ; i < 5 ; i++)
+        for (int i=0 ; i < 6 ; i++)
         {
-                GreenfootImage lifelineimg =new GreenfootImage("bomb.gif");
+                GreenfootImage lifelineimg =new GreenfootImage("power.png");
                 bombs[i] = new bomb();
                 bombs[i].Image(lifelineimg);
                 //xL[i]=getRandomNumber(50,1000);

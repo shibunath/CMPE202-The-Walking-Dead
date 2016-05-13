@@ -30,9 +30,14 @@ public class PlayerLevel
          items.remove(item);
     }
     
-    public WorldItem getItem()
+    public WorldItem getLevelBackground()
     {
         return items.get(0);
+    }
+    
+    public WorldItem getAllLevelBoosters()
+    {
+        return items.get(1);
     }
     
    

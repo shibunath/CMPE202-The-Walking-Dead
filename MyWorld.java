@@ -59,7 +59,9 @@ public class MyWorld extends ParentWorld
         super(1000, 600, 1);
         builder = new WorldBuilder();
         playercurrentLevel=1;
+        bgImage = new GreenfootImage("Background.jpg");
        // builder.PrepareAndReturnLevel1();
+        kills = 0;
         hero = new Hero();
         aac = new AmmoAndClip(hero.GetArsenal());
         aac2 = new AmmoAndClip2(hero.GetArsenal());
@@ -92,8 +94,6 @@ public class MyWorld extends ParentWorld
       
         addObject(kk,60,80);
         
-        addLifeBoosterToWorld();
-        addBombToWorld();
         setAction(0);
         
         eP=new EPosition();
@@ -106,32 +106,47 @@ public class MyWorld extends ParentWorld
       // System.out.println(iP.getPosition());
     }
     
-    public void GetWorldElementsByLevel(int level)
+     public void GetWorldElementsByLevel(int level)
     {
+        xL=new int[10]; 
+        yL=new int[10];  
        PlayerLevel playerlevel =  null;
        switch (level)
        {
-            case 1:  playerlevel =  builder.PrepareAndReturnLevel2();
-                     break;
             case 2:  playerlevel =  builder.PrepareAndReturnLevel2();
                      break;
-            default:
-                     playerlevel =  builder.PrepareAndReturnLevel2();
+            case 3:  playerlevel =  builder.PrepareAndReturnLevel3();
+                     break;
+            default: 
+                     playerlevel =  null;
                      break;
         }
-       WorldItem item = playerlevel.getItem();
-       String bgfilename = item.WorldBackGroundImgName();
-       setBackground(bgfilename);
-       bgImage = new GreenfootImage(bgfilename);
-       BoosterPack[] boosters = item.getLevelBoosters();
-       int boosterCount=0;
+       if(null!=playerlevel)
+       {
+           WorldItem item = playerlevel.getLevelBackground();
+           String bgfilename = item.WorldBackGroundImgName();
+           setBackground(bgfilename);
+           bgImage = new GreenfootImage(bgfilename);
+           WorldItem booster = playerlevel.getAllLevelBoosters();
+           BoosterPack[] boosters = new BoosterPack[6];
+           boosters = booster.getLevelBoosters();
+           
+            int boosterCount=0;   
+       //int[] xL,yL;
        for(BoosterPack pack : boosters)
        {
-          xL[boosterCount]=getRandomNumber(50,1000);
-          yL[boosterCount]=getRandomNumber(0,1000);
-          addObject(boosters[boosterCount],xL[boosterCount],yL[boosterCount]); 
+        
+          if(null!=  boosters && boosters.length > 0)
+          {
+            xL[boosterCount]=getRandomNumber(50,1000);
+            yL[boosterCount]=getRandomNumber(0,1000);
+            addObject(boosters[boosterCount],xL[boosterCount],yL[boosterCount]); 
+            
+          }
           boosterCount+=1;
        }
+      }
+      
     }
     
     public Hero GetHero()
@@ -172,46 +187,7 @@ public class MyWorld extends ParentWorld
          }        
     }
      
-     public void addLifeBoosterToWorld()
-    {
-        int xcord = 640;
-        int ycord = 500;
-        xL=new int[10]; 
-        yL=new int[10];
-        lives=new LifeLine[20];  
-        
-        for (int i=0 ; i < 9 ; i++)
-        {
-                GreenfootImage lifelineimg =new GreenfootImage("power.png");
-                lives[i] = new LifeLine();
-                lives[i].Image(lifelineimg);
-                xL[i]=getRandomNumber(50,1000);
-                yL[i]=getRandomNumber(0,1000);
-         //       addObject(lives[i],xL[i],yL[i]); 
-        
-        }        
-    }
-    
-      public void addBombToWorld()
-    {
-        int xcord = 640;
-        int ycord = 600;
-        xL=new int[10]; 
-        yL=new int[10];
-        bombs=new bomb[20];
-        
-        for (int i=0 ; i < 5 ; i++)
-        {
-                GreenfootImage lifelineimg =new GreenfootImage("bomb.gif");
-                bombs[i] = new bomb();
-                bombs[i].Image(lifelineimg);
-                xL[i]=getRandomNumber(50,1000);
-                yL[i]=getRandomNumber(0,1000);
-                //addObject(bombs[i],xL[i],yL[i]); 
-        
-        }        
-    }
-    
+
     public BoosterFactory GetBoosterFactory()
     {
         if(boosterFactory == null)
@@ -337,20 +313,29 @@ public class MyWorld extends ParentWorld
     public void setKill(int kill)
     {
         kills += kill; 
-        kk.setKill(kills);
+        kk.setKill(kills); 
         if(kills > 20 && playercurrentLevel == 1)
         {
             //Greenfoot.delay(5);
             setBackground("level2.png");
-            Greenfoot.delay(50);
+            Greenfoot.delay(70);
             playercurrentLevel = 2;
             GetWorldElementsByLevel(2);
-        }
-       // increment kill      
+            
+            
         GreenfootImage bg2 = new GreenfootImage(bg);                    
         bg2.setFont(new Font("SERIF", Font.BOLD, 24));
         bg2.setColor(Color.white);
         bg2.drawString(""+kills, 675, 40);
+        }
+        else
+        {
+             GreenfootImage bg2 = new GreenfootImage(bg);                    
+            bg2.setFont(new Font("SERIF", Font.BOLD, 24));
+            bg2.setColor(Color.white);
+            bg2.drawString(""+kills, 675, 40);
+            
+        }
     }
     
     public void addLife(int life)

@@ -13,15 +13,17 @@ public class WorldBuilder
     {
         // super(1000, 600, 1);
     }
-    public PlayerLevel PrepareAndReturnLevel1 (){
+    public PlayerLevel PrepareAndReturnLevel2 (){
      PlayerLevel level = new  PlayerLevel();
-     level.addItem(new Level1BackGround());
+     level.addItem(new Level2BackGround());
+      level.addItem(new Level2Booster()); 
      return  level;
    }   
 
-     public PlayerLevel PrepareAndReturnLevel2 (){
+     public PlayerLevel PrepareAndReturnLevel3 (){
         PlayerLevel level = new  PlayerLevel();
-        level.addItem(new Level2BackGround());
+        level.addItem(new Level3BackGround());
+        level.addItem(new Level3Booster());
         return level;
    }   
  
