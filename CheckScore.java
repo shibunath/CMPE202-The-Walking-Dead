@@ -23,8 +23,10 @@ public class CheckScore extends Actor
     {
         // Add your action code here.
         
-        if (Greenfoot.mouseClicked(this)){         
-           Greenfoot.setWorld(new CheckScoreScreen());
+        if (Greenfoot.mouseClicked(this)){   
+            CheckScoreScreen cs=new CheckScoreScreen();
+            cs.setter();
+           Greenfoot.setWorld(cs);
         }
     } 
         

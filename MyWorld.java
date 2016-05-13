@@ -8,7 +8,7 @@ import java.awt.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class MyWorld extends ParentWorld
 {
   
     /**  
@@ -16,7 +16,7 @@ public class MyWorld extends World
      * 
      */
     private Hero hero;// keep a reference of the hero object for the whole game
-    private int kills; // Number of Zombies Killed.
+ //   private int kills; // Number of Zombies Killed.
     private int lifes; // Number of Player Lifes.
     
     private int Count=0;

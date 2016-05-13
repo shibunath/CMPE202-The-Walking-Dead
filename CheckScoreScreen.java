@@ -8,7 +8,7 @@ import java.awt.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CheckScoreScreen extends World
+public class CheckScoreScreen extends ParentWorld
 {
 
     /**
@@ -20,15 +20,29 @@ public class CheckScoreScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);     
+        
+        
+  
+    
+       
+    }
+    
+    public void setter()
+    {
         GreenfootImage bg = new GreenfootImage("back.jpg");
         bg.scale(1000,600);
-        
-     CheckScoreS s=new CheckScoreS();
+           CheckScoreS s=new CheckScoreS();
+           s.setKill(kills);
      addObject(s,500,250);
         setBackground(bg);
-    
-        prepare();
+         prepare();
     }
+    
+    public void setZero()
+    {
+        kills=0;
+    }
+    
     
     public void prepare()
     {

@@ -23,7 +23,7 @@ public class CheckScoreS extends Actor
     public void act() 
     {
         // Add your action code here.
-        setImage(new GreenfootImage("Kills: 17"  + "\n", 50, Color.white, null));
+        setImage(new GreenfootImage("Kills:"  +kills+ "\n", 50, Color.white, null));
     }
     
     
