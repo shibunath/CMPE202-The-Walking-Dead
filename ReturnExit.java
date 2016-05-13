@@ -19,6 +19,8 @@ public class ReturnExit extends Actor
     {
         if (Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new ExitScreen());
+            CheckScoreScreen ref=(CheckScoreScreen)getWorld();
+            ref.setZero();
         }
     }    
 }
