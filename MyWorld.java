@@ -61,7 +61,7 @@ public class MyWorld extends ParentWorld
         playercurrentLevel=1;
         bgImage = new GreenfootImage("Background.jpg");
        // builder.PrepareAndReturnLevel1();
-        kills = 0;
+      //  kills = 0;
         hero = new Hero();
         aac = new AmmoAndClip(hero.GetArsenal());
         aac2 = new AmmoAndClip2(hero.GetArsenal());
