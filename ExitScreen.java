@@ -13,10 +13,12 @@ public class ExitScreen extends World
      * Constructor for objects of class ExitScreen.
      * 
      */
-    private CheckScore checkScore = new CheckScore();
+    private CheckScore checkScore;
+  
     private PlayAgain playAgain = new PlayAgain();
     private MyWorld  myworld = new MyWorld();
     static GreenfootSound gameOver = new GreenfootSound("sounds/gameOver.mp3");
+    public long survval;
     public ExitScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -24,8 +26,10 @@ public class ExitScreen extends World
         myworld.stopped();
         GreenfootImage bg = getBackground();
         bg.scale(1000,600);                 
-        prepare();
+      
     }
+    
+     
     
     public void act()
     {
@@ -38,6 +42,7 @@ public class ExitScreen extends World
     
     public void prepare()
     {        
+        checkScore=new CheckScore(survval);
         addObject(checkScore, 330, 530);
         addObject(playAgain, 660, 520);
     }

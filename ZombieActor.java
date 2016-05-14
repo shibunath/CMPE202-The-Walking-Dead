@@ -14,7 +14,7 @@ public class ZombieActor extends Actor
     private int vX, vY; // Zombie speeds along the horizontal axis and the vertial axis
     private int zR; // Zombie rotation
     BoosterFactory boosterFactory = new BoosterFactory();
-    
+    public long end;
     public void move()
     {
         zX += vX; // adjust x coordinate value according to horizontal speed
@@ -84,8 +84,16 @@ public class ZombieActor extends Actor
             if(currentCount < 1)
             {
                 World world = getWorld();
-                world.removeObject(hero);                        
-                Greenfoot.setWorld(new ExitScreen());      
+                world.removeObject(hero);        
+                end=System.currentTimeMillis();
+                MyWorld ref=(MyWorld)getWorld();
+            //    System.out.println("Time alive: "+(end-ref.start));
+                ExitScreen es=new ExitScreen();
+           
+                es.survval=(end-ref.start);
+                System.out.println("Time: "+es.survval);
+                     es.prepare();
+                Greenfoot.setWorld(es);      
             }
         }
     }
